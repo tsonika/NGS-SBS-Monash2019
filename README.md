@@ -2,12 +2,12 @@
 Bioinformatics Training Platform (BTP) Workshop: Introduction to Next Generation Sequencing Hands-on Workshop
 
   * Topics
-    1. Introduction to command line
-    2. NGS Quality Control
-    2. NGS Read Mapping
-    4. Intro to RNA-Seq
-    5. *de novo* assembly using bacterial example
-    6. *de novo* assembly using sukaryotic example
+    1. Introduction to R
+    2. Introduction to command line
+    3. RNA-Seq Read Mapping
+    4. RNA-Seq Differential Expression Analysis
+    5. *de novo* assembly using short reads (bacterial example)
+    6. *de novo* assembly using long reads
     7. Using the Australian NeCTAR Research Cloud
 
   * Target Audience
@@ -17,7 +17,7 @@ Bioinformatics Training Platform (BTP) Workshop: Introduction to Next Generation
   * Prerequisites
     * None
   * Time Required
-    * 2.5 days
+    * 2 days
   * Compute Requirements
     * Minimum: 2 CPUs, 8GB RAM, 30GB Storage
     * Recommended: 4 CPUs, 16GB RAM, 50GB Storage
