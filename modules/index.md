@@ -8,19 +8,19 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 
 |Time |Subject |notes|
 |-----|--------|-----|
-||Day1: 5 Nov 2018 |
-|9-9:15 am|Housekeeping + Icebreaker|Slides + group activity|
-|9:15-10:45 am|Intro to CLI|Lecture + hands on|
-|10:45-11:00 am|Break||
-|11:00-11:30 pm|Introduction to HTS|Lecture|  
-|11:30-11:50 pm|Intro to QC|Lecture|
-|11:50-12:30 pm|Assess quality of sequence data|Hands on exercise|
-12:30-12:45 pm|Recap + QA|Group discussion|
+||Day1: 30 Nov 2019 |
+|10-10:15 am|Housekeeping + Icebreaker|Slides + group activity|
+|10:15-11:00 pm|Introduction to HTS|Lecture|  
+|11:00-11:30 am|Morning Tea Break|AGRF Sponsored|
+|11:30-12:00 pm|Intro to R|Interactive Lecture|
+|12:00-1:00 pm|Lunch Break|BYO|
+|1:00-2:45 pm|Intro to CLI|Lecture + hands on|
+|2:45-3:00 pm|Recap + QA|Group discussion|
 
 
 | | ||
 |------|-----|----|
-||Day2: 6 Nov 2018|
+||Day2: 4 Oct 2019|
 |9:00-9:45 am|Intro to denovo assembly|Lecture |
 |9:45-10:45 am|Compile and explore Velvet + read data|Practice
 |10:45-11:00 am|Break|
@@ -32,20 +32,6 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 |3:00-3:15 pm|Break|
 |3:15-4:00 pm|Assembly Stats summary|Practice|
 |4:00-5:00 pm|Assembly talk part II|Lecture|
-
-
-
-
-| | ||
-|------|-----|----|
-||Day3: 7 Nov 2018|| 
-|9:00-10:00 am|Run eukaryotic assembly|Practice|
-|10:00-10:45 am|Assembly statistics|Practice|
-|10:45-11:00 am|Break|
-|10:50-11:20 am|Scaffolding|Practice/ discussion|
-|11:20-12:30 pm|Long read assembly|Lecture + Practice|
-|12:30-1:30 pm|Break|
-| | |||
 |-----|--------|-----|
 |1:30-1:45 pm|Intro to Alignment|Lecture|
 |1:45-2:15 pm|Alignment and processing bams|Practice|
@@ -61,13 +47,13 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 ## Workshop Content
 Topics covered by this workshop include:
 
-* An introduction to the command line interface and NGS file formats 
+* An introduction to R programming
 
-* Assessment of the quality of NGS sequence reads 
+* An Introduction to the command line interface and NGS file formats 
 
-* Sequence alignment algorithms 
+* RNA-Seq alignment  
 
-* Basic RNA-Seq analysis 
+* Basic RNA-Seq differential expression analysis 
 
 * Short and long read de novo genome assembly 
 
