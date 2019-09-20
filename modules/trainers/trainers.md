@@ -6,7 +6,7 @@ The Trainers
 Cloud Team <br>
 Monash eResearch Centre <br>
 
-**Mr Damien Leong ** <br>
+**Mr Damien Leong** <br>
 HPC Team <br>
 Monash eResearch Centre <br>
 
