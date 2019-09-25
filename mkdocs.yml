@@ -1,9 +1,9 @@
 site_name: Introduction to NGS Workshop
 site_description: This contains all material for the Introduction to NGS workshop.
-site_author: Authors
+site_author: Sonika Tyagi 
 docs_dir: modules
 
-copyright: '&copy; The authors; 2017-'
+copyright: '&copy; The authors; 2019-'
 
 #Documentation and theme
 theme: material
@@ -59,7 +59,5 @@ nav:
     - RNA-Seq: rna-seq/handout/handout.md
     - De Novo Genome Assembly: denovo/handout/handout.md
     - De Novo Canu: denovo-canu/handout/handout.md
-    - Eukaryote Genome Assembly: eukaryotic/handout/handout.md
-    - Scaffolding: scaffolding/handout/handout.md
 
 - License: license.md
