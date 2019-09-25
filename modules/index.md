@@ -30,7 +30,7 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 |1:30-2:00 pm|Assembly visualization and exploration|Practice|
 |2:00-3:00 pm| Long read assembly|
 |3-3:15 pm|break|Workflow activity |
-|3:15-3:30 pm|Spliced Alignment, transcript assembly and Gene quanitification workflow|Lecture|
+|3:15-3:30 pm|RNAseq analysis workflow example|Lecture|
 |3:30 - 4:30 pm|RNAseq: DE using edgeR|Practice|
 |4:30-4:455 pm|Wrap up| |
 
