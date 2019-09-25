@@ -8,7 +8,7 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 
 |*Time* |*Subject* |*notes*|
 |-----|--------|-----|
-||Day1: 30 Nov 2019 |
+||Day1: 30 Sep 2019 |
 |10-10:15 am|Housekeeping + Icebreaker|Slides + group activity|
 |10:15-11:00 pm|Introduction to HTS|Lecture|  
 |11:00-11:30 am|Morning Tea Break|AGRF Sponsored|
