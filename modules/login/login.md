@@ -25,17 +25,13 @@ Upon login to the URL/site above, the assigned instance is shown:
 ![image](images/login2.png)
 
 
-
 Click on the *Reconnect* link to then connect to the instance's remote desktop (via HTML5 viewer).
 The instance's desktop environment is then displayed:
 
 ![image](images/login3.png)
 
 
-
-Training modules (e.g qc, cli) from previous NGS workshops have been populated into
-the trainee's home and desktop directories (as seen above). Also, a new module/folder (population_genomics)
-have been created. Data/files from Kay and Gregory have been copied into this folder.
+Training modules (e.g qc, cli) contain datasets required for each module. There is precomputed data for some of the section, please DO NOT DELETE.
 
 <br>
 Terminal/shell is available from the bottom tools bar:
