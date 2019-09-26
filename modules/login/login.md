@@ -44,10 +44,6 @@ Terminal/shell is available from the bottom tools bar:
 
 
 
-
-## Workshop Content
-
-
-This workshop will be delivered using a mixture of lectures, hands-on practical sessions, and open discussions.
-
 ## Acknowledgements
+
+The training VMs have been kindly provided by the Monash eResearch platform at the Monash University. Mr Jerico Revote has provided his technical expertise in setting those up.
