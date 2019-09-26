@@ -10,7 +10,7 @@ https://sbs-broker.erc.monash.edu/
 Loading this URL in any browser will display the main/login page:
 
 <br>
-![image](login1.png)
+![image](images/login1.png)
 
 **Figure 1:** VM login screen
 
