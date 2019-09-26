@@ -53,6 +53,8 @@ nav:
 - Workshop Information: preamble/preamble.md
 
 - Hands-on Modules:
+    - Loging to the training VM: login/login.md
+    - Introduction to R: R/Rhandout.md
     - Introduction to Command Line: cli/handout/handout.md
     - Quality Control: qc/handout/handout.md
     - Read Alignment: alignment/handout/handout.md
