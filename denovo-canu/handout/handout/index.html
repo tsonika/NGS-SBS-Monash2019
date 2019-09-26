@@ -344,6 +344,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#author-information" class="md-nav__link">
+    Author Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
@@ -373,15 +380,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pacbio-files" class="md-nav__link">
-    PacBio files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#illumina-files" class="md-nav__link">
-    Illumina files
+  <a href="#pacbio-and-illumina-files" class="md-nav__link">
+    PacBio and Illumina files
   </a>
   
 </li>
@@ -693,6 +693,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#author-information" class="md-nav__link">
+    Author Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
@@ -722,15 +729,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pacbio-files" class="md-nav__link">
-    PacBio files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#illumina-files" class="md-nav__link">
-    Illumina files
+  <a href="#pacbio-and-illumina-files" class="md-nav__link">
+    PacBio and Illumina files
   </a>
   
 </li>
@@ -1013,6 +1013,9 @@
                 <h1 id="pacbio-reads-assembly-with-command-line-tools">Pacbio reads: assembly with command line tools</h1>
 <p><em>Keywords: de novo assembly, PacBio, PacificBiosciences, Illumina, command line, Canu, Circlator, BWA, Spades, Pilon, Microbial Genomics Virtual Laboratory</em></p>
 <p>This tutorial demonstrates how to use long Pacbio sequence reads to assemble a bacterial genome, including correcting the assembly with short Illumina reads.</p>
+<h2 id="author-information">Author Information</h2>
+<p><em>Primary Author(s):</em>
+Anna Syme Melbourne Bioinformatics</p>
 <h2 id="resources">Resources</h2>
 <p>Tools (and versions) used in this tutorial include:</p>
 <ul>
@@ -1035,64 +1038,33 @@
 <p>Simplified version of workflow:</p>
 <p><img alt="workflow" src="../images/flowchart.png" /></p>
 <h2 id="get-data">Get data</h2>
-<p>The files we need are:</p>
+<p>The files we need are here [ In a new tab, go to <a href="https://doi.org/10.5281/zenodo.1009308">https://doi.org/10.5281/zenodo.1009308</a>]:</p>
 <ul>
-<li><fn>pacbio.fastq.gz</fn> : the PacBio reads</li>
-<li><fn>illumina_R1.fastq.gz</fn>: the Illumina forward reads</li>
-<li><fn>illumina_R2.fastq.gz</fn>: the Illumina reverse reads</li>
+<li><fn>pacbio.fq</fn> : the PacBio reads</li>
+<li><fn>R1.fq</fn>: the Illumina forward reads</li>
+<li><fn>R2.fq</fn>: the Illumina reverse reads</li>
 </ul>
 <p>If you already have the files, skip forward to next section, <a href="#assemble">Assemble</a>.</p>
 <p>Otherwise, this section has information about how to find and move the files:</p>
-<h3 id="pacbio-files">PacBio files</h3>
-<ul>
-<li>Open the command line. <!-- own machine, mGVL or BPA VM --></li>
-<li>Navigate to or create the directory in which you want to work.</li>
-<li>If the files are already on your server, you can symlink by using</li>
-</ul>
-<div class="codehilite"><pre><span></span>ln -s real_file_path [e.g. data/sample_name/pacbio1.fastq.gz] chosen_symlink_name [e.g. pacbio1.fastq.gz]
+<h3 id="pacbio-and-illumina-files">PacBio and Illumina files</h3>
+<p>In a new tab, go to <a href="https://doi.org/10.5281/zenodo.1009308">https://doi.org/10.5281/zenodo.1009308</a>.</p>
+<p>Next to the first file, right-click (or control-click) the &ldquo;Download&rdquo; button, and select &ldquo;Copy link address&rdquo;.
+Back in your terminal, enter</p>
+<p><div class="codehilite"><pre><span></span>wget  [paste link URL for file]
+</pre></div>
+The file should download.
+Note: paste the link to the file, not to the webpage.
+Repeat this for the other two files.
+Shorten each of these files names with the mv command:</p>
+<div class="codehilite"><pre><span></span>mv R1.fq\?download\=1 R1.fq
+mv R2.fq\?download\=1 R2.fq
+mv pacbio.fq\?download\=1 pacbio.fq
 </pre></div>
 
-<ul>
-<li>
-<p>Alternatively, obtain the input files from elsewhere, e.g. from the BPA portal. (You will need a password.)</p>
-</li>
-<li>
-<p>Pacbio files are often stored in the format:</p>
-<ul>
-<li><fn>Sample_name/Cell_name/Analysis_Results/long_file_name_1.fastq.gz</fn></li>
-</ul>
-</li>
-<li>
-<p>We will use the <fn>longfilename.subreads.fastq.gz</fn> files.</p>
-</li>
-<li>
-<p>The reads are usually split into three separate files because they are so large.</p>
-</li>
-<li>
-<p>Right click on the first <fn>subreads.fastq.gz</fn> file and &ldquo;copy link address&rdquo;.</p>
-</li>
-<li>
-<p>In the command line, type:</p>
-</li>
-</ul>
-<p><div class="codehilite"><pre><span></span>wget --user username --password password [paste link URL for file]
-</pre></div>
-- Repeat for the other two <fn>subreads.fastq.gz</fn> files.
-- Join the files:
-<div class="codehilite"><pre><span></span>cat pacbio*.fastq.gz &gt; pacbio.fastq.gz
-</pre></div>
-- If the files are not gzipped, type:
-<div class="codehilite"><pre><span></span>cat pacbio*.fastq | gzip &gt; pacbio.fastq.gz
-</pre></div></p>
-<h3 id="illumina-files">Illumina files</h3>
-<ul>
-<li>We will also use 2 x Illumina (Miseq) fastq.gz files.</li>
-<li>These are the <fn>R1.fastq.gz</fn> and <fn>R2.fastq.gz</fn> files.</li>
-<li>Symlink or &ldquo;wget&rdquo; these files as described above for PacBio files.</li>
-<li>Shorten the name of each of these files:</li>
-</ul>
-<div class="codehilite"><pre><span></span>mv longfilename_R1.fastq.gz illumina_R1.fastq.gz
-mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
+<p>Type in <code class="codehilite"><span class="n">ls</span></code> to check the files are present and correctly-named.</p>
+<p>We should have <code class="codehilite"><span class="n">R1</span><span class="p">.</span><span class="n">fq</span></code>, <code class="codehilite"><span class="n">R2</span><span class="p">.</span><span class="n">fq</span></code> and <code class="codehilite"><span class="n">pacbio</span><span class="p">.</span><span class="n">fq</span></code>.</p>
+<div class="codehilite"><pre><span></span>cd denovo-canu
+ls
 </pre></div>
 
 <h3 id="sample-information">Sample information</h3>
@@ -1102,7 +1074,7 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 <li>We will use the assembly software called <a href="http://canu.readthedocs.io/en/stable/">Canu</a>.</li>
 <li>Run Canu with these commands:</li>
 </ul>
-<div class="codehilite"><pre><span></span>canu -p canu -d canu_outdir genomeSize=2.8m -pacbio-raw pacbio.fastq.gz
+<div class="codehilite"><pre><span></span>canu -p canu -d canu_outdir genomeSize=0.03m -pacbio-raw pacbio.fq
 </pre></div>
 
 <ul>
@@ -1114,6 +1086,7 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 <ul>
 <li>e.g. <em>Staphylococcus aureus</em>, 2.8m</li>
 <li>e.g. <em>Streptococcus pyogenes</em>, 1.8m</li>
+<li>(In this case we are using a partial genome of expected size 30,000 base pairs).</li>
 </ul>
 </li>
 <li>
@@ -1136,14 +1109,26 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 <ul>
 <li>This will show the contigs found by Canu. e.g.,</li>
 </ul>
-<div class="codehilite"><pre><span></span>    - tig00000001   2851805
+<div class="codehilite"><pre><span></span>    - tig00000001   47997
 </pre></div>
 
-<p>This looks like a chromosome of approximately 2.8 million bases.</p>
-<p>This matches what we would expect for this sample. For other data, Canu may not be able to join all the reads into one contig, so there may be several contigs in the output. Also, the sample may contain some plasmids and these may be found full or partially by Canu as additional contigs.  </p>
+<ul>
+<li>This will show the contigs found by Canu. e.g., tig00000001 47997
+    -&ldquo;tig00000001&rdquo; is the name given to the contig
+    -&ldquo;47997&rdquo; is the number of base pairs in that contig.</li>
+</ul>
+<p>This matches what we were expecting for this sample (approximately 30,000 base pairs). For other data, Canu may not be able to join all the reads into one contig, so there may be several contigs in the output.</p>
+<p>We should also look at the canu.report. To do this:</p>
+<p><div class="codehilite"><pre><span></span>less canu.report
+</pre></div>
+- <code class="codehilite"><span class="k">less</span></code> is a command to display the file on the screen.
+- Use the up and down arrows to scroll up and down.
+- You will see lots of histograms of read lengths before and after processing, final contig construction, etc.
+- For a description of the outputs that Canu produces, see: <a href="http://canu.readthedocs.io/en/latest/tutorial.html#outputs">http://canu.readthedocs.io/en/latest/tutorial.html#outputs</a>
+- Type <code class="codehilite"><span class="n">q</span></code> to exit viewing the report</p>
 <h3 id="change-canu-parameters-if-required">Change Canu parameters if required</h3>
 <p>If the assembly is poor with many contigs, re-run Canu with extra sensitivity parameters; e.g.
-<div class="codehilite"><pre><span></span>canu -p prefix -d outdir corMhapSensitivity=high corMinCoverage=0 genomeSize=2.8m -pacbio-raw pacbio.fastq.gz
+<div class="codehilite"><pre><span></span>canu -p prefix -d outdir corMhapSensitivity=high corMinCoverage=0 genomeSize=.03m -pacbio-raw pacbio.fq
 </pre></div></p>
 <h3 id="questions">Questions</h3>
 <p>Q: How do long- and short-read assembly methods differ? A: short reads: De Bruijn graphs; long reads: a move back towards simpler overlap-layout-consensus methods.</p>
@@ -1190,7 +1175,7 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 </pre></div>
 
 <ul>
-<li>tig00000001 2823331 (28564 bases trimmed)</li>
+<li>tig00000001 30019 (bases trimmed)</li>
 </ul>
 <p>This trimmed part is the overlap.</p>
 <p><em>Re-name the contigs file</em>:</p>
@@ -1227,14 +1212,14 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 <ul>
 <li>Align Illumina reads using using bwa mem:</li>
 </ul>
-<div class="codehilite"><pre><span></span>bwa mem -t 8 contig1.fasta illumina_R1.fastq.gz illumina_R2.fastq.gz | samtools sort &gt; aln.bam
+<div class="codehilite"><pre><span></span>bwa mem -t 8 contig1.fasta R1.fq R2.fq | samtools sort &gt; aln.bam
 </pre></div>
 
 <ul>
 <li><code class="codehilite"><span class="n">bwa</span> <span class="n">mem</span></code> is the alignment tool</li>
 <li><code class="codehilite"><span class="o">-</span><span class="n">t</span> <span class="mi">8</span></code> is the number of cores: choose an appropriate number</li>
 <li><code class="codehilite"><span class="n">contig1</span><span class="p">.</span><span class="n">fasta</span></code> is the input assembly file</li>
-<li><code class="codehilite"><span class="n">illumina_R1</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span> <span class="n">illumina_R2</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span></code> are the Illumina reads</li>
+<li><code class="codehilite"><span class="n">R1</span><span class="p">.</span><span class="n">fq</span> <span class="n">R2</span><span class="p">.</span><span class="n">fq</span></code> are the Illumina reads</li>
 <li><code class="codehilite"><span class="o">|</span> <span class="n">samtools</span> <span class="n">sort</span></code> pipes the output to samtools to sort</li>
 <li><code class="codehilite"><span class="o">&gt;</span> <span class="n">aln</span><span class="p">.</span><span class="n">bam</span></code> sends the alignment to the file <fn>aln.bam</fn></li>
 </ul>
@@ -1276,22 +1261,15 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 <li><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> is the output directory</li>
 </ul>
 <p>Move into the output directory (<fn>spades_assembly</fn>) and look at the contigs:</p>
-<p><div class="codehilite"><pre><span></span>infoseq contigs.fasta
+<p><div class="codehilite"><pre><span></span>cd spades_assembly
+infoseq contigs.fasta
 </pre></div>
-- 78 contigs were assembled, with the max length of 2250 (the first contig).<br />
-- All other nodes are &lt; 650kb so we will disregard as they are unlikely to be plasmids.
-- Type &ldquo;q&rdquo; to exit.
-- We will extract the first sequence (NODE_1):</p>
-<div class="codehilite"><pre><span></span>samtools faidx contigs.fasta
-</pre></div>
-
-<div class="codehilite"><pre><span></span>samtools faidx contigs.fasta NODE_1_length_2550_cov_496.613 &gt; contig2.fasta
+- 1 contig has been assembled with a length of 2359 bases.
+- Type &ldquo;q&rdquo; to exit.</p>
+<p>Copy it to a new file:</p>
+<div class="codehilite"><pre><span></span>cp contigs.fasta contig2.fasta
 </pre></div>
 
-<ul>
-<li>This is now saved as <fn>contig2.fasta</fn></li>
-<li>Open in nano and change header to &ldquo;&gt;plasmid&rdquo;.</li>
-</ul>
 <h3 id="trim-the-plasmid">Trim the plasmid</h3>
 <p>To trim any overhang on this plasmid, we will blast the start of contig2 against itself.</p>
 <ul>
@@ -1301,6 +1279,8 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 </pre></div>
 
 <ul>
+<li>head -n 10 takes the first ten lines of <fn>contig2.fasta</fn></li>
+<li><code class="codehilite"><span class="o">&gt;</span></code> sends that output to a new file called <fn>contig2.fa.head</fn></li>
 <li>We want to see if it matches the end (overhang).</li>
 <li>Format the assembly file for blast:</li>
 </ul>
@@ -1314,27 +1294,50 @@ mv longfilename_R2.fastq.gz illumina_R2.fastq.gz
 </pre></div></p>
 </li>
 <li>
-<p>Look at <fn>contig2.bls</fn> to see hits:
-<div class="codehilite"><pre><span></span>less contig2.bls
-</pre></div></p>
+<p><code class="codehilite"><span class="n">blastn</span></code> is the tool Blast, set as blastn to compare sequences of nucleotides to each other</p>
+</li>
+<li><code class="codehilite"><span class="n">query</span></code> sets the input sequence as <fn>contig2.fa.head</fn></li>
+<li><code class="codehilite"><span class="n">db</span></code> sets the database as that of the original sequence <fn>contig2.fasta</fn>. We don&rsquo;t have to specify the other files that were created when we formatted this file, but they need to present in our current directory.</li>
+<li><code class="codehilite"><span class="n">evalue</span></code> is the number of hits expected by chance, here set as 1e-3</li>
+<li><code class="codehilite"><span class="n">dust</span> <span class="k">no</span></code> turns off the masking of low-complexity regions</li>
+<li>
+<p><code class="codehilite"><span class="k">out</span></code> sets the output file as <fn>contig2.bls</fn></p>
 </li>
 <li>
-<p>The first hit is at start, as expected.</p>
+<p>Look at <fn>contig2.bls</fn> to see hits:</p>
 </li>
-<li>The second hit is at 2474 all the way to the end - 2550.</li>
-<li>This is the overhang.</li>
-<li>Trim to position 2473.</li>
-<li>Index the plasmid.fa file:</li>
 </ul>
-<div class="codehilite"><pre><span></span>samtools faidx contig2.fasta
+<div class="codehilite"><pre><span></span>less contig2.bls
 </pre></div>
 
 <ul>
-<li>Trim:
-<div class="codehilite"><pre><span></span>samtools faidx contig2.fasta plasmid:1-2473 &gt; plasmid.fa.trimmed
+<li>The first hit is at start, as expected. We can see that &ldquo;Query 1&rdquo; (the start of the contig) is aligned to &ldquo;Sbject 1&rdquo; (the whole contig), for the first 540 bases.</li>
+<li>Scroll down with the down arrow.</li>
+<li>The second hit shows &ldquo;Query 1&rdquo; (the start of the contig) also matches to &ldquo;Sbject 1&rdquo; (the whole contig) at position 2253, all the way to the end, position 2359. </li>
+<li>This is the overhang.</li>
+<li>Trim to position 2252.</li>
+<li>Index the plasmid.fa file:</li>
+</ul>
+<p>First, change the name of the contig within the file:</p>
+<p><div class="codehilite"><pre><span></span>nano contig2.fasta
+</pre></div>
+- <code class="codehilite"><span class="n">nano</span></code> opens up a text editor.
+- Use the arrow keys to navigate. (The mouse won&rsquo;t work.)
+- At the first line, delete the text, which will be something like <code class="codehilite"><span class="o">&gt;</span><span class="n">NODE_1_length_2359_cov_3</span><span class="p">.</span><span class="mi">320333</span></code>
+- Type in <code class="codehilite"><span class="o">&gt;</span><span class="n">contig2</span></code>
+- Don&rsquo;t forget the <code class="codehilite"><span class="o">&gt;</span></code> symbol
+- Press <code class="codehilite"><span class="n">Control</span><span class="o">-</span><span class="n">X</span></code>
+- <code class="codehilite"><span class="n">Save</span> <span class="n">modified</span> <span class="n">buffer</span> <span class="o">?</span></code> - type Y
+- Press the <code class="codehilite"><span class="n">Enter</span></code> key</p>
+<p>Index the file (this will allow samtools to edit the file as it will have an index):
+<div class="codehilite"><pre><span></span>samtools faidx contig2.fasta
+</pre></div></p>
+<ul>
+<li>Trim the contig:
+<div class="codehilite"><pre><span></span>samtools faidx contig2.fasta plasmid:1-2252 &gt; plasmid.fa.trimmed
 </pre></div></li>
 <li>
-<p><code class="codehilite"><span class="n">plasmid</span></code> is the name of the contig, and we want the sequence from 1-2473.</p>
+<p><code class="codehilite"><span class="n">plasmid</span></code> is the name of the contig, and we want the sequence from 1-2252.</p>
 </li>
 <li>
 <p>Open this file in nano (<code class="codehilite"><span class="n">nano</span> <span class="n">plasmid</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="n">trimmed</span></code>) and change the header to &ldquo;&gt;plasmid&rdquo;, save.</p>
