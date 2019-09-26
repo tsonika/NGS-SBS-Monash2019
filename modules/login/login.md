@@ -38,6 +38,15 @@ Terminal/shell is available from the bottom tools bar:
 ![image](images/login4.png)
 
 
+## How to transfer data in and out of the VM
+
+For transferring files in/out of the training environment, users can use "scp" (or WinSCP for Windows).
+
+For example, if user (trainee1) is logged into sbs-01.erc.monash.edu, user can scp files in/out of the training instance via:
+
+     scp trainee1@sbs-01.erc.monash.edu
+
+Using the password provided in the https://tsonika.github.io/NGS-SBS-Monash2019/login/login/ section of the manual.
 
 
 ## Acknowledgements
