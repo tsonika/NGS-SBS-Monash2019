@@ -1,0 +1,942 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Sonika Tyagi">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Read Alignment - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Introduction to NGS Workshop
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Read Alignment
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Read Alignment
+      </label>
+    
+    <a href="./" title="Read Alignment" class="md-nav__link md-nav__link--active">
+      Read Alignment
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful Links
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author-information" class="md-nav__link">
+    Author Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulate-sam-output" class="md-nav__link">
+    Manipulate SAM output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-alignments-in-igv" class="md-nav__link">
+    Visualize alignments in IGV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-makes-perfect" class="md-nav__link">
+    Practice Makes Perfect!
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+      RNA-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../denovo/handout/handout/" title="De Novo Genome Assembly" class="md-nav__link">
+      De Novo Genome Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../denovo-canu/handout/handout/" title="De Novo Canu" class="md-nav__link">
+      De Novo Canu
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful Links
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author-information" class="md-nav__link">
+    Author Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulate-sam-output" class="md-nav__link">
+    Manipulate SAM output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-alignments-in-igv" class="md-nav__link">
+    Visualize alignments in IGV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-makes-perfect" class="md-nav__link">
+    Practice Makes Perfect!
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Read Alignment</h1>
+                
+                <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
+<p>After completing this practical the trainee should be able to:</p>
+<ul>
+<li>
+<p>Perform a simple NGS data alignment task, with Bowtie2, against one
+    interested reference data</p>
+</li>
+<li>
+<p>Interpret and manipulate the mapping output using SAMtools</p>
+</li>
+<li>
+<p>Visualise the alignment via a standard genome browser, e.g. IGV
+    browser</p>
+</li>
+</ul>
+<h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
+<h3 id="tools-used">Tools Used</h3>
+<p>Bowtie2:<br />
+<a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a></p>
+<p>Samtools:<br />
+<a href="http://broadinstitute.github.io/picard">http://broadinstitute.github.io/picard</a></p>
+<p>BEDTools:<br />
+<a href="http://code.google.com/p/bedtools/">http://code.google.com/p/bedtools/</a></p>
+<p>UCSC tools:<br />
+<a href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a></p>
+<p>IGV genome browser:<br />
+<a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a></p>
+<h2 id="useful-links">Useful Links</h2>
+<p>SAM Specification:<br />
+<a href="http://samtools.sourceforge.net/SAM1.pdf">http://samtools.sourceforge.net/SAM1.pdf</a></p>
+<p>Explain SAM Flags:<br />
+<a href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
+<h3 id="sources-of-data">Sources of Data</h3>
+<p><a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-11431">http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-11431</a></p>
+<h2 id="author-information">Author Information</h2>
+<p><em>Primary Author(s):</em>
+    Myrto Kostadima <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#111;&#115;&#116;&#97;&#100;&#105;&#109;&#64;&#101;&#98;&#105;&#46;&#97;&#99;&#46;&#117;&#107;">&#107;&#111;&#115;&#116;&#97;&#100;&#105;&#109;&#64;&#101;&#98;&#105;&#46;&#97;&#99;&#46;&#117;&#107;</a></p>
+<p><em>Contributor(s):</em>
+    Xi (Sean) Li <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#110;&#46;&#108;&#105;&#64;&#99;&#115;&#105;&#114;&#111;&#46;&#97;&#117;">&#115;&#101;&#97;&#110;&#46;&#108;&#105;&#64;&#99;&#115;&#105;&#114;&#111;&#46;&#97;&#117;</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this hands-on session is to perform an unspliced alignment
+for a small subset of raw reads. We will align raw sequencing data to
+the mouse genome using Bowtie2 and then we will manipulate the SAM
+output in order to visualize the alignment on the IGV browser.</p>
+<h2 id="prepare-the-environment">Prepare the Environment</h2>
+<p>We will use one data set in this practical, which can be found in the
+<code class="codehilite"><span class="n">ChIP</span><span class="o">-</span><span class="n">seq</span></code> directory on your desktop.</p>
+<p>Open the Terminal.</p>
+<p>First, go to the right folder, where the data are stored.</p>
+<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">chipseq</span>
+</pre></div>
+
+
+<p>The <code class="codehilite"><span class="na">.fastq</span></code> file that we will align is called <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">fastq</span></code>. This file
+is based on Oct4 ChIP-seq data published by Chen <em>et al.</em> (2008). For
+the sake of time, we will align these reads to a single mouse
+chromosome.</p>
+<h2 id="alignment">Alignment</h2>
+<p>You already know that there are a number of competing tools for short
+read alignment, each with its own set of strengths, weaknesses, and
+caveats. Here we will try Bowtie2, a widely used ultrafast, memory
+efficient short read aligner.</p>
+<p>Bowtie2 has a number of parameters in order to perform the alignment. To
+view them all type</p>
+<div class="codehilite"><pre><span></span><span class="n">bowtie2</span> <span class="c1">--help</span>
+</pre></div>
+
+
+<p>Bowtie2 uses indexed genome for the alignment in order to keep its
+memory footprint small. Because of time constraints we will build the
+index only for one chromosome of the mouse genome. For this we need the
+chromosome sequence in FASTA format. This is stored in a file named
+<code class="codehilite"><span class="n">mm10</span></code>, under the subdirectory <code class="codehilite"><span class="n">bowtie_index</span></code>.</p>
+<div class="admonition failure">
+<p class="admonition-title">STOP</p>
+<p>DO NOT run this command. This has already been run for you.</p>
+<p>** bowtie2-build bowtie_index/mm10.fa bowtie_index/mm10 **</p>
+</div>
+<p>This command will output 6 files that constitute the index. These files
+that have the prefix <code class="codehilite"><span class="n">mm10</span></code> are stored in the <code class="codehilite"><span class="n">bowtie_index</span></code>
+subdirectory. To view if they files have been successfully created type:</p>
+<div class="codehilite"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">bowtie_index</span>
+</pre></div>
+
+
+<p>Now that the genome is indexed we can move on to the actual alignment.
+The first argument for <code class="codehilite"><span class="n">bowtie2</span></code> is the basename of the index for the
+genome to be searched; in our case this is <code class="codehilite"><span class="n">mm10</span></code>. We also want to make
+sure that the output is in SAM format using the <code class="codehilite"><span class="o">-</span><span class="n">S</span></code> parameter. The last
+argument is the name of the FASTQ file.</p>
+<p>Align the Oct4 reads using Bowtie2:</p>
+<div class="codehilite"><pre><span></span><span class="n">bowtie2</span> <span class="o">-</span><span class="n">x</span> <span class="n">bowtie_index</span><span class="o">/</span><span class="n">mm10</span> <span class="o">-</span><span class="n">q</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">fastq</span> <span class="o">&gt;</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">sam</span>
+</pre></div>
+
+
+<p>The above command outputs the alignment in SAM format and stores them in
+the file <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">sam</span></code>.</p>
+<p>In general before you run Bowtie2, you have to know what quality
+encoding your FASTQ files are in. The available FASTQ encodings for
+bowtie are:</p>
+<p>–phred33-quals
+:   Input qualities are Phred+33 (default).</p>
+<p>–phred64-quals
+:   Input qualities are Phred+64 (same as <code class="codehilite"><span class="err">–</span><span class="n">solexa1</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">quals</span></code>).</p>
+<p>–solexa-quals
+:   Input qualities are from GA Pipeline ver. &lt; 1.3.</p>
+<p>–solexa1.3-quals
+:   Input qualities are from GA Pipeline ver. &gt;= 1.3.</p>
+<p>–integer-quals
+:   Qualities are given as space-separated integers (not ASCII).</p>
+<p>The FASTQ files we are working with are Sanger encoded (Phred+33), which
+is the default for Bowtie2.</p>
+<p>Bowtie2 will take 2-3 minutes to align the file. This is fast compared
+to other aligners which sacrifice some speed to obtain higher
+sensitivity.</p>
+<p>Look at the top 10 lines of the SAM file using head (record lines are
+wrapped). Then try the second command, note use arrow navigation and to
+exit type ’q’.</p>
+<div class="codehilite"><pre><span></span><span class="n">head</span>  <span class="n">Oct4</span><span class="p">.</span><span class="n">sam</span>
+<span class="k">less</span> <span class="o">-</span><span class="n">S</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">sam</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>Can you distinguish between the header of the SAM format and the actual alignments?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>The header line starts with the letter ‘@’, i.e.:</p>
+<hr />
+<p>@HD   VN:1.0       SO:unsorted             <br />
+@SQ   SN:chr1      LN:195471971            <br />
+@PG   ID:Bowtie2   PN:bowtie2     VN:2.2.4   CL:“/tools/bowtie2/bowtie2-default/bowtie2-align-s –wrapper basic-0 -x bowtie_index/mm10 -q Oct4.fastq”</p>
+<hr />
+</div>
+</details>
+<p>While, the actual alignments start with read id, i.e.:</p>
+<hr />
+<p>SRR002012.45   0    etc  <br />
+  SRR002012.48   16   chr1   etc</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>What kind of information does the header provide?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+</div>
+<ul>
+<li>
+<p>@HD: Header line; VN: Format version; SO: the sort order of alignments.</p>
+</li>
+<li>
+<p>@SQ: Reference sequence information; SN: reference sequence name; LN: reference sequence length.</p>
+</li>
+<li>
+<p>@PG: Read group information; ID: Read group identifier; VN: Program version; CL: the command line that produces the alignment.</p>
+</li>
+</ul>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>To which chromosome are the reads mapped?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>Chromosome 1.</p>
+</div>
+</details>
+<h2 id="manipulate-sam-output">Manipulate SAM output</h2>
+<p>SAM files are rather big and when dealing with a high volume of NGS
+data, storage space can become an issue. As we have already seen, we can
+convert SAM to BAM files (their binary equivalent that are not human
+readable) that occupy much less space.</p>
+<p>Convert SAM to BAM using <code class="codehilite"><span class="n">samtools</span> <span class="k">view</span></code> and store the output in the
+file <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">bam</span></code>. You have to instruct <code class="codehilite"><span class="n">samtools</span> <span class="k">view</span></code> that the input is
+in SAM format (<code class="codehilite"><span class="o">-</span><span class="n">S</span></code>), the output should be in BAM format (<code class="codehilite"><span class="o">-</span><span class="n">b</span></code>) and that
+you want the output to be stored in the file specified by the <code class="codehilite"><span class="o">-</span><span class="n">o</span></code>
+option:</p>
+<div class="codehilite"><pre><span></span><span class="n">samtools</span> <span class="k">view</span> <span class="o">-</span><span class="n">bSo</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">bam</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">sam</span>
+</pre></div>
+
+
+<p>Compute summary stats for the Flag values associated with the alignments
+using:</p>
+<div class="codehilite"><pre><span></span><span class="n">samtools</span> <span class="n">flagstat</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">bam</span>
+</pre></div>
+
+
+<h2 id="visualize-alignments-in-igv">Visualize alignments in IGV</h2>
+<p>IGV is a stand-alone genome browser. Please check their website
+(<a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a>) for all the formats that IGV can
+display. For our visualization purposes we will use the BAM and bigWig
+formats.</p>
+<p>When uploading a BAM file into the genome browser, the browser will look
+for the index of the BAM file in the same folder where the BAM files is.
+The index file should have the same name as the BAM file and the suffix
+<code class="codehilite"><span class="na">.bai</span></code>. Finally, to create the index of a BAM file you need to make sure
+that the file is sorted according to chromosomal coordinates.</p>
+<p>Sort alignments according to chromosomal position and store the result
+in the file with the prefix <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">sorted</span></code>:</p>
+<div class="codehilite"><pre><span></span><span class="n">samtools</span> <span class="n">sort</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">o</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+</pre></div>
+
+
+<p>Index the sorted file.</p>
+<div class="codehilite"><pre><span></span><span class="n">samtools</span> <span class="k">index</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+</pre></div>
+
+
+<p>The indexing will create a file called <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span><span class="p">.</span><span class="n">bai</span></code>. Note that
+you don’t have to specify the name of the index file when running
+<code class="codehilite"><span class="n">samtools</span> <span class="k">index</span></code>, it simply appends a <code class="codehilite"><span class="na">.bai</span></code> suffix to the input BAM
+file.</p>
+<p>Another way to visualize the alignments is to convert the BAM file into
+a bigWig file. The bigWig format is for display of dense, continuous
+data and the data will be displayed as a graph. The resulting bigWig
+files are in an indexed binary format.</p>
+<p>The BAM to bigWig conversion takes place in two steps. Firstly, we
+convert the BAM file into a bedgraph, called <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">bedgraph</span></code>, using the
+tool <code class="codehilite"><span class="n">genomeCoverageBed</span></code> from BEDTools. Then we convert the bedgraph
+into a bigWig binary file called <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">bw</span></code>, using <code class="codehilite"><span class="n">bedGraphToBigWig</span></code>
+from the UCSC tools:</p>
+<div class="codehilite"><pre><span></span><span class="n">genomeCoverageBed</span> <span class="o">-</span><span class="n">bg</span> <span class="o">-</span><span class="n">ibam</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span> <span class="o">-</span><span class="k">g</span> <span class="n">bowtie_index</span><span class="o">/</span><span class="n">mouse</span><span class="p">.</span><span class="n">mm10</span><span class="p">.</span><span class="n">genome</span> <span class="o">&gt;</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">bedgraph</span>
+<span class="n">bedGraphToBigWig</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">bedgraph</span> <span class="n">bowtie_index</span><span class="o">/</span><span class="n">mouse</span><span class="p">.</span><span class="n">mm10</span><span class="p">.</span><span class="n">genome</span> <span class="n">Oct4</span><span class="p">.</span><span class="n">bw</span>
+</pre></div>
+
+
+<p>Both of the commands above take as input a file called
+<code class="codehilite"><span class="n">mouse</span><span class="p">.</span><span class="n">mm10</span><span class="p">.</span><span class="n">genome</span></code> that is stored under the subdirectory
+<code class="codehilite"><span class="n">bowtie_index</span></code>. These genome files are tab-delimited and describe the
+size of the chromosomes for the organism of interest. When using the
+UCSC Genome Browser, Ensembl, or Galaxy, you typically indicate which
+species/genome build you are working with. The way you do this for
+BEDTools is to create a “genome” file, which simply lists the names of
+the chromosomes (or scaffolds, etc.) and their size (in basepairs).</p>
+<p>BEDTools includes pre-defined genome files for human and mouse in the
+<code class="codehilite"><span class="n">genomes</span></code> subdirectory included in the BEDTools distribution.</p>
+<p>Now we will load the data into the IGV browser for visualization. In
+order to launch IGV double click on the <code class="codehilite"><span class="n">IGV</span> <span class="mi">2</span><span class="p">.</span><span class="mi">3</span></code> icon on your Desktop.
+Ignore any warnings and when it opens you have to load the genome of
+interest.</p>
+<p>On the top left of your screen choose from the drop down menu
+<code class="codehilite"><span class="n">Mouse</span> <span class="p">(</span><span class="n">mm10</span><span class="p">)</span></code>. If it doesn’t appear in list, click <code class="codehilite"><span class="k">More</span> <span class="p">..</span></code>, type
+<code class="codehilite"><span class="n">mm10</span></code> in the Filter section, choose the mouse genome and press OK. Then
+in order to load the desire files go to:</p>
+<div class="codehilite"><pre><span></span><span class="n">File</span> <span class="o">&gt;</span> <span class="k">Load</span> <span class="k">from</span> <span class="n">File</span>
+</pre></div>
+
+
+<p>On the pop up window navigate to Desktop -&gt; chipseq folder and select
+the file <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span></code>.</p>
+<p>Repeat these steps in order to load <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">bw</span></code> as well.</p>
+<p>Select <code class="codehilite"><span class="n">chr1</span></code> from the drop down menu on the top left. Right click on
+the name of <code class="codehilite"><span class="n">Oct4</span><span class="p">.</span><span class="n">bw</span></code> and choose Maximum under the Windowing Function.
+Right click again and select Autoscale.</p>
+<p>In order to see the aligned reads of the BAM file, you need to zoom in
+to a specific region. For example, look for gene <code class="codehilite"><span class="n">Lemd1</span></code> in the search
+box.</p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>What is the main difference between the visualization of BAM and bigWig files?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>The actual alignment of reads that stack to a particular region can be displayed using the information stored in a BAM format. The bigWig format is for display of dense, continuous data that will be displayed in the Genome Browser as a graph.</p>
+</div>
+</details>
+<p>Using the <code class="codehilite"><span class="o">+</span></code> button on the top right, zoom in to see more of the
+details of the alignments.</p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>What do you think the different colors mean?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>The different color represents four nucleotides, e.g. blue is Cytidine (C), red is Thymidine (T).</p>
+</div>
+</details>
+<h2 id="practice-makes-perfect">Practice Makes Perfect!</h2>
+<p>In the chipseq folder you will find the file <code class="codehilite"><span class="n">gfp</span><span class="p">.</span><span class="n">fastq</span></code>. Follow the
+above described analysis, from the bowtie2 alignment step, for this
+dataset as well. You will need these files for the ChIP-Seq module.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../qc/handout/handout/" title="Quality Control" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Quality Control
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                RNA-Seq
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2019-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+  </body>
+</html>
