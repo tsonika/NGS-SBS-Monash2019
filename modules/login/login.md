@@ -46,7 +46,7 @@ For example, if user (trainee1) is logged into sbs-01.erc.monash.edu, user can s
 
      scp trainee1@sbs-01.erc.monash.edu
 
-Using the password provided in the https://tsonika.github.io/NGS-SBS-Monash2019/login/login/ section of the manual.
+Using the password provided in the above section.
 
 
 ## Acknowledgements
