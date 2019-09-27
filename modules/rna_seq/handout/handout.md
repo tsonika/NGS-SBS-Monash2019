@@ -584,6 +584,7 @@ samples:
         ??? "Hint"
             `dim(y)` 
     !!! success ""
+        ???  "Answer"
         16494
 !!! note "Question"
     How many genes were filtered out?
@@ -721,7 +722,7 @@ We can write out these results to our current directory.
     How many differentially expressed genes are there?
 
     !!! success ""
-
+        ???  "Answer"
         4435
 
 !!! note "Question"
@@ -729,6 +730,7 @@ We can write out these results to our current directory.
     !!! hint ""
         ??? "Hint"
     !!! success ""
+        ???  "Answer"
         2339 2096
 
 If you need to quit the `R` console, type:
