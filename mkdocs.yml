@@ -58,7 +58,7 @@ nav:
     - Introduction to Command Line: cli/handout/handout.md
     - Quality Control: qc/handout/handout.md
     - Read Alignment: alignment/handout/handout.md
-    - RNA-Seq: rna-seq/handout/handout.md
+    - RNA-Seq: rna_seq/handout/handout.md
     - De Novo Genome Assembly: denovo/handout/handout.md
     - De Novo Canu: denovo-canu/handout/handout.md
 

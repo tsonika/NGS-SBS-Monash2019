@@ -146,6 +146,7 @@ this command yourself - we have done this for you.
 
 !!! failure "STOP"
     **DO NOT run this command. This has already been run for you.**
+
         bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
 
 Tophat2 has a number of parameters in order to perform the alignment. To
@@ -204,6 +205,7 @@ pre-aligned the `2cells` data for you using the following command:
 You **DO NOT** need to run this command yourself - we have done this for
 !!! failure "STOP"
     **DO NOT run this command. This has already been run for you.**
+
         tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
 
 Align the `6h` data yourself using the following command:
@@ -245,7 +247,9 @@ Open the `rnaseq` directory on your Desktop and double-click the
 `tophat` subdirectory and then the `ZV9_2cells` directory.
 
 1.  Launch IGV by double-clicking the “IGV 2.3.\*” icon on the Desktop
-    (ignore any warnings that you may get as it opens). *NOTE: IGV may
+    (ignore any warnings that you may get as it opens). 
+
+    *NOTE: IGV may
     take several minutes to load for the first time, please be patient.*
 
 2.  Choose “Zebrafish (Zv9)” from the drop-down box in the top left of
