@@ -144,9 +144,10 @@ you.
 The command to create an index is as follows. You DO NOT need to run
 this command yourself - we have done this for you.
 
-```diff
- - bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
-```
+!!! failure "STOP"
+    **DO NOT run this command. This has already been run for you.**
+        bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
+
 Tophat2 has a number of parameters in order to perform the alignment. To
 view them all type:
 
@@ -176,7 +177,7 @@ head -n 20 data/2cells_1.fastq
 Some other parameters that we are going to use to run Tophat are listed
 below:
 
--p `-g` : Maximum number of multihits allowed. Short reads are likely to map
+- `-g` : Maximum number of multihits allowed. Short reads are likely to map
     to more than one location in the genome even though these reads can
     have originated from only one of these regions. In RNA-seq we allow
     for a limited number of multihits, and in this case we ask Tophat to
@@ -201,11 +202,9 @@ alignments, even for this subset of reads. Therefore, we have
 pre-aligned the `2cells` data for you using the following command:
 
 You **DO NOT** need to run this command yourself - we have done this for
-you.
-
-```bash
-tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
-```
+!!! failure "STOP"
+    **DO NOT run this command. This has already been run for you.**
+        tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
 
 Align the `6h` data yourself using the following command:
 
@@ -525,7 +524,8 @@ to do this.
 We start by using the useMart function of BiomaRt to access the human
 data base of ensemble gene ids.
 ```
-    human<-useMart(host="www.ensembl.org", "ENSEMBL_MART_ENSEMBL", dataset="hsapiens_gene_ensembl") attributes=c("ensembl_gene_id", "entrezgene_id","hgnc_symbol")
+    human<-useMart(host="www.ensembl.org", "ENSEMBL_MART_ENSEMBL", dataset="hsapiens_gene_ensembl") 
+    attributes=c("ensembl_gene_id", "entrezgene_id","hgnc_symbol")
 ```
 We create a vector of our ensemble gene ids.
 ```
@@ -574,13 +574,22 @@ samples:
     keep <-rowSums( cpm(y)>1) >=3
     y <- y[keep, ]
 ```
-How many rows (genes) are retained now
+!!! note "Question"
+    How many rows (genes) are retained now
+    !!! hint ""
+        ??? "Hint"
+            `dim(y)` 
+    !!! success ""
+        16494
+!!! note "Question"
+    How many genes were filtered out?
+    !!! hint ""
+        ??? "Hint"
+        do 37435-16494.
+    !!! success ""
 
-`dim(y)` would give you 16494
 
-How many genes were filtered out?
 
-do 37435-16494.
 
 As we have removed the lowly expressed genes the total number of counts
 per sample has not changed greatly. Let us check the total number of
@@ -589,7 +598,9 @@ reads per sample in the original data (data) and now after filtering.
 Before:
 ```
     colSums(data[,1:7])
+```
     After filtering:
+```
     colSums(y$counts)
 ```
 We will now perform normalization to take account of different library
@@ -604,9 +615,10 @@ We will check the calculated normalization factors:
 Lets have a look at whether the samples cluster by condition. (You
 should produce a plot as shown in Figure 4):
 
+```
     plotMDS(y, col=as.numeric(y$samples$group))
-
-[H] ![image](MDS.png) [fig:MDS plot]
+```
+![image](MDS.png) [fig:MDS plot]
 
 Does the MDS plot indicate a difference in gene expression between the
 Controls and the DHT treated samples?
@@ -621,20 +633,21 @@ Coefficient of Variation (BCV) of the dataset averaged over all genes.
 
 By using verbose we get the Disp and BCV values printed on the screen
 
+```
     y <- estimateCommonDisp(y, verbose=T)
-
+```
 What value to you see for BCV?
 
 We now estimate gene-specific dispersion.
-
+```
     y <- estimateTagwiseDisp(y) 
-
+```
 We will plot the tagwise dispersion and the common dispersion (You
 should obtain a plot as shown in the Figure 5):
-
+```
     plotBCV(y)
-
-[H] ![image](BCV.png) [fig:BCV plot]
+```
+![image](BCV.png) [fig:BCV plot]
 
 We see here that the common dispersion estimates the overall Biological
 Coefficient of Variation (BCV) of the dataset averaged over all genes.
@@ -676,9 +689,9 @@ table of results:
     res <- topTags(et, n=nrow(y$counts), adjust.method="BH")$table
 ```
 Let’s have a look at the first rows of the table:
-
+```
     head(res)
-
+```
 To get a summary of the number of differentially expressed genes we can
 use the decideTestsDGE function.
 ```
@@ -687,27 +700,37 @@ use the decideTestsDGE function.
 This tells us that 2096 genes are downregulated and 2339 genes are
 upregulated at 5% FDR.We will now make subsets of the most significant
 upregulated and downregulated genes.
-
+```
     alpha=0.05
     lfc=1.5
     edgeR_res_sig<-res[res$FDR<alpha,]
-    edgeR_res_sig_lfc <-edgeR_res_sig[abs(edgeR_res_sig$logFC) >= lfc,]head(edgeR_res_sig, n=20)nrow(edgeR_res_sig)nrow(edgeR_res_sig_lfc)
-
+    edgeR_res_sig_lfc <-edgeR_res_sig[abs(edgeR_res_sig$logFC) >= lfc,]
+    head(edgeR_res_sig, n=20)nrow(edgeR_res_sig)nrow(edgeR_res_sig_lfc)
+```
 We can write out these results to our current directory.
 
+```
     write.table(edgeR_res_sig , "edgeR_res_sig.txt", sep="\t", col.names=NA, quote=F)
     write.table(edgeR_res_sig_lfc , "edgeR_res_sig_lfc.txt", sep="\t", col.names=NA, quote=F)
+```
+!!! note "Question"
+    How many differentially expressed genes are there?
 
-How many differentially expressed genes are there?
+    !!! success ""
 
-4435
+        4435
 
-How many upregulated genes and downregulated genes do we have?
+!!! note "Question"
+    How many upregulated genes and downregulated genes do we have?
+    !!! hint ""
+        ??? "Hint"
+    !!! success ""
+        2339 2096
 
-2339 2096
-
+If you need to quit the `R` console, type:
+`
     q()
-
+`
 You can save your workspace by typing `Y` on prompt.
 
 Please note that the output files you are creating are saved in your
