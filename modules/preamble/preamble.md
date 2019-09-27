@@ -55,13 +55,13 @@ The following styled code is not to be entered at a terminal, it is
 simply to show you the syntax of the command. You must use your own
 judgement to substitute in the correct arguments, options, filenames etc
 
-``` {style="command_syntax"}
+```{style="command_syntax"}
 tophat [options]* <index_base> <reads_1> <reads_2>
 ```
 
 The following is an example how of R commands are styled:
 
-``` {style="R"}
+``` {style="Rsource"}
 R --no-save
 library(plotrix) 
 data <- read.table("run_25/stats.txt", header=TRUE) 
@@ -73,12 +73,12 @@ The following icons are used in the margin, throughout the documentation
 to help you navigate around the document more easily:
 
 \hspace*{.2cm}
-Important\
-For reference\
-Follow these steps\
-Questions to answer\
-Warning - STOP and read\
-Bonus exercise for fast learners\
+Important \
+For reference \
+Follow these steps \
+Questions to answer \
+Warning - STOP and read \
+Bonus exercise for fast learners \
 Advanced exercise for super-fast learners\
 
 Resources Used
