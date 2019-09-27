@@ -293,7 +293,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+    <a href="../../../rna-seq/handout/handout.md" title="RNA-Seq" class="md-nav__link">
       RNA-Seq
     </a>
   </li>
@@ -1402,7 +1402,7 @@ infoseq contigs.fasta
 <li>Align the Illumina reads (R1 and R2) to the draft PacBio assembly, e.g. <fn>genome.fasta</fn>:</li>
 </ul>
 <div class="codehilite"><pre><span></span>bwa index genome.fasta
-bwa mem -t 32 genome.fasta R1.fq R2.fq | samtools sort &gt; aln.bam
+bwa mem -t 32 genome.fasta illumina_R1.fastq.gz illumina_R2.fastq.gz | samtools sort &gt; aln.bam
 </pre></div>
 
 <ul>
@@ -1474,12 +1474,12 @@ samtools faidx genome.fasta
 <h3 id="get-data_1">Get data</h3>
 <p>We will use the same Illumina data as we used above:</p>
 <ul>
-<li><fn>R1.fq</fn>: the Illumina forward reads</li>
-<li><fn>R2.fq</fn>: the Illumina reverse reads</li>
+<li><fn>illumina_R1.fastq.gz</fn>: the Illumina forward reads</li>
+<li><fn>illumina_R2.fastq.gz</fn>: the Illumina reverse reads</li>
 </ul>
 <h3 id="assemble_1">Assemble</h3>
 <p>Run Spades:</p>
-<div class="codehilite"><pre><span></span>spades.py -1 R1.fq -2 R2.fq --careful --cov-cutoff auto -o spades_assembly_all_illumina
+<div class="codehilite"><pre><span></span>spades.py -1 illumina_R1.fastq.gz -2 illumina_R2.fastq.gz --careful --cov-cutoff auto -o spades_assembly_all_illumina
 </pre></div>
 
 <ul>
