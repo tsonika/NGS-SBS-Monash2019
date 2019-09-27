@@ -828,9 +828,12 @@ small. The the index for the <code class="codehilite"><span class="n">Danio</spa
 you.</p>
 <p>The command to create an index is as follows. You DO NOT need to run
 this command yourself - we have done this for you.</p>
-<p><div class="codehilite"><pre><span></span> - bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
-</pre></div>
-Tophat2 has a number of parameters in order to perform the alignment. To
+<div class="admonition failure">
+<p class="admonition-title">STOP</p>
+<p><strong>DO NOT run this command. This has already been run for you.</strong></p>
+<p>bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9</p>
+</div>
+<p>Tophat2 has a number of parameters in order to perform the alignment. To
 view them all type:</p>
 <div class="codehilite"><pre><span></span>tophat2 --help
 </pre></div>
@@ -1142,8 +1145,9 @@ useful to have other annotations such as the gene symbol and entrez id.
 Next we will add in these annotations. We will use the BiomaRt package
 to do this.</p>
 <p>We start by using the useMart function of BiomaRt to access the human
-data base of ensemble gene ids.
-<div class="codehilite"><pre><span></span>    <span class="n">human</span><span class="o">&lt;-</span><span class="nf">useMart</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;www.ensembl.org&quot;</span><span class="p">,</span> <span class="s">&quot;ENSEMBL_MART_ENSEMBL&quot;</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="s">&quot;hsapiens_gene_ensembl&quot;</span><span class="p">)</span> <span class="n">attributes</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ensembl_gene_id&quot;</span><span class="p">,</span> <span class="s">&quot;entrezgene&quot;</span><span class="p">,</span><span class="s">&quot;hgnc_symbol&quot;</span><span class="p">)</span>
+data base of ensemble gene ids.</p>
+<p><div class="codehilite"><pre><span></span>    <span class="n">human</span><span class="o">&lt;-</span><span class="nf">useMart</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;www.ensembl.org&quot;</span><span class="p">,</span> <span class="s">&quot;ENSEMBL_MART_ENSEMBL&quot;</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="s">&quot;hsapiens_gene_ensembl&quot;</span><span class="p">)</span> 
+    <span class="n">attributes</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ensembl_gene_id&quot;</span><span class="p">,</span> <span class="s">&quot;entrezgene_id&quot;</span><span class="p">,</span><span class="s">&quot;hgnc_symbol&quot;</span><span class="p">)</span>
 </pre></div>
 We create a vector of our ensemble gene ids.
 <div class="codehilite"><pre><span></span>    <span class="n">ensembl_names</span><span class="o">&lt;-</span><span class="nf">rownames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -1197,8 +1201,9 @@ per sample has not changed greatly. Let us check the total number of
 reads per sample in the original data (data) and now after filtering.</p>
 <p>Before:
 <div class="codehilite"><pre><span></span>    <span class="n">colSums</span><span class="p">(</span><span class="k">data</span><span class="p">[,</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
-    <span class="k">After</span> <span class="n">filtering</span><span class="p">:</span>
-    <span class="n">colSums</span><span class="p">(</span><span class="n">y$counts</span><span class="p">)</span>
+</pre></div>
+    After filtering:
+<div class="codehilite"><pre><span></span>    <span class="n">colSums</span><span class="p">(</span><span class="n">y$counts</span><span class="p">)</span>
 </pre></div>
 We will now perform normalization to take account of different library
 size:
@@ -1223,21 +1228,17 @@ expression between the conditions.</p>
 dispersion. The common dispersion estimates the overall Biological
 Coefficient of Variation (BCV) of the dataset averaged over all genes.</p>
 <p>By using verbose we get the Disp and BCV values printed on the screen</p>
-<div class="codehilite"><pre><span></span><span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">estimateCommonDisp</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+<p><div class="codehilite"><pre><span></span>    <span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">estimateCommonDisp</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
 </pre></div>
-
-
-<p>What value to you see for BCV?</p>
+What value to you see for BCV?</p>
 <p>We now estimate gene-specific dispersion.</p>
-<div class="codehilite"><pre><span></span><span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">estimateTagwiseDisp</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>    <span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">estimateTagwiseDisp</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> 
 </pre></div>
-
 
 <p>We will plot the tagwise dispersion and the common dispersion (You
 should obtain a plot as shown in the Figure 5):</p>
-<div class="codehilite"><pre><span></span><span class="n">plotBCV</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>    <span class="n">plotBCV</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
-
 
 <p>[H] <img alt="image" src="../BCV.png" /> [fig:BCV plot]</p>
 <p>We see here that the common dispersion estimates the overall Biological
@@ -1272,39 +1273,46 @@ table of results:
 <div class="codehilite"><pre><span></span>    <span class="n">res</span> <span class="o">&lt;-</span> <span class="nf">topTags</span><span class="p">(</span><span class="n">et</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="nf">nrow</span><span class="p">(</span><span class="n">y</span><span class="o">$</span><span class="n">counts</span><span class="p">),</span> <span class="n">adjust.method</span><span class="o">=</span><span class="s">&quot;BH&quot;</span><span class="p">)</span><span class="o">$</span><span class="n">table</span>
 </pre></div>
 Let’s have a look at the first rows of the table:</p>
-<div class="codehilite"><pre><span></span><span class="n">head</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<p><div class="codehilite"><pre><span></span>    <span class="n">head</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
-
-
-<p>To get a summary of the number of differentially expressed genes we can
+To get a summary of the number of differentially expressed genes we can
 use the decideTestsDGE function.
 <div class="codehilite"><pre><span></span>    <span class="nf">summary</span><span class="p">(</span><span class="n">de</span> <span class="o">&lt;-</span> <span class="nf">decideTestsDGE</span><span class="p">(</span><span class="n">et</span><span class="p">))</span>
 </pre></div>
 This tells us that 2096 genes are downregulated and 2339 genes are
 upregulated at 5% FDR.We will now make subsets of the most significant
 upregulated and downregulated genes.</p>
-<div class="codehilite"><pre><span></span><span class="n">alpha</span><span class="o">=</span><span class="m">0.05</span>
-<span class="n">lfc</span><span class="o">=</span><span class="m">1.5</span>
-<span class="n">edgeR_res_sig</span><span class="o">&lt;-</span><span class="n">res[res</span><span class="o">$</span><span class="n">FDR</span><span class="o">&lt;</span><span class="n">alpha</span><span class="p">,</span><span class="n">]</span>
-<span class="n">edgeR_res_sig_lfc</span> <span class="o">&lt;-</span><span class="n">edgeR_res_sig</span><span class="nf">[abs</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="o">$</span><span class="n">logFC</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">lfc</span><span class="p">,</span><span class="nf">]head</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span><span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">)</span><span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig_lfc</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>    <span class="n">alpha</span><span class="o">=</span><span class="m">0.05</span>
+    <span class="n">lfc</span><span class="o">=</span><span class="m">1.5</span>
+    <span class="n">edgeR_res_sig</span><span class="o">&lt;-</span><span class="n">res[res</span><span class="o">$</span><span class="n">FDR</span><span class="o">&lt;</span><span class="n">alpha</span><span class="p">,</span><span class="n">]</span>
+    <span class="n">edgeR_res_sig_lfc</span> <span class="o">&lt;-</span><span class="n">edgeR_res_sig</span><span class="nf">[abs</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="o">$</span><span class="n">logFC</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">lfc</span><span class="p">,</span><span class="nf">]head</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
+    <span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">)</span>
+    <span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig_lfc</span><span class="p">)</span>
 </pre></div>
-
 
 <p>We can write out these results to our current directory.</p>
-<div class="codehilite"><pre><span></span><span class="k">write</span><span class="p">.</span><span class="k">table</span><span class="p">(</span><span class="n">edgeR_res_sig</span> <span class="p">,</span> <span class="ss">&quot;edgeR_res_sig.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="ss">&quot;\t&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="k">names</span><span class="o">=</span><span class="n">NA</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
-<span class="k">write</span><span class="p">.</span><span class="k">table</span><span class="p">(</span><span class="n">edgeR_res_sig_lfc</span> <span class="p">,</span> <span class="ss">&quot;edgeR_res_sig_lfc.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="ss">&quot;\t&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="k">names</span><span class="o">=</span><span class="n">NA</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>    <span class="k">write</span><span class="p">.</span><span class="k">table</span><span class="p">(</span><span class="n">edgeR_res_sig</span> <span class="p">,</span> <span class="ss">&quot;edgeR_res_sig.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="ss">&quot;\t&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="k">names</span><span class="o">=</span><span class="n">NA</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+    <span class="k">write</span><span class="p">.</span><span class="k">table</span><span class="p">(</span><span class="n">edgeR_res_sig_lfc</span> <span class="p">,</span> <span class="ss">&quot;edgeR_res_sig_lfc.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="ss">&quot;\t&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="k">names</span><span class="o">=</span><span class="n">NA</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
 </pre></div>
 
-
+<div class="admonition note">
+<p class="admonition-title">Question</p>
 <p>How many differentially expressed genes are there?</p>
-<p>4435</p>
-<p>How many upregulated genes and downregulated genes do we have?</p>
-<p>2339 2096</p>
-<div class="codehilite"><pre><span></span><span class="n">q</span><span class="p">()</span>
+<div class="admonition success">
+<details><summary>Answer</summary><p>4435 </p>
+</details>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>How many upregulated genes and downregulated genes do we have?
+    ??? &ldquo;Answer&rdquo;
+        2339 2096</p>
+</div>
+<p>If you want to quit <code class="codehilite"><span class="n">R</span></code> console, type:
+<div class="codehilite"><pre><span></span>    <span class="n">q</span><span class="p">()</span>
 </pre></div>
-
-
-<p>You can save your workspace by typing <code class="codehilite"><span class="n">Y</span></code> on prompt.</p>
+You can save your workspace by typing <code class="codehilite"><span class="n">Y</span></code> on prompt.</p>
 <p>Please note that the output files you are creating are saved in your
 present working directory. If you are not sure where you are in the file
 system try typing <code class="codehilite"><span class="n">pwd</span></code> on your command prompt to find out.</p>
