@@ -40,7 +40,7 @@
     
     
       
-        <title>Handout - Introduction to NGS Workshop</title>
+        <title>RNA-Seq - Introduction to NGS Workshop</title>
       
     
     
@@ -107,7 +107,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Handout
+                RNA-Seq
               
             </span>
           
@@ -210,10 +210,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Hands-on Modules
@@ -289,11 +291,196 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../rna-seq/handout/handout.md" title="RNA-Seq" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RNA-Seq
+      </label>
+    
+    <a href="./" title="RNA-Seq" class="md-nav__link md-nav__link--active">
       RNA-Seq
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author-information" class="md-nav__link">
+    Author Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alignment-visualisation-in-igv" class="md-nav__link">
+    Alignment Visualisation in IGV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-gene-counts" class="md-nav__link">
+    Generating Gene Counts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoform-expression-and-transcriptome-assembly" class="md-nav__link">
+    Isoform Expression and Transcriptome Assembly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visulaizing-transcript-assembly" class="md-nav__link">
+    Visulaizing transcript assembly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-gene-expression-analysis-using-edger" class="md-nav__link">
+    Differential Gene Expression Analysis using edgeR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experiment-design" class="md-nav__link">
+    Experiment Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-environment_1" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-in-data" class="md-nav__link">
+    Read in Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-gene-annotation" class="md-nav__link">
+    Add Gene annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-checks" class="md-nav__link">
+    Data checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-for-differential-expression" class="md-nav__link">
+    Testing for Differential Expression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -531,7 +718,7 @@
               
                 
                 
-                  <h1>Handout</h1>
+                  <h1>RNA-Seq</h1>
                 
                 <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
 <p>After completing this practical the trainee should be able to:</p>
@@ -566,33 +753,51 @@
 <h2 id="author-information">Author Information</h2>
 <p><em>Primary Author(s):</em>
 Sonika Tyagi, Monash University and  Susan Corley, UNSW</p>
-<p><em>Contributor)s)</em>
+<p><em>Contributor(s)</em>
 Myrto Kostadima EBI UK</p>
 <h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
 <h3 id="tools-used">Tools Used</h3>
+<ul>
+<li>
 <p>Tophat
 :   <a href="https://ccb.jhu.edu/software/tophat/index.shtml">https://ccb.jhu.edu/software/tophat/index.shtml</a></p>
+</li>
+<li>
 <p>Stringtie
 :  <a href="http://https://ccb.jhu.edu/software/stringtie/">http://https://ccb.jhu.edu/software/stringtie/</a></p>
+</li>
+<li>
 <p>Samtools
 :    <a href="http://www.htslib.org/">http://www.htslib.org/</a></p>
+</li>
+<li>
 <p>BEDTools
 :   <a href="https://github.com/arq5x/bedtools2">https://github.com/arq5x/bedtools2</a></p>
+</li>
+<li>
 <p>UCSC tools
 :    <a href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a></p>
+</li>
+<li>
 <p>IGV
 :   <a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a></p>
+</li>
+<li>
 <p>FeatureCount
 :    <a href="http://subread.sourceforge.net/">http://subread.sourceforge.net/</a></p>
+</li>
+<li>
 <p>edgeR pakcage
 :    <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">https://bioconductor.org/packages/release/bioc/html/edgeR.html</a></p>
+</li>
+</ul>
 <h3 id="sources-of-data">Sources of Data</h3>
 <p><a href="http://www.ebi.ac.uk/ena/data/view/ERR022484">http://www.ebi.ac.uk/ena/data/view/ERR022484</a>\
 <a href="http://www.ebi.ac.uk/ena/data/view/ERR022485">http://www.ebi.ac.uk/ena/data/view/ERR022485</a>\
 <a href="http://www.pnas.org/content/suppl/2008/12/16/0807121105.DCSupplemental">http://www.pnas.org/content/suppl/2008/12/16/0807121105.DCSupplemental</a></p>
 <h2 id="introduction">Introduction</h2>
 <p>The goal of this hands-on session is to perform some basic tasks in the
-downstream analysis of RNA-seq data.\</p>
+downstream analysis of RNA-seq data.</p>
 <p>First we will use RNA-seq data from zebrafish. You will align one set of
 reads to the zebrafish using Tophat2. You will then view the aligned
 reads using the IGV viewer. We will also demonstrate how gene counts can
@@ -615,10 +820,10 @@ we will only use a subset of the reads.</p>
 <p>The data files are contained in the subdirectory called <code class="codehilite"><span class="k">data</span></code> and are
 the following:</p>
 <p><code class="codehilite"><span class="mi">2</span><span class="n">cells_1</span><span class="p">.</span><span class="n">fastq</span></code> and <code class="codehilite"><span class="mi">2</span><span class="n">cells_2</span><span class="p">.</span><span class="n">fastq</span></code>
-:   \
+: <br />
     These files are based on RNA-seq data of a 2-cell zebrafish embryo</p>
 <p><code class="codehilite"><span class="mi">6</span><span class="n">h_1</span><span class="p">.</span><span class="n">fastq</span></code> and <code class="codehilite"><span class="mi">6</span><span class="n">h_2</span><span class="p">.</span><span class="n">fastq</span></code>
-:   \
+: <br />
     These files are based on RNA-seq data of zebrafish embryos 6h post
     fertilization</p>
 <p>Open the Terminal and go to the <code class="codehilite"><span class="n">rnaseq</span></code> working directory:</p>
@@ -629,7 +834,9 @@ the following:</p>
 within the <strong><code class="codehilite"><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">rnaseq</span></code></strong> directory.</p>
 <p>Check that the <code class="codehilite"><span class="k">data</span></code> directory contains the above-mentioned files by
 typing:</p>
-<p><code class="codehilite"><span class="n">shell</span><span class="n">ls</span> <span class="k">data</span></code></p>
+<div class="codehilite"><pre><span></span> ls data
+</pre></div>
+
 <h2 id="alignment">Alignment</h2>
 <p>There are numerous tools for performing short read alignment and the
 choice of aligner should be carefully made according to the analysis
@@ -643,8 +850,11 @@ you.</p>
 this command yourself - we have done this for you.</p>
 <div class="admonition failure">
 <p class="admonition-title">STOP</p>
-<p><strong>DO NOT run this command. This has already been run for you.</strong>
-    bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9</p>
+<p><strong>DO NOT run this command. This has already been run for you.</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">bowtie2</span><span class="o">-</span><span class="n">build</span> <span class="n">genome</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">dna</span><span class="p">.</span><span class="n">fa</span> <span class="n">genome</span><span class="o">/</span><span class="n">ZV9</span>
+</pre></div>
+
+
 </div>
 <p>Tophat2 has a number of parameters in order to perform the alignment. To
 view them all type:</p>
@@ -696,8 +906,11 @@ alignments, even for this subset of reads. Therefore, we have
 pre-aligned the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data for you using the following command:</p>
 <div class="admonition failure">
 <p class="admonition-title">STOP</p>
-<p><strong>DO NOT run this command. This has already been run for you.</strong>
-    tophat2 &ndash;solexa-quals -g 2 &ndash;library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq</p>
+<p><strong>DO NOT run this command. This has already been run for you.</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">tophat2</span> <span class="c1">--solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq</span>
+</pre></div>
+
+
 </div>
 <p>Align the <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data yourself using the following command:</p>
 <div class="codehilite"><pre><span></span>    <span class="c1"># Takes approx. 20mins</span>
@@ -730,8 +943,9 @@ in the data set.</p>
 <ol>
 <li>
 <p>Launch IGV by double-clicking the “IGV 2.3.*” icon on the Desktop
-    (ignore any warnings that you may get as it opens). <em>NOTE: IGV may
-    take several minutes to load for the first time, please be patient.</em></p>
+    (ignore any warnings that you may get as it opens). </p>
+<p><em>NOTE: IGV may
+take several minutes to load for the first time, please be patient.</em></p>
 </li>
 <li>
 <p>Choose “Zebrafish (Zv9)” from the drop-down box in the top left of
@@ -811,74 +1025,84 @@ format.</p>
 <p>To run string tie, the basic command is:</p>
 <p>Stringtie has a number of parameters in order to perform transcriptome
 assembly and quantification. To view them all type:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="c1">--help</span>
+<p><div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="c1">--help</span>
 </pre></div>
-
-
-<p>We aim to reconstruct the transcriptome for both samples by using the
+We aim to reconstruct the transcriptome for both samples by using the
 Ensembl annotation as a guide. </p>
 <p>The Ensembl annotation for <code class="codehilite"><span class="n">Danio</span> <span class="n">rerio</span></code> is available in
 <code class="codehilite"><span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span></code>.</p>
-<p>The general format of the <code class="codehilite"><span class="n">stringtie</span></code> command is:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aligned_reads_file</span><span class="p">.</span><span class="n">bam</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">options</span><span class="o">]</span><span class="w"></span>
+<p>The general format of the <code class="codehilite"><span class="n">stringtie</span></code> command is:
+<div class="codehilite"><pre><span></span><span class="w">    </span><span class="n">stringtie</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aligned_reads_file</span><span class="p">.</span><span class="n">bam</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">options</span><span class="o">]</span><span class="w"></span>
 </pre></div>
-
-
-<p>Where the input is the aligned reads (either in SAM or BAM format).</p>
+Where the input is the aligned reads (either in SAM or BAM format).</p>
 <p>Perform transcriptome assembly, strictly using the supplied GTF
 annotations, for the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> and <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data using cufflinks:</p>
-<p>For instance, to run StringTie on 2cells BAM file:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div>
-
-
-<p>Repeat this command on the 6h BAM file:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div>
-
-
-<p>:   -p = number of processing threads</p>
-<p>:   -G = reference annotation file</p>
-<p>:   -o = output file location and name.</p>
+<p>For instance, to run StringTie on 2cells BAM file:
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+</pre></div></p>
+<p>Repeat this command on the 6h BAM file:
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+</pre></div></p>
+<ul>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">p</span></code> = number of processing threads</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="k">G</span></code> = reference annotation file</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> = output file location and name.</p>
+</li>
+</ul>
 <p>Most RNA sequencing experiments will have multiple samples. As such, Stringtie has a function to merge all transcripts assembled across the samples, which enables inter-sample comparisons to be made. It does this by first assembling all transcripts within each sample, merging the the transcripts and re-running the assembly based off a merged list of genes.</p>
 <p>Prior to running a merge function within stringtie:
 We need to create a mergelist.txt file before utilising the merge function. This is a list of all .gtf files created by stringtie in the above step and can be made in a text editor such as vi or nano. For this exercise, there is a file pre-made for you. The txt file will direct the merge function to look for the names of all the .gtf files that we want to merge.</p>
-<p>To merge StringTie files</p>
-<div class="codehilite"><pre><span></span><span class="n">ls</span> <span class="n">stringtie</span><span class="cm">/*.gtf &gt;mergelist.txt</span>
-<span class="cm">less mergelist.txt</span>
+<p>To merge StringTie files
+<div class="codehilite"><pre><span></span>    <span class="n">ls</span> <span class="n">stringtie</span><span class="cm">/*.gtf &gt;mergelist.txt</span>
+<span class="cm">    less mergelist.txt </span>
 
-<span class="cm">stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt</span>
+<span class="cm">    stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt</span>
 </pre></div>
-
-
-<p>(mergelist.txt is a text file that will have a list of all .gtf generated by stringtie in the above steps)</p>
-<p>Note how a reference gene annotation (Danio_rerio.Zv9.66.gtf) is utilised in this case. This makes use of information we already have in order to assemble the transcriptome of our RNA seq data.</p>
+(<code class="codehilite"><span class="n">mergelist</span><span class="p">.</span><span class="n">txt</span></code> is a text file that will have a list of all <strong>.gtf</strong> generated by stringtie in the above steps)</p>
+<p>Note how a reference gene annotation (<code class="codehilite"><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span></code>) is utilised in this case. This makes use of information we already have in order to assemble the transcriptome of our RNA seq data.</p>
 <p>The next step is an optional step to see how your merged annotation compares to reference gene annotation provided. gffcompare is a tool that determines how many of your annotations match the reference (either fully or partial) and how many were completely novel. The output of this ulitily gives you:</p>
 <p>Sensitivity is defined as the proportion of genes from the annotation that are correctly reconstructed
 Precision (also known as positive predictive value) captures the proportion of the output that overlaps the annotation
-To compare how merged annotation compares to reference</p>
-<div class="codehilite"><pre><span></span><span class="n">gffcompare</span> <span class="o">-</span><span class="k">G</span> <span class="o">-</span><span class="n">r</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span>
-</pre></div>
-
-
-<p>:   -r = reference genome in form of gtf</p>
-<p>:   -G = tells gffcompare to compare all transcripts in the input file (stringtie/stringtie_merged.gtf), even those that might be redundant</p>
-<p>:   -o = all output of gffcompare has a gffcmp. prefix, unless otherwise defined by user</p>
+To compare how merged annotation compares to reference
+<div class="codehilite"><pre><span></span>    <span class="n">gffcompare</span> <span class="o">-</span><span class="k">G</span> <span class="o">-</span><span class="n">r</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span>
+</pre></div></p>
+<ul>
+<li>
+<p>-r = reference genome in form of gtf</p>
+</li>
+<li>
+<p>-G = tells gffcompare to compare all transcripts in the input file (stringtie/stringtie_merged.gtf), even those that might be redundant</p>
+</li>
+<li>
+<p>-o = all output of gffcompare has a gffcmp. prefix, unless otherwise defined by user</p>
+</li>
+</ul>
 <p>Now that we are happy with our merged annotation, we need to estimate the abundance of each transcript within each sample. Stringtie is designed to create output files that are immediately usable in next step of our RNA sequencing pipeline. In this next example, we can direct stringtie to simultaneously create a .ctab file required for ballgown.</p>
-<p>To estimate abundances and create table counts for 2cell </p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+<p>To estimate abundances and create table counts for 2cell 
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
 </pre></div>
-
-
-<p>To estimate abundances and create table counts for 2cell </p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div>
-
-
-<p>:   -e = limits the processing of read alignments to only estimate and output the assembled transcripts matching the reference transcripts (given by -G). Reads with no reference transcripts will be entirely skipped</p>
-<p>:   -B = enables output of Ballgown input table files (*.ctab) containing coverage data for the reference transcripts given with the -G option. If -o is used,  StringTie will write the *.ctab files in the same directory as the output GTF.      </p>
-<p>:   -p = refers to number of processing threads</p>
-<p>:   -G = refers to a reference annotation (in GTF or GFF format)</p>
+To estimate abundances and create table counts for 2cell 
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+</pre></div></p>
+<ul>
+<li>
+<p>-e = limits the processing of read alignments to only estimate and output the assembled transcripts matching the reference transcripts (given by -G). Reads with no reference transcripts will be entirely skipped</p>
+</li>
+<li>
+<p>-B = enables output of Ballgown input table files (*.ctab) containing coverage data for the reference transcripts given with the -G option. If -o is used,  StringTie will write the *.ctab files in the same directory as the output GTF.      </p>
+</li>
+<li>
+<p>-p = refers to number of processing threads</p>
+</li>
+<li>
+<p>-G = refers to a reference annotation (in GTF or GFF format)</p>
+</li>
+</ul>
 <h2 id="visulaizing-transcript-assembly">Visulaizing transcript assembly</h2>
 <ol>
 <li>
@@ -913,14 +1137,52 @@ androgen hormone (DHT). Four replicates were collected from cells
 treated with an inactive compound. Each of the seven samples was run on
 a lane (7 lanes) of an Illumina flow cell to produce 35 bp reads. The
 experimental design was therefore:</p>
-<p><strong>Lane</strong> | <strong>Treatment</strong> | <strong>Label</strong>|
-1 | Control | Con1|
-2 | Control | Con2|
-3 | Control | Con3|
-4 | Control | Con4|
-5 | DHT | DHT1|
-6 | DHT | DHT2|
-7 | DHT | DHT3|</p>
+<table>
+<thead>
+<tr>
+<th><strong>Lane</strong></th>
+<th><strong>Treatment</strong></th>
+<th><strong>Label</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Control</td>
+<td>Con1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Control</td>
+<td>Con2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Control</td>
+<td>Con3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Control</td>
+<td>Con4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DHT</td>
+<td>DHT1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>DHT</td>
+<td>DHT2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DHT</td>
+<td>DHT3</td>
+</tr>
+</tbody>
+</table>
 <p>This workflow requires raw gene count files and these can be generated
 using a utility called featureCounts as demonstrated above. We are using
 a pre-computed gene counts data (stored in <code class="codehilite"><span class="n">pnas_expression</span><span class="p">.</span><span class="n">txt</span></code>) for
@@ -993,14 +1255,15 @@ We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
 </details>
 </div>
 <div class="admonition success">
-<p>16494</p>
+<details><summary>Answer</summary><p>16494</p>
+</details>
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <div class="admonition hint">
-<details><summary>Hint</summary></details>
-<p>do 37435-16494.</p>
+<details><summary>Hint</summary><p>do 37435-16494.</p>
+</details>
 </div>
 <div class="admonition success"></div>
 </div>
@@ -1097,16 +1360,15 @@ We can write out these results to our current directory.</p>
 <p class="admonition-title">Question</p>
 <p>How many differentially expressed genes are there?</p>
 <div class="admonition success">
-<p>4435</p>
+<details><summary>Answer</summary><p>4435</p>
+</details>
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<div class="admonition hint">
-<details><summary>Hint</summary></details>
-</div>
 <div class="admonition success">
-<p>2339 2096</p>
+<details><summary>Answer</summary><p>2339 2096</p>
+</details>
 </div>
 </div>
 <p>If you need to quit the <code class="codehilite"><span class="n">R</span></code> console, type:
@@ -1177,6 +1439,41 @@ system try typing <code class="codehilite"><span class="n">pwd</span></code> on 
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Read Alignment
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../denovo/handout/handout/" title="De Novo Genome Assembly" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                De Novo Genome Assembly
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
