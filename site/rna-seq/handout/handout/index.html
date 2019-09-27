@@ -831,7 +831,10 @@ this command yourself - we have done this for you.</p>
 <div class="admonition failure">
 <p class="admonition-title">STOP</p>
 <p><strong>DO NOT run this command. This has already been run for you.</strong></p>
-<p>bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9</p>
+<div class="codehilite"><pre><span></span><span class="n">bowtie2</span><span class="o">-</span><span class="n">build</span> <span class="n">genome</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">dna</span><span class="p">.</span><span class="n">fa</span> <span class="n">genome</span><span class="o">/</span><span class="n">ZV9</span>
+</pre></div>
+
+
 </div>
 <p>Tophat2 has a number of parameters in order to perform the alignment. To
 view them all type:</p>
@@ -853,38 +856,48 @@ with:</p>
 </pre></div>
 Some other parameters that we are going to use to run Tophat are listed
 below:</p>
-<p>-g
-:   Maximum number of multihits allowed. Short reads are likely to map
+<ul>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="k">g</span></code> Maximum number of multihits allowed. Short reads are likely to map
     to more than one location in the genome even though these reads can
     have originated from only one of these regions. In RNA-seq we allow
     for a limited number of multihits, and in this case we ask Tophat to
     report only reads that map at most onto 2 different loci.</p>
-<p>–library-type
-:   Before performing any type of RNA-seq analysis you need to know a
+</li>
+<li>
+<p><code class="codehilite"><span class="err">–</span><span class="n">library</span><span class="o">-</span><span class="k">type</span></code> Before performing any type of RNA-seq analysis you need to know a
     few things about the library preparation. Was it done using a
     strand-specific protocol or not? If yes, which strand? In our data
     the protocol was NOT strand specific.</p>
-<p>-j
-:   Improve spliced alignment by providing Tophat with annotated splice
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">j</span></code> Improve spliced alignment by providing Tophat with annotated splice
     junctions. Pre-existing genome annotation is an advantage when
     analysing RNA-seq data. This file contains the coordinates of
     annotated splice junctions from Ensembl. These are stored under the
     sub-directory <code class="codehilite"><span class="n">annotation</span></code> in a file called <code class="codehilite"><span class="n">ZV9</span><span class="p">.</span><span class="n">spliceSites</span></code>.</p>
-<p>-o
-:   This specifies in which subdirectory Tophat should save the output
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> This specifies in which subdirectory Tophat should save the output
     files. Given that for every run the name of the output files is the
     same, we specify different directories for each run.</p>
+</li>
+</ul>
 <p>It takes some time (approx. 20 min) to perform tophat spliced
 alignments, even for this subset of reads. Therefore, we have
 pre-aligned the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data for you using the following command:</p>
 <p>You DO NOT need to run this command yourself - we have done this for
 you.</p>
-<div class="codehilite"><pre><span></span>tophat2 --solexa-quals -g <span class="m">2</span> --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
+<div class="admonition failure">
+<p class="admonition-title">STOP</p>
+<p><strong>DO NOT run this command. This has already been run for you.</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">tophat2</span> <span class="c1">--solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq</span>
 </pre></div>
 
-<p>Align the <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data yourself using the following command:</p>
-<div class="codehilite"><pre><span></span>    <span class="c1"># Takes approx. 20mins</span>
-    tophat2 --solexa-quals -g <span class="m">2</span> --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_6h genome/ZV9 data/6h_1.fastq data/6h_2.fastq
+
+</div>
+<p>Align the <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data yourself using the following command (Takes approx. <strong>10mins</strong> ):</p>
+<div class="codehilite"><pre><span></span>    tophat2 --solexa-quals -g <span class="m">2</span> --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_6h genome/ZV9 data/6h_1.fastq data/6h_2.fastq
 </pre></div>
 
 <p>The <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> read alignment will take approx. 20 min to complete. Therefore,
@@ -892,12 +905,17 @@ we’ll take a look at some of the files, generated by tophat, for the
 pre-computed <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data.</p>
 <p>Tophat generates several files in the specified output directory. The
 most important files are listed below.</p>
-<p>accepted_hits.bam
-:   This file contains the list of read alignments in BAM format.</p>
-<p>align_summary.txt
-:   Provides a detailed summary of the read-alignments.</p>
-<p>unmapped.bam
-:   This file contains the unmapped reads.</p>
+<ul>
+<li>
+<p><em>accepted_hits.bam</em> This file contains the list of read alignments in BAM format.</p>
+</li>
+<li>
+<p><em>align_summary.txt</em>  Provides a detailed summary of the read-alignments.</p>
+</li>
+<li>
+<p><em>unmapped.bam</em> This file contains the unmapped reads.</p>
+</li>
+</ul>
 <p>The complete documentation can be found at:
 <a href="https://ccb.jhu.edu/software/tophat/manual.shtml">https://ccb.jhu.edu/software/tophat/manual.shtml</a></p>
 <h3 id="alignment-visualisation-in-igv">Alignment Visualisation in IGV</h3>
@@ -917,11 +935,11 @@ in the data set.</p>
     take several minutes to load for the first time, please be patient.</em></p>
 </li>
 <li>
-<p>Choose “Zebrafish (Zv9)” from the drop-down box in the top left of
+<p>Choose <strong>Zebrafish (Zv9)</strong> from the drop-down box in the top left of
     the IGV window. Else you can also load the genome fasta file.</p>
 </li>
 <li>
-<p>Load the <code class="codehilite"><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span></code> file by clicking the “File”
+<p>Load the <code class="codehilite"><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span></code> file by clicking the <strong>File</strong>
     menu, selecting “Load from File” and navigating to the
     <code class="codehilite"><span class="n">Desktop</span><span class="o">/</span><span class="n">rnaseq</span><span class="o">/</span><span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span></code> directory.</p>
 </li>
@@ -951,7 +969,7 @@ in the data set.</p>
 does it provide?</p>
 <p>As the name suggests, the file provides a details summary of the
 alignment statistics.</p>
-<p>One other important file is ’unmapped.bam’. This file contains the
+<p>One other important file is <fn>unmapped.bam</fn>. This file contains the
 unampped reads.</p>
 <p>Can you identify the splice junctions from the BAM file?</p>
 <p>Splice junctions can be identified in the alignment BAM files. These are
@@ -994,74 +1012,83 @@ format.</p>
 <p>To run string tie, the basic command is:</p>
 <p>Stringtie has a number of parameters in order to perform transcriptome
 assembly and quantification. To view them all type:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="c1">--help</span>
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="c1">--help</span>
 </pre></div>
-
 
 <p>We aim to reconstruct the transcriptome for both samples by using the
 Ensembl annotation as a guide. </p>
 <p>The Ensembl annotation for <code class="codehilite"><span class="n">Danio</span> <span class="n">rerio</span></code> is available in
 <code class="codehilite"><span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span></code>.</p>
-<p>The general format of the <code class="codehilite"><span class="n">stringtie</span></code> command is:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aligned_reads_file</span><span class="p">.</span><span class="n">bam</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">options</span><span class="o">]</span><span class="w"></span>
+<p>The general format of the <code class="codehilite"><span class="n">stringtie</span></code> command is:
+<div class="codehilite"><pre><span></span><span class="w">    </span><span class="n">stringtie</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aligned_reads_file</span><span class="p">.</span><span class="n">bam</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">options</span><span class="o">]</span><span class="w"></span>
 </pre></div>
-
-
-<p>Where the input is the aligned reads (either in SAM or BAM format).</p>
+Where the input is the aligned reads (either in SAM or BAM format).</p>
 <p>Perform transcriptome assembly, strictly using the supplied GTF
 annotations, for the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> and <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data using cufflinks:</p>
 <p>For instance, to run StringTie on 2cells BAM file:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
 </pre></div>
 
-
-<p>Repeat this command on the 6h BAM file:</p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+<p>Repeat this command on the <strong>6h</strong> BAM file:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
 </pre></div>
 
-
-<p>:   -p = number of processing threads</p>
-<p>:   -G = reference annotation file</p>
-<p>:   -o = output file location and name.</p>
+<ul>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">p</span></code> = number of processing threads</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="k">G</span></code> = reference annotation file</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> = output file location and name.</p>
+</li>
+</ul>
 <p>Most RNA sequencing experiments will have multiple samples. As such, Stringtie has a function to merge all transcripts assembled across the samples, which enables inter-sample comparisons to be made. It does this by first assembling all transcripts within each sample, merging the the transcripts and re-running the assembly based off a merged list of genes.</p>
 <p>Prior to running a merge function within stringtie:
 We need to create a mergelist.txt file before utilising the merge function. This is a list of all .gtf files created by stringtie in the above step and can be made in a text editor such as vi or nano. For this exercise, there is a file pre-made for you. The txt file will direct the merge function to look for the names of all the .gtf files that we want to merge.</p>
 <p>To merge StringTie files</p>
-<div class="codehilite"><pre><span></span><span class="n">ls</span> <span class="n">stringtie</span><span class="cm">/*.gtf &gt;mergelist.txt</span>
-<span class="cm">less mergelist.txt</span>
+<p><div class="codehilite"><pre><span></span>    <span class="n">ls</span> <span class="n">stringtie</span><span class="cm">/*.gtf &gt;mergelist.txt</span>
+<span class="cm">    less mergelist.txt </span>
 
-<span class="cm">stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt</span>
+<span class="cm">    stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt</span>
 </pre></div>
-
-
-<p>(mergelist.txt is a text file that will have a list of all .gtf generated by stringtie in the above steps)</p>
+(<code class="codehilite"><span class="n">mergelist</span><span class="p">.</span><span class="n">txt</span></code> is a text file that will have a list of all .gtf generated by stringtie in the above steps)</p>
 <p>Note how a reference gene annotation (Danio_rerio.Zv9.66.gtf) is utilised in this case. This makes use of information we already have in order to assemble the transcriptome of our RNA seq data.</p>
 <p>The next step is an optional step to see how your merged annotation compares to reference gene annotation provided. gffcompare is a tool that determines how many of your annotations match the reference (either fully or partial) and how many were completely novel. The output of this ulitily gives you:</p>
 <p>Sensitivity is defined as the proportion of genes from the annotation that are correctly reconstructed
 Precision (also known as positive predictive value) captures the proportion of the output that overlaps the annotation
-To compare how merged annotation compares to reference</p>
-<div class="codehilite"><pre><span></span><span class="n">gffcompare</span> <span class="o">-</span><span class="k">G</span> <span class="o">-</span><span class="n">r</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span>
+To compare how merged annotation compares to reference
+<div class="codehilite"><pre><span></span>    <span class="n">gffcompare</span> <span class="o">-</span><span class="k">G</span> <span class="o">-</span><span class="n">r</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span>
 </pre></div>
-
-
-<p>:   -r = reference genome in form of gtf</p>
-<p>:   -G = tells gffcompare to compare all transcripts in the input file (stringtie/stringtie_merged.gtf), even those that might be redundant</p>
-<p>:   -o = all output of gffcompare has a gffcmp. prefix, unless otherwise defined by user</p>
+-   <code class="codehilite"><span class="o">-</span><span class="n">r</span></code> = reference genome in form of gtf</p>
+<ul>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="k">G</span></code> = tells gffcompare to compare all transcripts in the input file (stringtie/stringtie_merged.gtf), even those that might be redundant</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> = all output of gffcompare has a gffcmp. prefix, unless otherwise defined by user</p>
+</li>
+</ul>
 <p>Now that we are happy with our merged annotation, we need to estimate the abundance of each transcript within each sample. Stringtie is designed to create output files that are immediately usable in next step of our RNA sequencing pipeline. In this next example, we can direct stringtie to simultaneously create a .ctab file required for ballgown.</p>
-<p>To estimate abundances and create table counts for 2cell </p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+<p>To estimate abundances and create table counts for 2cell 
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
 </pre></div>
-
-
-<p>To estimate abundances and create table counts for 2cell </p>
-<div class="codehilite"><pre><span></span><span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
+To estimate abundances and create table counts for 2cell 
+<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
 </pre></div>
-
-
-<p>:   -e = limits the processing of read alignments to only estimate and output the assembled transcripts matching the reference transcripts (given by -G). Reads with no reference transcripts will be entirely skipped</p>
-<p>:   -B = enables output of Ballgown input table files (*.ctab) containing coverage data for the reference transcripts given with the -G option. If -o is used,  StringTie will write the *.ctab files in the same directory as the output GTF.      </p>
-<p>:   -p = refers to number of processing threads</p>
-<p>:   -G = refers to a reference annotation (in GTF or GFF format)</p>
+-   <code class="codehilite"><span class="o">-</span><span class="n">e</span></code> = limits the processing of read alignments to only estimate and output the assembled transcripts matching the reference transcripts (given by -G). Reads with no reference transcripts will be entirely skipped</p>
+<ul>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">B</span></code> = enables output of Ballgown input table files (*.ctab) containing coverage data for the reference transcripts given with the -G option. If -o is used,  StringTie will write the *.ctab files in the same directory as the output GTF.      </p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="n">p</span></code> = refers to number of processing threads</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="o">-</span><span class="k">G</span></code> = refers to a reference annotation (in GTF or GFF format)</p>
+</li>
+</ul>
 <h2 id="visulaizing-transcript-assembly">Visulaizing transcript assembly</h2>
 <ol>
 <li>
@@ -1095,23 +1122,55 @@ replicate RNA samples were collected from LNCaP cells treated with an
 androgen hormone (DHT). Four replicates were collected from cells
 treated with an inactive compound. Each of the seven samples was run on
 a lane (7 lanes) of an Illumina flow cell to produce 35 bp reads. The
-experimental design was therefore:
-<div class="codehilite"><pre><span></span><span class="k">[H]</span>
-
-<span class="na">rrr</span>
-
-<span class="na">**Lane** &amp; **Treatment** &amp; **Label**\</span>
-<span class="na">1 &amp; Control &amp; Con1\</span>
-<span class="na">2 &amp; Control &amp; Con2\</span>
-<span class="na">3 &amp; Control &amp; Con3\</span>
-<span class="na">4 &amp; Control &amp; Con4\</span>
-<span class="na">5 &amp; DHT &amp; DHT1\</span>
-<span class="na">6 &amp; DHT &amp; DHT2\</span>
-<span class="na">7 &amp; DHT &amp; DHT3\</span>
-
-<span class="k">[tab:experimental~d~esign]</span>
-</pre></div>
-This workflow requires raw gene count files and these can be generated
+experimental design was therefore:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Lane</strong></th>
+<th><strong>Treatment</strong></th>
+<th><strong>Label</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Control</td>
+<td>Con1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Control</td>
+<td>Con2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Control</td>
+<td>Con3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Control</td>
+<td>Con4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DHT</td>
+<td>DHT1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>DHT</td>
+<td>DHT2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DHT</td>
+<td>DHT3</td>
+</tr>
+</tbody>
+</table>
+<p>[tab:experimental<sub>d</sub>esign]</p>
+<p>This workflow requires raw gene count files and these can be generated
 using a utility called featureCounts as demonstrated above. We are using
 a pre-computed gene counts data (stored in <code class="codehilite"><span class="n">pnas_expression</span><span class="p">.</span><span class="n">txt</span></code>) for
 this exercise.</p>
@@ -1164,7 +1223,7 @@ Have a look at the start of the genemap dataframe.</p>
 
 <p>We then match the data we have retrieved to our dataset.
 <div class="codehilite"><pre><span></span>    <span class="n">idx</span> <span class="o">&lt;-</span><span class="nf">match</span><span class="p">(</span><span class="n">ensembl_names</span><span class="p">,</span> <span class="n">genemap</span><span class="o">$</span><span class="n">ensembl_gene_id</span><span class="p">)</span>
-    <span class="n">data</span><span class="o">$</span><span class="n">entrezgene</span> <span class="o">&lt;-</span><span class="n">genemap</span><span class="o">$</span><span class="n">entrezgene</span> <span class="n">[</span> <span class="n">idx</span> <span class="n">]</span>
+    <span class="n">data</span><span class="o">$</span><span class="n">entrezgene</span> <span class="o">&lt;-</span><span class="n">genemap</span><span class="o">$</span><span class="n">entrezgene_id</span> <span class="n">[</span> <span class="n">idx</span> <span class="n">]</span>
     <span class="n">data</span><span class="o">$</span><span class="n">hgnc_symbol</span> <span class="o">&lt;-</span><span class="n">genemap</span><span class="o">$</span><span class="n">hgnc_symbol</span> <span class="n">[</span> <span class="n">idx</span> <span class="n">]</span>
     <span class="n">Ann</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">data</span><span class="o">$</span><span class="n">hgnc_symbol</span><span class="p">,</span> <span class="n">data</span><span class="o">$</span><span class="n">entrezgene</span><span class="p">)</span>
     <span class="nf">colnames</span><span class="p">(</span><span class="n">Ann</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Ensembl&quot;</span><span class="p">,</span> <span class="s">&quot;Symbol&quot;</span><span class="p">,</span> <span class="s">&quot;Entrez&quot;</span><span class="p">)</span>
@@ -1181,21 +1240,34 @@ Let’s check and see that this additional information is there.</p>
     <span class="n">y</span> <span class="o">&lt;-</span><span class="nf">DGEList</span><span class="p">(</span><span class="n">counts</span><span class="o">=</span><span class="n">data[</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="n">]</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">treatment</span><span class="p">,</span> <span class="n">genes</span><span class="o">=</span><span class="n">Ann</span><span class="p">)</span>
 </pre></div>
 Check the dimensions of the object:</p>
-<div class="codehilite"><pre><span></span><span class="n">dim</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<p><div class="codehilite"><pre><span></span>    <span class="n">dim</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
-
-
-<p>We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
+We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
 <p>Now we will filter out genes with low counts by only keeping those rows
 where the count per million (cpm) is at least 1 in at least three
 samples:
 <div class="codehilite"><pre><span></span>    <span class="n">keep</span> <span class="o">&lt;-</span><span class="nf">rowSums</span><span class="p">(</span> <span class="nf">cpm</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;</span><span class="m">1</span><span class="p">)</span> <span class="o">&gt;=</span><span class="m">3</span>
     <span class="n">y</span> <span class="o">&lt;-</span> <span class="n">y[keep</span><span class="p">,</span> <span class="n">]</span>
-</pre></div>
-How many rows (genes) are retained now</p>
-<p>dim(y) would give you 16494</p>
-<p>How many genes were filtered out?</p>
-<p>do 37435-16494.</p>
+</pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<div class="admonition hint">
+<details><summary>Hint</summary><p>dim(y)</p>
+</details>
+</div>
+<div class="admonition success">
+<details><summary>Answer</summary><p>16494</p>
+</details>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<div class="admonition hint">
+<details><summary>Hint</summary><p>do 37435-16494.</p>
+</details>
+<details><summary>Answer</summary></details>
+</div>
+</div>
 <p>As we have removed the lowly expressed genes the total number of counts
 per sample has not changed greatly. Let us check the total number of
 reads per sample in the original data (data) and now after filtering.</p>
@@ -1214,11 +1286,10 @@ We will check the calculated normalization factors:
 </pre></div>
 Lets have a look at whether the samples cluster by condition. (You
 should produce a plot as shown in Figure 4):</p>
-<div class="codehilite"><pre><span></span><span class="n">plotMDS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="k">as</span><span class="p">.</span><span class="nb">numeric</span><span class="p">(</span><span class="n">y$samples$group</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span>    <span class="n">plotMDS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="k">as</span><span class="p">.</span><span class="nb">numeric</span><span class="p">(</span><span class="n">y$samples$group</span><span class="p">))</span>
 </pre></div>
 
-
-<p>[H] <img alt="image" src="../MDS.png" /> [fig:MDS plot]</p>
+<p><img alt="image" src="../MDS.png" /> [fig:MDS plot]</p>
 <p>Does the MDS plot indicate a difference in gene expression between the
 Controls and the DHT treated samples?</p>
 <p>The MDS plot shows us that the controls are separated from the DHT
@@ -1240,7 +1311,7 @@ should obtain a plot as shown in the Figure 5):</p>
 <div class="codehilite"><pre><span></span>    <span class="n">plotBCV</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 
-<p>[H] <img alt="image" src="../BCV.png" /> [fig:BCV plot]</p>
+<p><img alt="image" src="../BCV.png" /> [fig:BCV plot]</p>
 <p>We see here that the common dispersion estimates the overall Biological
 Coefficient of Variation (BCV) of the dataset averaged over all genes.
 The common dispersion is <code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">02</span></code> and the BCV is the square root of the
@@ -1285,7 +1356,8 @@ upregulated and downregulated genes.</p>
 <div class="codehilite"><pre><span></span>    <span class="n">alpha</span><span class="o">=</span><span class="m">0.05</span>
     <span class="n">lfc</span><span class="o">=</span><span class="m">1.5</span>
     <span class="n">edgeR_res_sig</span><span class="o">&lt;-</span><span class="n">res[res</span><span class="o">$</span><span class="n">FDR</span><span class="o">&lt;</span><span class="n">alpha</span><span class="p">,</span><span class="n">]</span>
-    <span class="n">edgeR_res_sig_lfc</span> <span class="o">&lt;-</span><span class="n">edgeR_res_sig</span><span class="nf">[abs</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="o">$</span><span class="n">logFC</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">lfc</span><span class="p">,</span><span class="nf">]head</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
+    <span class="n">edgeR_res_sig_lfc</span> <span class="o">&lt;-</span><span class="n">edgeR_res_sig</span><span class="nf">[abs</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="o">$</span><span class="n">logFC</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">lfc</span><span class="p">,</span><span class="n">]</span>
+    <span class="nf">head</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
     <span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">)</span>
     <span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig_lfc</span><span class="p">)</span>
 </pre></div>
