@@ -4,4 +4,4 @@ This quick introductory module introduces the basics of working with data using 
 
 We will use lesson material from the Carpentries:
 
-     https://datacarpentry.org/R-genomics/01-intro-to-R.html
+     https://monashdatafluency.github.io/r-intro-halfday/
