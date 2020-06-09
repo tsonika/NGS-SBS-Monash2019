@@ -8,31 +8,38 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 
 |*Time* |*Subject* |*notes*|
 |-----|--------|-----|
-||Day1: 30 Sep 2019 |
-|10-10:15 am|Housekeeping + Icebreaker|Slides + group activity|
-|10:15-11:00 pm|Introduction to HTS|Lecture|  
-|11:00-11:30 am|Morning Tea Break|AGRF Sponsored|
-|11:30-12:00 pm|Intro to R|Interactive Lecture|
-|12:00-1:00 pm|Lunch Break|BYO|
+||Day1: 16 June 2020 |
+|10:00-10:20 am|Housekeeping + Icebreaker|Slides + group activity|
+|10:20:10-30 pm| short Break|
+|10:30-12:00 pm|Intro to R|Interactive Lecture|
+|12:00:1-00 pm| Lunch Break|
 |1:00-2:45 pm|Intro to CLI|Lecture + hands on|
 |2:45-3:00 pm|Recap + QA|Group discussion|
 
 
 |*Time* |*Subject* |*notes*|
 |------|-----|----|
-||Day2: 4 Oct 2019|
-|10:00-9:45 am|Intro to denovo assembly|Lecture |
-|10:45-11:15 am|Compile and explore Velvet + read data|Practice
+||Day2: 17 June 2020|
+|10:00-10:15 am|Intro to denovo assembly|Lecture Recap |
+|10:15-11:15 am|Compile and explore Velvet + read data|Practice
 |11:15-11:30 am|Assembly activity I|group activity|
 |11:30-12:00 pm|Perform short read assembly using different settings|Practice|
-|12:00-1:00 pm|Break|
+|12:00-1:00 pm| Lunch Break|
 |1:00-1:30 pm|Assembly results discussion|
 |1:30-2:00 pm|Assembly visualization and exploration|Practice|
 |2:00-3:00 pm| Long read assembly|
-|3-3:15 pm|break|Workflow activity |
-|3:15-3:30 pm|RNAseq analysis workflow example|Lecture|
-|3:30 - 4:30 pm|RNAseq: DE using edgeR|Practice|
-|4:30-4:455 pm|Wrap up| |
+
+
+|*Time* |*Subject* |*notes*|
+|------|-----|----|
+||Day 3: 18 June 2020|
+|10:00-10:15 am|Intro to RNA-seq|Lecture Recap |
+|10:15-10:45 am|Workflow activity |
+|10:45-11:30 am|RNAseq alignment exploration in IGV|Practice
+|11:30-12:00 pm|Transcript assembly exploration in IGV|Practice|
+|12:00-1:00 pm| Lunch Break|
+|1:00 - 2:30 pm|RNAseq: DE using edgeR|Practice|
+|2:30-3:00 pm|QA and Wrap up| |
 
 
 ## Workshop Content
@@ -40,9 +47,11 @@ Topics covered by this workshop include:
 
 * An introduction to R programming
 
-* An Introduction to the command line interface and NGS file formats 
+* An Introduction to the command line interface and NGS file formats
 
-* RNA-Seq alignment  
+* Quality control of sequencing data
+
+* NGS read  alignment
 
 * Basic RNA-Seq differential expression analysis 
 

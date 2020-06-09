@@ -1,26 +1,28 @@
 # btp-workshop-ngs
 Bioinformatics Training Platform (BTP) Workshop: Introduction to Next Generation Sequencing Hands-on Workshop
 
-  * Topics
+ * Topics
     1. Introduction to R
     2. Introduction to command line
-    3. RNA-Seq Read Mapping
-    4. RNA-Seq Differential Expression Analysis
-    5. *de novo* assembly using short reads (bacterial example)
-    6. *de novo* assembly using long reads
-    7. Using the Australian NeCTAR Research Cloud
+    3. Quality control of NGS data
+    4. NGS read alignment
+    5. RNA-Seq Differential Expression Analysis
+    6. *de novo* assembly using short reads (bacterial example)
+    7. *de novo* assembly using long reads
+    8. Using the Australian NeCTAR Research Cloud
 
   * Target Audience
     * Biologists
-	* Non-bioinformaticians
-	* Little to no programming expereience
+        * Non-bioinformaticians
+        * Little to no programming expereience
   * Prerequisites
     * None
   * Time Required
-    * 2 days
+    * 2.5 days
   * Compute Requirements
     * Minimum: 2 CPUs, 8GB RAM, 30GB Storage
     * Recommended: 4 CPUs, 16GB RAM, 50GB Storage
+
 
 License
 =======
