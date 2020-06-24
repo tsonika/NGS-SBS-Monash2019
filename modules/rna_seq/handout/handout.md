@@ -584,10 +584,42 @@ We see we have 37435 rows (i.e. genes) and 7 columns (samples).
 Now we will filter out genes with low counts by only keeping those rows
 where the count per million (cpm) is at least 1 in at least three
 samples:
+
 ```
-    keep <-rowSums( cpm(y)>1) >=3
-    y <- y[keep, ]
+# Here we calculate the number of counts per million (cpm) reads as a normalization factor
+myCPM <- cpm(y$counts)
+dim(myCPM)
+
+# Here we generate a graph and save it as a pdf comparing raw counts with cpm
+# we want to remove all those genes that have too low counts which may be due to noise
+
+pdf(file="counts-vs-cpms-gene.pdf")
+plot(myCPM[,1],y$counts[,1],ylim=c(0,30),xlim=c(0,3))
+for (i in 1:3) {
+  abline(h=10,v=i)
+  i<-i+1
+}
+dev.off()
+
+
+head(myCPM)
+thresh <- myCPM > 1 ## we selected a threshold of at least 1 cpm on each gene on each sample
+head(thresh)
+table(rowSums(thresh))
+
+# we would like to keep genes that have at least 2 TRUES, two samples with more than 1 cpm in each row (gene).
+
+keep <- rowSums(thresh) >=3
+
+y$counts<-y$counts[keep,]
+
+# dim function will tell us the number of genes that we kept with high enough expression 
+
+dim(y$counts)
+
 ```
+
+
 !!! note "Question"
     How many rows (genes) are retained now
     !!! hint ""
