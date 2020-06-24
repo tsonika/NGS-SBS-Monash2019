@@ -987,7 +987,7 @@ genome (most likely introns).</p>
 (cby1-001)</p>
 <p>Once tophat finishes aligning the 6h data you will need to sort the
 alignments found in the BAM file and then index the sorted BAM file.</p>
-<div class="highlight"><pre><span></span><code>samtools sort tophat/ZV9_6h/accepted_hits.bam tophat/ZV9_6h/accepted_hits.sorted
+<div class="highlight"><pre><span></span><code>samtools sort tophat/ZV9_6h/accepted_hits.bam -o tophat/ZV9_6h/accepted_hits.sorted.bam
 samtools index tophat/ZV9_6h/accepted_hits.sorted.bam
 </code></pre></div>
 
@@ -1032,7 +1032,7 @@ Where the input is the aligned reads (either in SAM or BAM format).</p>
 <p>Perform transcriptome assembly, strictly using the supplied GTF
 annotations, for the <code>2cells</code> and <code>6h</code> data using cufflinks:</p>
 <p>For instance, to run StringTie on 2cells BAM file:
-<div class="highlight"><pre><span></span><code>    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_2cells.gft tophat/ZV9_2cells/accepted_hits.sorted.bam
+<div class="highlight"><pre><span></span><code>    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_2cells.gtf tophat/ZV9_2cells/accepted_hits.sorted.bam
 </code></pre></div></p>
 <p>Repeat this command on the 6h BAM file:
 <div class="highlight"><pre><span></span><code>    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_6h.gft tophat/ZV9_6h/accepted_hits.sorted.bam
