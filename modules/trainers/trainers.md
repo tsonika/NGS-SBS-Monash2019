@@ -6,10 +6,20 @@ The Trainers
 Cloud Team <br>
 Monash eResearch Centre <br>
 
-**Mr Damien Leong** <br>
-HPC Team <br>
-Monash eResearch Centre <br>
+**Mr Yashpal Ramakrishnaiah** <br>
+Tyagi Lab <br>
+School of Biological Sciences <br>
+Monash University <br>
 
+**Mr Javier Gomez Ortega** <br>
+PiperLab and TyagiLab <br>
+School of Biological Sciences <br>
+Monash University <br>
+
+**Ms Rithika Venkatesan** <br>
+Tyagi Lab <br>
+School of Biological Sciences <br>
+Monash University <br>
 
 **Mr Tyrone Chen** <br>
 Tyagi Lab <br>
@@ -23,4 +33,3 @@ Monash University <br>
 
 
 ###Helpers
-Mr Tyrone Chen, Ms Emma Gail, Ms Shilpi Singh, Dr Hieu Nim

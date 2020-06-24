@@ -1,14 +1,12 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
       
@@ -16,27 +14,8 @@
       
         <meta name="author" content="Sonika Tyagi">
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
     
     
       
@@ -44,21 +23,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
       
       
     
-    
-      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../../css/details.css">
@@ -69,69 +45,72 @@
     
   </head>
   
+  
     <body dir="ltr">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#key-learning-outcomes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Introduction to NGS Workshop
-            </span>
-            <span class="md-header-nav__topic">
-              
-                RNA-Seq
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo" aria-label="Introduction to NGS Workshop">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Introduction to NGS Workshop
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              RNA-Seq
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -139,31 +118,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo" aria-label="Introduction to NGS Workshop">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Introduction to NGS Workshop
   </label>
@@ -215,13 +195,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Hands-on Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Hands-on Modules" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Hands-on Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -296,11 +282,14 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         RNA-Seq
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="RNA-Seq" class="md-nav__link md-nav__link--active">
@@ -308,11 +297,16 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -334,7 +328,7 @@
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -375,7 +369,7 @@
     Alignment
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Alignment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -416,7 +410,7 @@
     Differential Gene Expression Analysis using edgeR
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Differential Gene Expression Analysis using edgeR">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -472,10 +466,6 @@
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -536,11 +526,16 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -562,7 +557,7 @@
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -603,7 +598,7 @@
     Alignment
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Alignment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -644,7 +639,7 @@
     Differential Gene Expression Analysis using edgeR
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Differential Gene Expression Analysis using edgeR">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -701,10 +696,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -716,6 +707,9 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
+                
+                
+                  
                 
                 
                   <h1>RNA-Seq</h1>
@@ -812,30 +806,30 @@ final session which introduces you to some of the tools used to gain
 biological insight into the results of a differential expression
 analysis</p>
 <h2 id="prepare-the-environment">Prepare the Environment</h2>
-<p>We will use a dataset derived from sequencing of mRNA from <code class="codehilite"><span class="n">Danio</span> <span class="n">rerio</span></code>
+<p>We will use a dataset derived from sequencing of mRNA from <code>Danio rerio</code>
 embryos in two different developmental stages. Sequencing was performed
 on the Illumina platform and generated 76bp paired-end sequence data
 using polyA selected RNA. Due to the time constraints of the practical
 we will only use a subset of the reads.</p>
-<p>The data files are contained in the subdirectory called <code class="codehilite"><span class="k">data</span></code> and are
+<p>The data files are contained in the subdirectory called <code>data</code> and are
 the following:</p>
-<p><code class="codehilite"><span class="mi">2</span><span class="n">cells_1</span><span class="p">.</span><span class="n">fastq</span></code> and <code class="codehilite"><span class="mi">2</span><span class="n">cells_2</span><span class="p">.</span><span class="n">fastq</span></code>
+<p><code>2cells_1.fastq</code> and <code>2cells_2.fastq</code>
 : <br />
     These files are based on RNA-seq data of a 2-cell zebrafish embryo</p>
-<p><code class="codehilite"><span class="mi">6</span><span class="n">h_1</span><span class="p">.</span><span class="n">fastq</span></code> and <code class="codehilite"><span class="mi">6</span><span class="n">h_2</span><span class="p">.</span><span class="n">fastq</span></code>
+<p><code>6h_1.fastq</code> and <code>6h_2.fastq</code>
 : <br />
     These files are based on RNA-seq data of zebrafish embryos 6h post
     fertilization</p>
-<p>Open the Terminal and go to the <code class="codehilite"><span class="n">rnaseq</span></code> working directory:</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> /home/trainee/rnaseq/ 
-</pre></div>
+<p>Open the Terminal and go to the <code>rnaseq</code> working directory:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /home/trainee/rnaseq/ 
+</code></pre></div>
 
 <p>All commands entered into the terminal for this tutorial should be from
-within the <strong><code class="codehilite"><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">rnaseq</span></code></strong> directory.</p>
-<p>Check that the <code class="codehilite"><span class="k">data</span></code> directory contains the above-mentioned files by
+within the <strong><code>/home/trainee/rnaseq</code></strong> directory.</p>
+<p>Check that the <code>data</code> directory contains the above-mentioned files by
 typing:</p>
-<div class="codehilite"><pre><span></span> ls data
-</pre></div>
+<div class="highlight"><pre><span></span><code> ls data
+</code></pre></div>
 
 <h2 id="alignment">Alignment</h2>
 <p>There are numerous tools for performing short read alignment and the
@@ -844,102 +838,102 @@ goals/requirements. Here we will use Tophat2, a widely used ultrafast
 aligner that performs spliced alignments.</p>
 <p>Tophat2 is based on the Bowtie2 aligner and uses an indexed genome for
 the alignment to speed up the alignment and keep its memory footprint
-small. The the index for the <code class="codehilite"><span class="n">Danio</span> <span class="n">rerio</span></code> genome has been created for
+small. The the index for the <code>Danio rerio</code> genome has been created for
 you.</p>
 <p>The command to create an index is as follows. You DO NOT need to run
 this command yourself - we have done this for you.</p>
 <div class="admonition failure">
 <p class="admonition-title">STOP</p>
 <p><strong>DO NOT run this command. This has already been run for you.</strong></p>
-<div class="codehilite"><pre><span></span><span class="n">bowtie2</span><span class="o">-</span><span class="n">build</span> <span class="n">genome</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">dna</span><span class="p">.</span><span class="n">fa</span> <span class="n">genome</span><span class="o">/</span><span class="n">ZV9</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9</span>
+</code></pre></div>
 
 
 </div>
 <p>Tophat2 has a number of parameters in order to perform the alignment. To
 view them all type:</p>
-<div class="codehilite"><pre><span></span>tophat2 --help
-</pre></div>
+<div class="highlight"><pre><span></span><code>tophat2 --help
+</code></pre></div>
 
 <p>The general format of the tophat2 command is:</p>
-<div class="codehilite"><pre><span></span>tophat2 <span class="o">[</span>options<span class="o">]</span>* &lt;index_base&gt; &lt;reads_1&gt; &lt;reads_2&gt;
-</pre></div>
+<div class="highlight"><pre><span></span><code>tophat2 <span class="o">[</span>options<span class="o">]</span>* &lt;index_base&gt; &lt;reads_1&gt; &lt;reads_2&gt;
+</code></pre></div>
 
-<p>Where the last two arguments are the <code class="codehilite"><span class="na">.fastq</span></code> files of the paired end
+<p>Where the last two arguments are the <code>.fastq</code> files of the paired end
 reads, and the argument before is the basename of the indexed genome.</p>
 <p>The quality values in the FASTQ files used in this hands-on session are
 Phred+33 encoded. We explicitly tell tophat of this fact by using the
-command line argument <code class="codehilite"><span class="err">–</span><span class="n">solexa</span><span class="o">-</span><span class="n">quals</span></code>.</p>
-<p>You can look at the first few reads in the file <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="mi">2</span><span class="n">cells_1</span><span class="p">.</span><span class="n">fastq</span></code>
+command line argument <code>–solexa-quals</code>.</p>
+<p>You can look at the first few reads in the file <code>data/2cells_1.fastq</code>
 with:</p>
-<p><div class="codehilite"><pre><span></span>head -n <span class="m">20</span> data/2cells_1.fastq
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>head -n <span class="m">20</span> data/2cells_1.fastq
+</code></pre></div>
 Some other parameters that we are going to use to run Tophat are listed
 below:</p>
 <ul>
-<li><code class="codehilite"><span class="o">-</span><span class="k">g</span></code> : Maximum number of multihits allowed. Short reads are likely to map
+<li><code>-g</code> : Maximum number of multihits allowed. Short reads are likely to map
     to more than one location in the genome even though these reads can
     have originated from only one of these regions. In RNA-seq we allow
     for a limited number of multihits, and in this case we ask Tophat to
     report only reads that map at most onto 2 different loci.</li>
 <li>
-<p><code class="codehilite"><span class="err">–</span><span class="n">library</span><span class="o">-</span><span class="k">type</span></code>:   Before performing any type of RNA-seq analysis you need to know a
+<p><code>–library-type</code>:   Before performing any type of RNA-seq analysis you need to know a
     few things about the library preparation. Was it done using a
     strand-specific protocol or not? If yes, which strand? In our data
     the protocol was NOT strand specific.</p>
 </li>
 <li>
-<p><code class="codehilite"><span class="o">-</span><span class="n">j</span></code>:   Improve spliced alignment by providing Tophat with annotated splice
+<p><code>-j</code>:   Improve spliced alignment by providing Tophat with annotated splice
     junctions. Pre-existing genome annotation is an advantage when
     analysing RNA-seq data. This file contains the coordinates of
     annotated splice junctions from Ensembl. These are stored under the
-    sub-directory <code class="codehilite"><span class="n">annotation</span></code> in a file called <code class="codehilite"><span class="n">ZV9</span><span class="p">.</span><span class="n">spliceSites</span></code>.</p>
+    sub-directory <code>annotation</code> in a file called <code>ZV9.spliceSites</code>.</p>
 </li>
 <li>
-<p><code class="codehilite"><span class="o">-</span><span class="n">o</span></code>:  This specifies in which subdirectory Tophat should save the output
+<p><code>-o</code>:  This specifies in which subdirectory Tophat should save the output
     files. Given that for every run the name of the output files is the
     same, we specify different directories for each run.</p>
 </li>
 </ul>
 <p>It takes some time (approx. 20 min) to perform tophat spliced
 alignments, even for this subset of reads. Therefore, we have
-pre-aligned the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data for you using the following command:</p>
+pre-aligned the <code>2cells</code> data for you using the following command:</p>
 <div class="admonition failure">
 <p class="admonition-title">STOP</p>
 <p><strong>DO NOT run this command. This has already been run for you.</strong></p>
-<div class="codehilite"><pre><span></span><span class="n">tophat2</span> <span class="c1">--solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq</span>
+</code></pre></div>
 
 
 </div>
-<p>Align the <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data yourself using the following command:</p>
-<div class="codehilite"><pre><span></span>    <span class="c1"># Takes approx. 20mins</span>
+<p>Align the <code>6h</code> data yourself using the following command:</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># Takes approx. 20mins</span>
     tophat2 --solexa-quals -g <span class="m">2</span> --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_6h genome/ZV9 data/6h_1.fastq data/6h_2.fastq
-</pre></div>
+</code></pre></div>
 
-<p>The <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> read alignment will take approx. 20 min to complete. Therefore,
+<p>The <code>6h</code> read alignment will take approx. 20 min to complete. Therefore,
 we’ll take a look at some of the files, generated by tophat, for the
-pre-computed <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data.</p>
+pre-computed <code>2cells</code> data.</p>
 <p>Tophat generates several files in the specified output directory. The
 most important files are listed below.</p>
-<p><code class="codehilite"><span class="n">accepted_hits</span><span class="p">.</span><span class="n">bam</span></code>
+<p><code>accepted_hits.bam</code>
 :   This file contains the list of read alignments in BAM format.</p>
-<p><code class="codehilite"><span class="n">align_summary</span><span class="p">.</span><span class="n">txt</span></code>
+<p><code>align_summary.txt</code>
 :   Provides a detailed summary of the read-alignments.</p>
-<p><code class="codehilite"><span class="n">unmapped</span><span class="p">.</span><span class="n">bam</span></code>
+<p><code>unmapped.bam</code>
 :   This file contains the unmapped reads.</p>
 <p>The complete documentation can be found at:
 <a href="https://ccb.jhu.edu/software/tophat/manual.shtml">https://ccb.jhu.edu/software/tophat/manual.shtml</a></p>
 <h3 id="alignment-visualisation-in-igv">Alignment Visualisation in IGV</h3>
 <p>The Integrative Genomics Viewer (IGV) is able to provide a visualisation
 of read alignments given a reference sequence and a BAM file. We’ll
-visualise the information contained in the <code class="codehilite"><span class="n">accepted_hits</span><span class="p">.</span><span class="n">bam</span></code> and
-<code class="codehilite"><span class="n">junctions</span><span class="p">.</span><span class="n">bed</span></code> files for the pre-computed <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data. The former,
+visualise the information contained in the <code>accepted_hits.bam</code> and
+<code>junctions.bed</code> files for the pre-computed <code>2cells</code> data. The former,
 contains the tophat spliced alignments of the reads to the reference
 while the latter stores the coordinates of the splice junctions present
 in the data set.</p>
-<p>Open the <code class="codehilite"><span class="n">rnaseq</span></code> directory on your Desktop and double-click the
-<code class="codehilite"><span class="n">tophat</span></code> subdirectory and then the <code class="codehilite"><span class="n">ZV9_2cells</span></code> directory.</p>
+<p>Open the <code>rnaseq</code> directory on your Desktop and double-click the
+<code>tophat</code> subdirectory and then the <code>ZV9_2cells</code> directory.</p>
 <ol>
 <li>
 <p>Launch IGV by double-clicking the “IGV 2.3.*” icon on the Desktop
@@ -952,25 +946,25 @@ take several minutes to load for the first time, please be patient.</em></p>
     the IGV window. Else you can also load the genome fasta file.</p>
 </li>
 <li>
-<p>Load the <code class="codehilite"><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span></code> file by clicking the “File”
+<p>Load the <code>accepted_hits.sorted.bam</code> file by clicking the “File”
     menu, selecting “Load from File” and navigating to the
-    <code class="codehilite"><span class="n">Desktop</span><span class="o">/</span><span class="n">rnaseq</span><span class="o">/</span><span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span></code> directory.</p>
+    <code>Desktop/rnaseq/tophat/ZV9_2cells</code> directory.</p>
 </li>
 <li>
 <p>Rename the track by right-clicking on its name and choosing “Rename
     Track”. Give it a meaningful name like “2cells BAM”.</p>
 </li>
 <li>
-<p>Load the <code class="codehilite"><span class="n">junctions</span><span class="p">.</span><span class="n">bed</span></code> from the same directory and rename the
+<p>Load the <code>junctions.bed</code> from the same directory and rename the
     track “2cells Junctions BED”.</p>
 </li>
 <li>
-<p>Load the Ensembl annotations file <code class="codehilite"><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span></code> stored in
-    the <code class="codehilite"><span class="n">rnaseq</span><span class="o">/</span><span class="n">annotation</span></code> directory.</p>
+<p>Load the Ensembl annotations file <code>Danio_rerio.Zv9.66.gtf</code> stored in
+    the <code>rnaseq/annotation</code> directory.</p>
 </li>
 <li>
 <p>Navigate to a region on chromosome 12 by typing
-    <code class="codehilite"><span class="n">chr12</span><span class="o">:</span><span class="mi">20</span><span class="o">,</span><span class="mi">270</span><span class="o">,</span><span class="mi">921</span><span class="o">-</span><span class="mi">20</span><span class="o">,</span><span class="mi">300</span><span class="o">,</span><span class="mi">943</span></code> into the search box at the top of the
+    <code>chr12:20,270,921-20,300,943</code> into the search box at the top of the
     IGV window.</p>
 </li>
 </ol>
@@ -988,14 +982,14 @@ unampped reads.</p>
 <p>Splice junctions can be identified in the alignment BAM files. These are
 the aligned RNA-Seq reads that have skipped-bases from the reference
 genome (most likely introns).</p>
-<p>Are the junctions annotated for <code class="codehilite"><span class="n">CBY1</span></code> consistent with the annotation?</p>
+<p>Are the junctions annotated for <code>CBY1</code> consistent with the annotation?</p>
 <p>Read alignment supports an extended length in exon 5 to the gene model
 (cby1-001)</p>
 <p>Once tophat finishes aligning the 6h data you will need to sort the
 alignments found in the BAM file and then index the sorted BAM file.</p>
-<div class="codehilite"><pre><span></span>samtools sort tophat/ZV9_6h/accepted_hits.bam tophat/ZV9_6h/accepted_hits.sorted
+<div class="highlight"><pre><span></span><code>samtools sort tophat/ZV9_6h/accepted_hits.bam tophat/ZV9_6h/accepted_hits.sorted
 samtools index tophat/ZV9_6h/accepted_hits.sorted.bam
-</pre></div>
+</code></pre></div>
 
 <p>Load the sorted BAM file into IGV, as described previously, and rename
 the track appropriately.</p>
@@ -1005,10 +999,10 @@ gene counts or number of reads aligning to a known gene feature. If you
 have a well annotated genome, you can use the gene structure file in a
 standard gene annotation format (GTF or GFF)) along with the spliced
 alignment file to quantify the known genes. We will demonstrate a
-utility called <code class="codehilite"><span class="n">FeatureCounts</span></code> that comes with the <code class="codehilite"><span class="n">Subread</span></code> package.</p>
-<div class="codehilite"><pre><span></span>mkdir gene_counts
+utility called <code>FeatureCounts</code> that comes with the <code>Subread</code> package.</p>
+<div class="highlight"><pre><span></span><code>mkdir gene_counts
 featureCounts -a annotation/Danio_rerio.Zv9.66.gtf -t exon -g gene_id -o gene_counts/gene_counts.txt tophat/ZV9_6h/accepted_hits.sorted.bam tophat/ZV9_2cells/accepted_hits.sorted.bam
-</pre></div>
+</code></pre></div>
 
 <h2 id="isoform-expression-and-transcriptome-assembly">Isoform Expression and Transcriptome Assembly</h2>
 <p>For non-model organisms and genomes with draft assemblies and incomplete
@@ -1019,58 +1013,58 @@ be used for this purpose such as, cufflinks, stringtie. These assemblers
 can give gene or isoform level assemblies that can be used to perform a
 gene/isoform level quantification. These assemblers require an alignment
 of reads with a reference genome or transcriptome as an input. The
-second optional input is a known gene structure in <code class="codehilite"><span class="n">GTF</span></code> or <code class="codehilite"><span class="n">GFF</span></code>
+second optional input is a known gene structure in <code>GTF</code> or <code>GFF</code>
 format.</p>
 <p>These gene annotation files contain information of known genes and may be helpful in reconstruction of transcripts that are of low abundance on your sample. StringTie will also assemble and construct a transcriptome containing any unannotated genes. Furthermore, its output data is able to directly be utilised in differential expression resources such as Cuffdiff, Ballgown or other packers in R (edgeR, DESeq2).</p>
 <p>To run string tie, the basic command is:</p>
 <p>Stringtie has a number of parameters in order to perform transcriptome
 assembly and quantification. To view them all type:</p>
-<p><div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="c1">--help</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>    stringtie --help
+</code></pre></div>
 We aim to reconstruct the transcriptome for both samples by using the
 Ensembl annotation as a guide. </p>
-<p>The Ensembl annotation for <code class="codehilite"><span class="n">Danio</span> <span class="n">rerio</span></code> is available in
-<code class="codehilite"><span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span></code>.</p>
-<p>The general format of the <code class="codehilite"><span class="n">stringtie</span></code> command is:
-<div class="codehilite"><pre><span></span><span class="w">    </span><span class="n">stringtie</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aligned_reads_file</span><span class="p">.</span><span class="n">bam</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">options</span><span class="o">]</span><span class="w"></span>
-</pre></div>
+<p>The Ensembl annotation for <code>Danio rerio</code> is available in
+<code>annotation/Danio_rerio.Zv9.66.gtf</code>.</p>
+<p>The general format of the <code>stringtie</code> command is:
+<div class="highlight"><pre><span></span><code>    stringtie &lt;aligned_reads_file.bam&gt; [options]
+</code></pre></div>
 Where the input is the aligned reads (either in SAM or BAM format).</p>
 <p>Perform transcriptome assembly, strictly using the supplied GTF
-annotations, for the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> and <code class="codehilite"><span class="mi">6</span><span class="n">h</span></code> data using cufflinks:</p>
+annotations, for the <code>2cells</code> and <code>6h</code> data using cufflinks:</p>
 <p>For instance, to run StringTie on 2cells BAM file:
-<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_2cells.gft tophat/ZV9_2cells/accepted_hits.sorted.bam
+</code></pre></div></p>
 <p>Repeat this command on the 6h BAM file:
-<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gft</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_6h.gft tophat/ZV9_6h/accepted_hits.sorted.bam
+</code></pre></div></p>
 <ul>
 <li>
-<p><code class="codehilite"><span class="o">-</span><span class="n">p</span></code> = number of processing threads</p>
+<p><code>-p</code> = number of processing threads</p>
 </li>
 <li>
-<p><code class="codehilite"><span class="o">-</span><span class="k">G</span></code> = reference annotation file</p>
+<p><code>-G</code> = reference annotation file</p>
 </li>
 <li>
-<p><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> = output file location and name.</p>
+<p><code>-o</code> = output file location and name.</p>
 </li>
 </ul>
 <p>Most RNA sequencing experiments will have multiple samples. As such, Stringtie has a function to merge all transcripts assembled across the samples, which enables inter-sample comparisons to be made. It does this by first assembling all transcripts within each sample, merging the the transcripts and re-running the assembly based off a merged list of genes.</p>
 <p>Prior to running a merge function within stringtie:
 We need to create a mergelist.txt file before utilising the merge function. This is a list of all .gtf files created by stringtie in the above step and can be made in a text editor such as vi or nano. For this exercise, there is a file pre-made for you. The txt file will direct the merge function to look for the names of all the .gtf files that we want to merge.</p>
 <p>To merge StringTie files
-<div class="codehilite"><pre><span></span>    <span class="n">ls</span> <span class="n">stringtie</span><span class="cm">/*.gtf &gt;mergelist.txt</span>
-<span class="cm">    less mergelist.txt </span>
+<div class="highlight"><pre><span></span><code>    ls stringtie/*.gtf &gt;mergelist.txt
+    less mergelist.txt 
 
-<span class="cm">    stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt</span>
-</pre></div>
-(<code class="codehilite"><span class="n">mergelist</span><span class="p">.</span><span class="n">txt</span></code> is a text file that will have a list of all <strong>.gtf</strong> generated by stringtie in the above steps)</p>
-<p>Note how a reference gene annotation (<code class="codehilite"><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span></code>) is utilised in this case. This makes use of information we already have in order to assemble the transcriptome of our RNA seq data.</p>
+    stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt
+</code></pre></div>
+(<code>mergelist.txt</code> is a text file that will have a list of all <strong>.gtf</strong> generated by stringtie in the above steps)</p>
+<p>Note how a reference gene annotation (<code>Danio_rerio.Zv9.66.gtf</code>) is utilised in this case. This makes use of information we already have in order to assemble the transcriptome of our RNA seq data.</p>
 <p>The next step is an optional step to see how your merged annotation compares to reference gene annotation provided. gffcompare is a tool that determines how many of your annotations match the reference (either fully or partial) and how many were completely novel. The output of this ulitily gives you:</p>
 <p>Sensitivity is defined as the proportion of genes from the annotation that are correctly reconstructed
 Precision (also known as positive predictive value) captures the proportion of the output that overlaps the annotation
 To compare how merged annotation compares to reference
-<div class="codehilite"><pre><span></span>    <span class="n">gffcompare</span> <span class="o">-</span><span class="k">G</span> <span class="o">-</span><span class="n">r</span> <span class="n">annotation</span><span class="o">/</span><span class="n">Danio_rerio</span><span class="p">.</span><span class="n">Zv9</span><span class="p">.</span><span class="mi">66</span><span class="p">.</span><span class="n">gtf</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    gffcompare -G -r annotation/Danio_rerio.Zv9.66.gtf stringtie/stringtie_merged.gtf
+</code></pre></div></p>
 <ul>
 <li>
 <p>-r = reference genome in form of gtf</p>
@@ -1084,11 +1078,11 @@ To compare how merged annotation compares to reference
 </ul>
 <p>Now that we are happy with our merged annotation, we need to estimate the abundance of each transcript within each sample. Stringtie is designed to create output files that are immediately usable in next step of our RNA sequencing pipeline. In this next example, we can direct stringtie to simultaneously create a .ctab file required for ballgown.</p>
 <p>To estimate abundances and create table counts for 2cell 
-<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_6h</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    stringtie -e -B -p 8 -G stringtie/stringtie_merged.gtf -o ballgown/ZV9_6h.gtf tophat/ZV9_6h/accepted_hits.sorted.bam
+</code></pre></div>
 To estimate abundances and create table counts for 2cell 
-<div class="codehilite"><pre><span></span>    <span class="n">stringtie</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8</span> <span class="o">-</span><span class="k">G</span> <span class="n">stringtie</span><span class="o">/</span><span class="n">stringtie_merged</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">ballgown</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gtf</span> <span class="n">tophat</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="o">/</span><span class="n">accepted_hits</span><span class="p">.</span><span class="n">sorted</span><span class="p">.</span><span class="n">bam</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    stringtie -e -B -p 8 -G stringtie/stringtie_merged.gtf -o ballgown/ZV9_2cells.gtf tophat/ZV9_2cells/accepted_hits.sorted.bam
+</code></pre></div></p>
 <ul>
 <li>
 <p>-e = limits the processing of read alignments to only estimate and output the assembled transcripts matching the reference transcripts (given by -G). Reads with no reference transcripts will be entirely skipped</p>
@@ -1107,14 +1101,14 @@ To estimate abundances and create table counts for 2cell
 <ol>
 <li>
 <p>Go back to IGV and load the pre-computed, GTF-guided transcriptome
-    assembly for the <code class="codehilite"><span class="mi">2</span><span class="n">cells</span></code> data
-    (<code class="codehilite"><span class="n">stringtie</span><span class="o">/</span><span class="n">ZV9_2cells</span><span class="p">.</span><span class="n">gtf</span></code>).</p>
+    assembly for the <code>2cells</code> data
+    (<code>stringtie/ZV9_2cells.gtf</code>).</p>
 </li>
 <li>
 <p>Rename the track as “2cells GTF-Guided Transcripts”.</p>
 </li>
 <li>
-<p>In the search box type <code class="codehilite"><span class="n">ENSDART00000082297</span></code> in order for the browser
+<p>In the search box type <code>ENSDART00000082297</code> in order for the browser
     to zoom in to the gene of interest.</p>
 </li>
 </ol>
@@ -1185,28 +1179,28 @@ experimental design was therefore:</p>
 </table>
 <p>This workflow requires raw gene count files and these can be generated
 using a utility called featureCounts as demonstrated above. We are using
-a pre-computed gene counts data (stored in <code class="codehilite"><span class="n">pnas_expression</span><span class="p">.</span><span class="n">txt</span></code>) for
+a pre-computed gene counts data (stored in <code>pnas_expression.txt</code>) for
 this exercise.</p>
 <h3 id="prepare-the-environment_1">Prepare the Environment</h3>
 <p>Prepare the environment and load R:</p>
-<p><div class="codehilite"><pre><span></span>    <span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">rnaseq</span><span class="o">/</span><span class="n">edgeR</span>
-    <span class="n">R</span> <span class="p">(</span><span class="n">press</span> <span class="n">enter</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>    cd /home/trainee/rnaseq/edgeR
+    R (press enter)
+</code></pre></div>
 Once on the R prompt. Load libraries:
-<div class="codehilite"><pre><span></span>    <span class="n">library</span><span class="p">(</span><span class="n">edgeR</span><span class="p">)</span>
-    <span class="n">library</span><span class="p">(</span><span class="n">biomaRt</span><span class="p">)</span>
-    <span class="n">library</span><span class="p">(</span><span class="n">gplots</span><span class="p">)</span>
-    <span class="n">library</span><span class="p">(</span><span class="ss">&quot;limma&quot;</span><span class="p">)</span>
-    <span class="n">library</span><span class="p">(</span><span class="ss">&quot;RColorBrewer&quot;</span><span class="p">)</span>
-    <span class="n">library</span><span class="p">(</span><span class="ss">&quot;org.Hs.eg.db&quot;</span><span class="p">)</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    library(edgeR)
+    library(biomaRt)
+    library(gplots)
+    library(&quot;limma&quot;)
+    library(&quot;RColorBrewer&quot;)
+    library(&quot;org.Hs.eg.db&quot;)
+</code></pre></div></p>
 <h3 id="read-in-data">Read in Data</h3>
 <p>Read in count table and experimental design:
-<div class="codehilite"><pre><span></span>    <span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&quot;pnas_expression.txt&quot;</span><span class="p">,</span> <span class="n">row.names</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-    <span class="n">targets</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&quot;Targets.txt&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-    <span class="nf">colnames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;-</span><span class="n">targets</span><span class="o">$</span><span class="n">Label</span>
-    <span class="nf">head</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    data &lt;- read.delim(&quot;pnas_expression.txt&quot;, row.names=1, header=T)
+    targets &lt;- read.delim(&quot;Targets.txt&quot;, header=T)
+    colnames(data) &lt;-targets$Label
+    head(data, n=20)
+</code></pre></div></p>
 <h3 id="add-gene-annotation">Add Gene annotation</h3>
 <p>The data set only includes the Ensembl gene id and the counts. It is
 useful to have other annotations such as the gene symbol and entrez id.
@@ -1214,44 +1208,79 @@ Next we will add in these annotations. We will use the BiomaRt package
 to do this.</p>
 <p>We start by using the useMart function of BiomaRt to access the human
 data base of ensemble gene ids.
-<div class="codehilite"><pre><span></span>    <span class="n">human</span><span class="o">&lt;-</span><span class="nf">useMart</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;www.ensembl.org&quot;</span><span class="p">,</span> <span class="s">&quot;ENSEMBL_MART_ENSEMBL&quot;</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="s">&quot;hsapiens_gene_ensembl&quot;</span><span class="p">)</span> 
-    <span class="n">attributes</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ensembl_gene_id&quot;</span><span class="p">,</span> <span class="s">&quot;entrezgene_id&quot;</span><span class="p">,</span><span class="s">&quot;hgnc_symbol&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    human&lt;-useMart(host=&quot;www.ensembl.org&quot;, &quot;ENSEMBL_MART_ENSEMBL&quot;, dataset=&quot;hsapiens_gene_ensembl&quot;) 
+    attributes=c(&quot;ensembl_gene_id&quot;, &quot;entrezgene_id&quot;,&quot;hgnc_symbol&quot;)
+</code></pre></div>
 We create a vector of our ensemble gene ids.
-<div class="codehilite"><pre><span></span>    <span class="n">ensembl_names</span><span class="o">&lt;-</span><span class="nf">rownames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="nf">head</span><span class="p">(</span><span class="n">ensembl_names</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    ensembl_names&lt;-rownames(data)
+    head(ensembl_names)
+</code></pre></div>
 We then use the function getBM to get the gene symbol data we want.This
 takes about a minute.
-<div class="codehilite"><pre><span></span>    <span class="n">genemap</span><span class="o">&lt;-</span><span class="nf">getBM</span><span class="p">(</span><span class="n">attributes</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="s">&quot;ensembl_gene_id&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">ensembl_names</span><span class="p">,</span> <span class="n">mart</span><span class="o">=</span><span class="n">human</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    genemap&lt;-getBM(attributes, filters=&quot;ensembl_gene_id&quot;, values=ensembl_names, mart=human)
+</code></pre></div>
 Have a look at the start of the genemap dataframe.
-<div class="codehilite"><pre><span></span>    <span class="n">head</span><span class="p">(</span><span class="n">genemap</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    head(genemap)
+</code></pre></div>
 We then match the data we have retrieved to our dataset.
-<div class="codehilite"><pre><span></span>    <span class="n">idx</span> <span class="o">&lt;-</span><span class="nf">match</span><span class="p">(</span><span class="n">ensembl_names</span><span class="p">,</span> <span class="n">genemap</span><span class="o">$</span><span class="n">ensembl_gene_id</span><span class="p">)</span>
-    <span class="n">data</span><span class="o">$</span><span class="n">entrezgene</span> <span class="o">&lt;-</span><span class="n">genemap</span><span class="o">$</span><span class="n">entrezgene_id</span> <span class="n">[</span> <span class="n">idx</span> <span class="n">]</span>
-    <span class="n">data</span><span class="o">$</span><span class="n">hgnc_symbol</span> <span class="o">&lt;-</span><span class="n">genemap</span><span class="o">$</span><span class="n">hgnc_symbol</span> <span class="n">[</span> <span class="n">idx</span> <span class="n">]</span>
-    <span class="n">Ann</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">data</span><span class="o">$</span><span class="n">hgnc_symbol</span><span class="p">,</span> <span class="n">data</span><span class="o">$</span><span class="n">entrezgene</span><span class="p">)</span>
-    <span class="nf">colnames</span><span class="p">(</span><span class="n">Ann</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Ensembl&quot;</span><span class="p">,</span> <span class="s">&quot;Symbol&quot;</span><span class="p">,</span> <span class="s">&quot;Entrez&quot;</span><span class="p">)</span>
-    <span class="n">Ann</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">Ann</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    idx &lt;-match(ensembl_names, genemap$ensembl_gene_id)
+    data$entrezgene &lt;-genemap$entrezgene_id [ idx ]
+    data$hgnc_symbol &lt;-genemap$hgnc_symbol [ idx ]
+    Ann &lt;- cbind(rownames(data), data$hgnc_symbol, data$entrezgene)
+    colnames(Ann)&lt;-c(&quot;Ensembl&quot;, &quot;Symbol&quot;, &quot;Entrez&quot;)
+    Ann&lt;-as.data.frame(Ann)
+</code></pre></div>
 Let’s check and see that this additional information is there.
-<div class="codehilite"><pre><span></span>    <span class="n">head</span><span class="p">(</span><span class="k">data</span><span class="p">)</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>    head(data)
+</code></pre></div></p>
 <h3 id="data-checks">Data checks</h3>
 <p>Create DGEList object:
-<div class="codehilite"><pre><span></span>    <span class="n">treatment</span> <span class="o">&lt;-</span><span class="nf">factor</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;Control&quot;</span><span class="p">,</span><span class="m">4</span><span class="p">),</span> <span class="nf">rep</span><span class="p">(</span><span class="s">&quot;DHT&quot;</span><span class="p">,</span><span class="m">3</span><span class="p">)),</span> <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Control&quot;</span><span class="p">,</span> <span class="s">&quot;DHT&quot;</span><span class="p">))</span>
-    <span class="n">y</span> <span class="o">&lt;-</span><span class="nf">DGEList</span><span class="p">(</span><span class="n">counts</span><span class="o">=</span><span class="n">data[</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="n">]</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">treatment</span><span class="p">,</span> <span class="n">genes</span><span class="o">=</span><span class="n">Ann</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    treatment &lt;-factor(c(rep(&quot;Control&quot;,4), rep(&quot;DHT&quot;,3)), levels=c(&quot;Control&quot;, &quot;DHT&quot;))
+    y &lt;-DGEList(counts=data[,1:7], group=treatment, genes=Ann)
+</code></pre></div>
 Check the dimensions of the object:
-<div class="codehilite"><pre><span></span>    <span class="n">dim</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    dim(y)
+</code></pre></div>
 We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
+<p>Now we will filter out genes with low counts by only keeping those rows
+where the count per million (cpm) is at least 1 in at least three
+samples:</p>
+<div class="highlight"><pre><span></span><code># Here we calculate the number of counts per million (cpm) reads as a normalization factor
+myCPM &lt;- cpm(y$counts)
+dim(myCPM)
+
+# Here we generate a graph and save it as a pdf comparing raw counts with cpm
+# we want to remove all those genes that have too low counts which may be due to noise
+
+pdf(file=&quot;counts-vs-cpms-gene.pdf&quot;)
+plot(myCPM[,1],y$counts[,1],ylim=c(0,30),xlim=c(0,3))
+for (i in 1:3) {
+  abline(h=10,v=i)
+  i&lt;-i+1
+}
+dev.off()
+
+
+head(myCPM)
+thresh &lt;- myCPM &gt; 1 ## we selected a threshold of at least 1 cpm on each gene on each sample
+head(thresh)
+table(rowSums(thresh))
+
+# we would like to keep genes that have at least 2 TRUES, two samples with more than 1 cpm in each row (gene).
+
+keep &lt;- rowSums(thresh) &gt;=3
+
+y$counts&lt;-y$counts[keep,]
+
+# dim function will tell us the number of genes that we kept with high enough expression 
+
+dim(y$counts)
+</code></pre></div>
+
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <div class="admonition hint">
-<details><summary>Hint</summary><p><code class="codehilite"><span class="n">dim</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></code> </p>
+<details><summary>Hint</summary><p><code>dim(y)</code> </p>
 </details>
 </div>
 <div class="admonition success">
@@ -1271,22 +1300,22 @@ We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
 per sample has not changed greatly. Let us check the total number of
 reads per sample in the original data (data) and now after filtering.</p>
 <p>Before:
-<div class="codehilite"><pre><span></span>    <span class="n">colSums</span><span class="p">(</span><span class="k">data</span><span class="p">[,</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    colSums(data[,1:7])
+</code></pre></div>
     After filtering:
-<div class="codehilite"><pre><span></span>    <span class="n">colSums</span><span class="p">(</span><span class="n">y$counts</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    colSums(y$counts)
+</code></pre></div>
 We will now perform normalization to take account of different library
 size:
-<div class="codehilite"><pre><span></span>    <span class="n">y</span><span class="o">&lt;-</span><span class="nf">calcNormFactors</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    y&lt;-calcNormFactors(y)
+</code></pre></div>
 We will check the calculated normalization factors:
-<div class="codehilite"><pre><span></span>    <span class="n">y$samples</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    y$samples
+</code></pre></div>
 Lets have a look at whether the samples cluster by condition. (You
 should produce a plot as shown in Figure 4):</p>
-<p><div class="codehilite"><pre><span></span>    <span class="n">plotMDS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="k">as</span><span class="p">.</span><span class="nb">numeric</span><span class="p">(</span><span class="n">y$samples$group</span><span class="p">))</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>    plotMDS(y, col=as.numeric(y$samples$group))
+</code></pre></div>
 <img alt="image" src="../MDS.png" /> [fig:MDS plot]</p>
 <p>Does the MDS plot indicate a difference in gene expression between the
 Controls and the DHT treated samples?</p>
@@ -1297,20 +1326,20 @@ expression between the conditions.</p>
 dispersion. The common dispersion estimates the overall Biological
 Coefficient of Variation (BCV) of the dataset averaged over all genes.</p>
 <p>By using verbose we get the Disp and BCV values printed on the screen</p>
-<p><div class="codehilite"><pre><span></span>    <span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">estimateCommonDisp</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>    y &lt;- estimateCommonDisp(y, verbose=T)
+</code></pre></div>
 What value to you see for BCV?</p>
 <p>We now estimate gene-specific dispersion.
-<div class="codehilite"><pre><span></span>    <span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">estimateTagwiseDisp</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> 
-</pre></div>
+<div class="highlight"><pre><span></span><code>    y &lt;- estimateTagwiseDisp(y) 
+</code></pre></div>
 We will plot the tagwise dispersion and the common dispersion (You
 should obtain a plot as shown in the Figure 5):
-<div class="codehilite"><pre><span></span>    <span class="n">plotBCV</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    plotBCV(y)
+</code></pre></div>
 <img alt="image" src="../BCV.png" /> [fig:BCV plot]</p>
 <p>We see here that the common dispersion estimates the overall Biological
 Coefficient of Variation (BCV) of the dataset averaged over all genes.
-The common dispersion is <code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">02</span></code> and the BCV is the square root of the
+The common dispersion is <code>0.02</code> and the BCV is the square root of the
 common dispersion (sqrt[0.02] = 0.14). A BCV of 14% is typical for cell
 line experiment.</p>
 <p>As you can see from the plot the BCV of some genes (generally those with
@@ -1332,29 +1361,29 @@ exact test for the negative binomial distribution (Robinson and Smyth,
 2008).</p>
 <h3 id="testing-for-differential-expression">Testing for Differential Expression</h3>
 <p>We now test for differentially expressed BCV genes:
-<div class="codehilite"><pre><span></span>    <span class="n">et</span> <span class="o">&lt;-</span> <span class="nf">exactTest</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    et &lt;- exactTest(y)
+</code></pre></div>
 Now we will use the topTags function to adjust for multiple testing. We
 will use the Benjimini Hochberg (&ldquo;BH&rdquo;) method and we will produce a
 table of results:
-<div class="codehilite"><pre><span></span>    <span class="n">res</span> <span class="o">&lt;-</span> <span class="nf">topTags</span><span class="p">(</span><span class="n">et</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="nf">nrow</span><span class="p">(</span><span class="n">y</span><span class="o">$</span><span class="n">counts</span><span class="p">),</span> <span class="n">adjust.method</span><span class="o">=</span><span class="s">&quot;BH&quot;</span><span class="p">)</span><span class="o">$</span><span class="n">table</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    res &lt;- topTags(et, n=nrow(y$counts), adjust.method=&quot;BH&quot;)$table
+</code></pre></div>
 Let’s have a look at the first rows of the table:
-<div class="codehilite"><pre><span></span>    <span class="n">head</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    head(res)
+</code></pre></div>
 To get a summary of the number of differentially expressed genes we can
 use the decideTestsDGE function.
-<div class="codehilite"><pre><span></span>    <span class="nf">summary</span><span class="p">(</span><span class="n">de</span> <span class="o">&lt;-</span> <span class="nf">decideTestsDGE</span><span class="p">(</span><span class="n">et</span><span class="p">))</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    summary(de &lt;- decideTestsDGE(et))
+</code></pre></div>
 This tells us that 2096 genes are downregulated and 2339 genes are
 upregulated at 5% FDR.We will now make subsets of the most significant
 upregulated and downregulated genes.
-<div class="codehilite"><pre><span></span>    <span class="n">alpha</span><span class="o">=</span><span class="m">0.05</span>
-    <span class="n">lfc</span><span class="o">=</span><span class="m">1.5</span>
-    <span class="n">edgeR_res_sig</span><span class="o">&lt;-</span><span class="n">res[res</span><span class="o">$</span><span class="n">FDR</span><span class="o">&lt;</span><span class="n">alpha</span><span class="p">,</span><span class="n">]</span>
-    <span class="n">edgeR_res_sig_lfc</span> <span class="o">&lt;-</span><span class="n">edgeR_res_sig</span><span class="nf">[abs</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="o">$</span><span class="n">logFC</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">lfc</span><span class="p">,</span><span class="n">]</span>
-    <span class="nf">head</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span><span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig</span><span class="p">)</span><span class="nf">nrow</span><span class="p">(</span><span class="n">edgeR_res_sig_lfc</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    alpha=0.05
+    lfc=1.5
+    edgeR_res_sig&lt;-res[res$FDR&lt;alpha,]
+    edgeR_res_sig_lfc &lt;-edgeR_res_sig[abs(edgeR_res_sig$logFC) &gt;= lfc,]
+    head(edgeR_res_sig, n=20)nrow(edgeR_res_sig)nrow(edgeR_res_sig_lfc)
+</code></pre></div>
 We can write out these results to our current directory.</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
@@ -1371,12 +1400,12 @@ We can write out these results to our current directory.</p>
 </details>
 </div>
 </div>
-<p>If you need to quit the <code class="codehilite"><span class="n">R</span></code> console, type:
-<code class="codehilite"><span class="n">q</span><span class="p">()</span></code>
-You can save your workspace by typing <code class="codehilite"><span class="n">Y</span></code> on prompt.</p>
+<p>If you need to quit the <code>R</code> console, type:
+<code>q()</code>
+You can save your workspace by typing <code>Y</code> on prompt.</p>
 <p>Please note that the output files you are creating are saved in your
 present working directory. If you are not sure where you are in the file
-system try typing <code class="codehilite"><span class="n">pwd</span></code> on your command prompt to find out.</p>
+system try typing <code>pwd</code> on your command prompt to find out.</p>
 <h2 id="references">References</h2>
 <ol>
 <li>
@@ -1424,8 +1453,6 @@ system try typing <code class="codehilite"><span class="n">pwd</span></code> on 
 </li>
 </ol>
                 
-                  
-                
               
               
                 
@@ -1441,34 +1468,34 @@ system try typing <code class="codehilite"><span class="n">pwd</span></code> on 
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Read Alignment
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../../denovo/handout/handout/" title="De Novo Genome Assembly" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../../../denovo/handout/handout/" title="De Novo Genome Assembly" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 De Novo Genome Assembly
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -1483,11 +1510,10 @@ system try typing <code class="codehilite"><span class="n">pwd</span></code> on 
             &copy; The authors; 2019-
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1496,9 +1522,18 @@ system try typing <code class="codehilite"><span class="n">pwd</span></code> on 
       
     </div>
     
-      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

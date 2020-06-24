@@ -1,4 +1,4 @@
-# Welcome to the Introduction to NGS Workshop (30 Sep - 4 Oct 2019)
+# Welcome to the Introduction to NGS Workshop
 <br>
 
 The Introduction to NGS Data Analysis is a Two-day, hands-on workshop that offers attendees a basic understanding of NGS data analysis workflows. 
@@ -8,18 +8,33 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 
 |*Time* |*Subject* |*notes*|
 |-----|--------|-----|
-||Day1: 16 June 2020 |
+||Day1: 22 June 2020 |
 |10:00-10:20 am|Housekeeping + Icebreaker|Slides + group activity|
 |10:20:10-30 pm| short Break|
-|10:30-12:00 pm|Intro to R|Interactive Lecture|
-|12:00:1-00 pm| Lunch Break|
-|1:00-2:45 pm|Intro to CLI|Lecture + hands on|
+|10:30-11:40 am|Intro to command line|Interactive Lecture|
+|11:45:12:45 pm|Intro to R|Live coding|
+|12:45-1:45 pm|Lunch Break|
+|1:45-2:45 pm|QC of NGS data|Hands-on|
 |2:45-3:00 pm|Recap + QA|Group discussion|
 
 
 |*Time* |*Subject* |*notes*|
 |------|-----|----|
-||Day2: 17 June 2020|
+||Day 2: 24 June 2020|
+|10:00-10:15 am|Workflow activity|group activity |
+|10:15-10:30 am|NGS alignment |Practice|
+|10:30-11:30 am|RNAseq alignment exploration in IGV|Practice
+|11:30-11:40 pm| short Break|
+|11:40-12:00 pm|Transcript assembly exploration in IGV|Practice|
+|12:00 -1:00 pm|RNAseq: DE using edgeR|Practice|
+|1:00-2:00 pm| Lunch Break|
+|2:00 - 2:30 pm|RNAseq: DE using edgeR|Practice|
+|2:30-3:00 pm|QA and Wrap up| |
+
+
+|*Time* |*Subject* |*notes*|
+|------|-----|----|
+||Day3: 25 June 2020|
 |10:00-10:15 am|Intro to denovo assembly|Lecture Recap |
 |10:15-11:15 am|Compile and explore Velvet + read data|Practice
 |11:15-11:30 am|Assembly activity I|group activity|
@@ -30,16 +45,6 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 |2:00-3:00 pm| Long read assembly|
 
 
-|*Time* |*Subject* |*notes*|
-|------|-----|----|
-||Day 3: 18 June 2020|
-|10:00-10:15 am|Intro to RNA-seq|Lecture Recap |
-|10:15-10:45 am|Workflow activity |
-|10:45-11:30 am|RNAseq alignment exploration in IGV|Practice
-|11:30-12:00 pm|Transcript assembly exploration in IGV|Practice|
-|12:00-1:00 pm| Lunch Break|
-|1:00 - 2:30 pm|RNAseq: DE using edgeR|Practice|
-|2:30-3:00 pm|QA and Wrap up| |
 
 
 ## Workshop Content

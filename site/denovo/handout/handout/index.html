@@ -1,14 +1,12 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
       
@@ -16,27 +14,8 @@
       
         <meta name="author" content="Sonika Tyagi">
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
     
     
       
@@ -44,21 +23,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
       
       
     
-    
-      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../../css/details.css">
@@ -69,69 +45,72 @@
     
   </head>
   
+  
     <body dir="ltr">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#key-learning-outcomes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Introduction to NGS Workshop
-            </span>
-            <span class="md-header-nav__topic">
-              
-                De Novo Genome Assembly
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo" aria-label="Introduction to NGS Workshop">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Introduction to NGS Workshop
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              De Novo Genome Assembly
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -139,31 +118,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo" aria-label="Introduction to NGS Workshop">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Introduction to NGS Workshop
   </label>
@@ -215,13 +195,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Hands-on Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Hands-on Modules" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Hands-on Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -308,11 +294,14 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         De Novo Genome Assembly
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="De Novo Genome Assembly" class="md-nav__link md-nav__link--active">
@@ -320,11 +309,16 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -339,7 +333,7 @@
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -402,10 +396,6 @@
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -454,11 +444,16 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -473,7 +468,7 @@
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -537,10 +532,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -552,6 +543,9 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
+                
+                
+                  
                 
                 
                   <h1>De Novo Genome Assembly</h1>
@@ -617,39 +611,39 @@ variety of sequence data.</p>
 <p>The first exercise should get you a little more comfortable with the
 computer environment and the command line.</p>
 <p>First make sure that you are in the denovo working directory by typing:</p>
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">cd /home/trainee/denovo</span>
+</code></pre></div>
 
 
 <p>and making absolutely sure you’re there by typing:</p>
-<div class="codehilite"><pre><span></span><span class="n">pwd</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">pwd</span>
+</code></pre></div>
 
 
 <p>Now create sub-directories for this and the two other velvet practicals.
 All these directories will be made as sub-directories of a directory for
 the whole course called NGS. For this you can use the following
 commands:</p>
-<div class="codehilite"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="err">{</span><span class="n">part1</span><span class="p">,</span><span class="n">part2</span><span class="err">}</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">mkdir -p NGS/velvet/{part1,part2}</span>
+</code></pre></div>
 
 
-<p>The <code class="codehilite"><span class="o">-</span><span class="n">p</span></code> tells <code class="codehilite"><span class="n">mkdir</span></code> (make directory) to make any parent directories
+<p>The <code>-p</code> tells <code>mkdir</code> (make directory) to make any parent directories
 if they don’t already exist. You could have created the above
 directories one-at-a-time by doing this instead:</p>
-<div class="codehilite"><pre><span></span><span class="n">mkdir</span> <span class="n">NGS</span>
-<span class="n">mkdir</span> <span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span>
-<span class="n">mkdir</span> <span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="n">part1</span>
-<span class="n">mkdir</span> <span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="n">part2</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">mkdir NGS</span>
+<span class="err">mkdir NGS/velvet</span>
+<span class="err">mkdir NGS/velvet/part1</span>
+<span class="err">mkdir NGS/velvet/part2</span>
+</code></pre></div>
 
 
 <p>After creating the directories, examine the structure and move into the
 directory ready for the first velvet exercise by typing:</p>
-<div class="codehilite"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">R</span> <span class="n">NGS</span>
-<span class="n">cd</span> <span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="n">part1</span>
-<span class="n">pwd</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">ls -R NGS</span>
+<span class="err">cd NGS/velvet/part1</span>
+<span class="err">pwd</span>
+</code></pre></div>
 
 
 <h2 id="downloading-and-compiling-velvet">Downloading and Compiling Velvet</h2>
@@ -665,30 +659,30 @@ version of velvet at:</p>
 <p>You could go to this URL and download the latest velvet version, or
 equivalently, you could type the following, which will download, unpack,
 inspect, compile and execute your locally compiled version of velvet:</p>
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span><span class="o">/</span><span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="n">part1</span>
-<span class="n">pwd</span>
-<span class="n">tar</span> <span class="n">xzf</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">velvet_1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="n">tgz</span>
-<span class="n">ls</span> <span class="o">-</span><span class="n">R</span>
-<span class="n">cd</span> <span class="n">velvet_1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">10</span>
-<span class="n">make</span>
-<span class="p">.</span><span class="o">/</span><span class="n">velveth</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">cd /home/trainee/denovo/NGS/velvet/part1</span>
+<span class="err">pwd</span>
+<span class="err">tar xzf /home/trainee/denovo/data/velvet_1.2.10.tgz</span>
+<span class="err">ls -R</span>
+<span class="err">cd velvet_1.2.10</span>
+<span class="err">make</span>
+<span class="err">./velveth</span>
+</code></pre></div>
 
 
 <p>The standout displayed to screen when ’make’ runs may contain an error
 message but it is ignored</p>
 <p>Take a look at the executables you have created. They will be displayed
 as green by the command:</p>
-<div class="codehilite"><pre><span></span><span class="n">ls</span> <span class="c1">--color=always</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">ls --color=always</span>
+</code></pre></div>
 
 
-<p>The switch <code class="codehilite"><span class="err">–</span><span class="n">color</span></code>, instructs that files be coloured according to their
+<p>The switch <code>–color</code>, instructs that files be coloured according to their
 type. This is often the default but we are just being explicit. By
-specifying the value <code class="codehilite"><span class="n">always</span></code>, we ensure that colouring is always
+specifying the value <code>always</code>, we ensure that colouring is always
 applied, even from a script.</p>
 <p>Have a look of the output the command produces and you will see that
-<code class="codehilite"><span class="n">MAXKMERLENGTH</span><span class="o">=</span><span class="mi">31</span></code> and <code class="codehilite"><span class="n">CATEGORIES</span><span class="o">=</span><span class="mi">2</span></code> parameters were passed into the
+<code>MAXKMERLENGTH=31</code> and <code>CATEGORIES=2</code> parameters were passed into the
 compiler.</p>
 <p>This indicates that the default compilation was set for de Bruijn graph
 k-mers of maximum size 31 and to allow a maximum of just 2 read
@@ -696,10 +690,10 @@ categories. You can override these, and other, default configuration
 choices using command line parameters. Assume, you want to run velvet
 with a k-mer length of 41 using 3 categories, velvet needs to be
 recompiled to enable this functionality by typing:</p>
-<div class="codehilite"><pre><span></span><span class="n">make</span> <span class="n">clean</span>
-<span class="n">make</span> <span class="n">MAXKMERLENGTH</span><span class="o">=</span><span class="mi">41</span> <span class="n">CATEGORIES</span><span class="o">=</span><span class="mi">3</span>
-<span class="p">.</span><span class="o">/</span><span class="n">velveth</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">make clean</span>
+<span class="err">make MAXKMERLENGTH=41 CATEGORIES=3</span>
+<span class="err">./velveth</span>
+</code></pre></div>
 
 
 <p>Discuss with the persons next to you the following questions:</p>
@@ -784,97 +778,97 @@ ready for Velvet, using Velvet in paired-end mode and comparing results
 with Velvet’s ’auto’ option.</p>
 <p>First move to the directory you made for this exercise and make a
 suitable named directory for the exercise:</p>
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span><span class="o">/</span><span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="n">part2</span> 
-<span class="n">mkdir</span> <span class="n">SRS004748</span> 
-<span class="n">cd</span> <span class="n">SRS004748</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">cd /home/trainee/denovo/NGS/velvet/part2 </span>
+<span class="err">mkdir SRS004748 </span>
+<span class="err">cd SRS004748</span>
+</code></pre></div>
 
 
 <p>There is no need to download the read files, as they are already stored
 locally. You will simply create a symlink to this pre-downloaded data
 using the following commands:</p>
-<div class="codehilite"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">SRR022852_</span><span class="o">?</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span> <span class="p">.</span><span class="o">/</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">ln -s /home/trainee/denovo/data/SRR022852_?.fastq.gz ./</span>
+</code></pre></div>
 
 
 <p>It is interesting to monitor the computer’s resource utilisation,
 particularly memory. A simple way to do this is to open a second
 terminal and in it type:</p>
-<div class="codehilite"><pre><span></span><span class="n">top</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">top</span>
+</code></pre></div>
 
 
-<p><code class="codehilite"><span class="n">top</span></code> is a program that continually monitors all the processes running
+<p><code>top</code> is a program that continually monitors all the processes running
 on your computer, showing the resources used by each. Leave this running
 and refer to it periodically throughout your Velvet analyses.
 Particularly if they are taking a long time or whenever your curiosity
 gets the better of you. You should find that as this practical
 progresses, memory usage will increase significantly.</p>
-<p>Now, back to the first terminal, you are ready to run <code class="codehilite"><span class="n">velveth</span></code> and
-<code class="codehilite"><span class="n">velvetg</span></code>. The reads are <code class="codehilite"><span class="o">-</span><span class="n">shortPaired</span></code> and for the first run you should
-not use any parameters for <code class="codehilite"><span class="n">velvetg</span></code>.</p>
+<p>Now, back to the first terminal, you are ready to run <code>velveth</code> and
+<code>velvetg</code>. The reads are <code>-shortPaired</code> and for the first run you should
+not use any parameters for <code>velvetg</code>.</p>
 <p>From this point on, where it will be informative to time your runs. This
 is very easy to do, just prefix the command to run the program with the
-command <code class="codehilite"><span class="n">time</span></code>. This will cause UNIX to report how long the program took
+command <code>time</code>. This will cause UNIX to report how long the program took
 to complete its task.</p>
 <p>Set the two stages of velvet running, whilst you watch the memory usage
-as reported by <code class="codehilite"><span class="n">top</span></code>. Time the <code class="codehilite"><span class="n">velvetg</span></code> stage:</p>
-<div class="codehilite"><pre><span></span><span class="n">velveth</span> <span class="n">run_25</span> <span class="mi">25</span> <span class="o">-</span><span class="n">fmtAuto</span> <span class="o">-</span><span class="n">create_binary</span> <span class="o">-</span><span class="n">shortPaired</span> <span class="o">-</span><span class="n">separate</span> <span class="n">SRR022852_1</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span> <span class="n">SRR022852_2</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_25</span>
-</pre></div>
+as reported by <code>top</code>. Time the <code>velvetg</code> stage:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">velveth run_25 25 -fmtAuto -create_binary -shortPaired -separate SRR022852_1.fastq.gz SRR022852_2.fastq.gz</span>
+<span class="err">time velvetg run_25</span>
+</code></pre></div>
 
 
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>What does <code class="codehilite"><span class="o">-</span><span class="n">fmtAuto</span></code> and <code class="codehilite"><span class="o">-</span><span class="n">create_binary</span></code> do? (see help menu)</p>
+<p>What does <code>-fmtAuto</code> and <code>-create_binary</code> do? (see help menu)</p>
 </div>
 <div class="admonition success">
-<details><summary>Answer</summary><p><code class="codehilite"><span class="o">-</span><span class="n">fmtAuto</span></code> tries to detect the correct format of the input files e.g. FASTA, FASTQ and whether they are compressed or not.   <br />
-<code class="codehilite"><span class="o">-</span><span class="n">create_binary</span></code> outputs sequences as a binary file. That means that <code class="codehilite"><span class="n">velvetg</span></code> can read the sequences from the binary file more quickly that from the original sequence files.</p>
+<details><summary>Answer</summary><p><code>-fmtAuto</code> tries to detect the correct format of the input files e.g. FASTA, FASTQ and whether they are compressed or not.   <br />
+<code>-create_binary</code> outputs sequences as a binary file. That means that <code>velvetg</code> can read the sequences from the binary file more quickly that from the original sequence files.</p>
 </details>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>Comment on the use of memory and CPU for <code class="codehilite"><span class="n">velveth</span></code> and <code class="codehilite"><span class="n">velvetg</span></code>?</p>
+<p>Comment on the use of memory and CPU for <code>velveth</code> and <code>velvetg</code>?</p>
 </div>
 <div class="admonition success">
-<details><summary>Answer</summary><p><code class="codehilite"><span class="n">velveth</span></code> uses only one CPU while <code class="codehilite"><span class="n">velvetg</span></code> uses all possible CPUs for some parts of the calculation.</p>
+<details><summary>Answer</summary><p><code>velveth</code> uses only one CPU while <code>velvetg</code> uses all possible CPUs for some parts of the calculation.</p>
 </details>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>How long did <code class="codehilite"><span class="n">velvetg</span></code> take?</p>
+<p>How long did <code>velvetg</code> take?</p>
 </div>
 <div class="admonition success">
 <details><summary>Answer</summary><p>My own measurements are:   <br />
-<code class="codehilite"><span class="nb">real</span> <span class="mi">1</span><span class="n">m8</span><span class="p">.</span><span class="mi">877</span><span class="n">s</span><span class="p">;</span> <span class="k">user</span> <span class="mi">4</span><span class="n">m15</span><span class="p">.</span><span class="mi">324</span><span class="n">s</span><span class="p">;</span> <span class="n">sys</span> <span class="mi">0</span><span class="n">m4</span><span class="p">.</span><span class="mi">716</span><span class="n">s</span></code></p>
+<code>real 1m8.877s; user 4m15.324s; sys 0m4.716s</code></p>
 </details>
 </div>
-<p>Next, after saving your <code class="codehilite"><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span></code> file from being overwritten, set
+<p>Next, after saving your <code>contigs.fa</code> file from being overwritten, set
 the cut-off parameters that you investigated in the previous exercise
-and rerun <code class="codehilite"><span class="n">velvetg</span></code>. time and monitor the use of resources as
-previously. Start with <code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span></code> thus:</p>
-<div class="codehilite"><pre><span></span><span class="n">mv</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="mi">0</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_25</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span>
-</pre></div>
+and rerun <code>velvetg</code>. time and monitor the use of resources as
+previously. Start with <code>-cov_cutoff 16</code> thus:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">mv run_25/contigs.fa run_25/contigs.fa.0</span>
+<span class="err">time velvetg run_25 -cov_cutoff 16</span>
+</code></pre></div>
 
 
-<p>Up until now, <code class="codehilite"><span class="n">velvetg</span></code> has ignored the paired-end information. Now try
-running <code class="codehilite"><span class="n">velvetg</span></code> with both <code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span></code> and <code class="codehilite"><span class="o">-</span><span class="n">exp_cov</span> <span class="mi">26</span></code>, but
-first save your <code class="codehilite"><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span></code> file. By using <code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span></code> and
-<code class="codehilite"><span class="o">-</span><span class="n">exp_cov</span></code>, <code class="codehilite"><span class="n">velvetg</span></code> tries to estimate the insert length, which you
-will see in the <code class="codehilite"><span class="n">velvetg</span></code> output. The command is, of course:</p>
-<div class="codehilite"><pre><span></span><span class="n">mv</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="mi">1</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_25</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">26</span>
-</pre></div>
+<p>Up until now, <code>velvetg</code> has ignored the paired-end information. Now try
+running <code>velvetg</code> with both <code>-cov_cutoff 16</code> and <code>-exp_cov 26</code>, but
+first save your <code>contigs.fa</code> file. By using <code>-cov_cutoff</code> and
+<code>-exp_cov</code>, <code>velvetg</code> tries to estimate the insert length, which you
+will see in the <code>velvetg</code> output. The command is, of course:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">mv run_25/contigs.fa run_25/contigs.fa.1</span>
+<span class="err">time velvetg run_25 -cov_cutoff 16 -exp_cov 26</span>
+</code></pre></div>
 
 
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>Comment on the time required, use of memory and CPU for <code class="codehilite"><span class="n">velvetg</span></code>?</p>
+<p>Comment on the time required, use of memory and CPU for <code>velvetg</code>?</p>
 </div>
 <div class="admonition success">
-<details><summary>Answer</summary><p>Runtime is lower when velvet can reuse previously calculated data. By using <code class="codehilite"><span class="o">-</span><span class="n">exp_cov</span></code>, the memory usage increases.</p>
+<details><summary>Answer</summary><p>Runtime is lower when velvet can reuse previously calculated data. By using <code>-exp_cov</code>, the memory usage increases.</p>
 </details>
 </div>
 <div class="admonition note">
@@ -885,16 +879,16 @@ will see in the <code class="codehilite"><span class="n">velvetg</span></code> o
 <details><summary>Answer</summary><p>Paired-end library 1 has length: 228, sample standard deviation: 26</p>
 </details>
 </div>
-<p>Next try running <code class="codehilite"><span class="n">velvetg</span></code> in ‘paired-end mode‘. This entails running
-<code class="codehilite"><span class="n">velvetg</span></code> specifying the insert length with the parameter <code class="codehilite"><span class="o">-</span><span class="n">ins_length</span></code>
+<p>Next try running <code>velvetg</code> in ‘paired-end mode‘. This entails running
+<code>velvetg</code> specifying the insert length with the parameter <code>-ins_length</code>
 set to 350. Even though velvet estimates the insert length it is always
 advisable to check / provide the insert length manually as velvet can
 get the statistics wrong due to noise. Just in case, save your last
-version of <code class="codehilite"><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span></code>. The commands are:</p>
-<div class="codehilite"><pre><span></span><span class="n">mv</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="mi">2</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_25</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">26</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">350</span>
-<span class="n">mv</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="mi">3</span>
-</pre></div>
+version of <code>contigs.fa</code>. The commands are:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">mv run_25/contigs.fa run_25/contigs.fa.2</span>
+<span class="err">time velvetg run_25 -cov_cutoff 16 -exp_cov 26 -ins_length 350</span>
+<span class="err">mv run_25/contigs.fa run_25/contigs.fa.3</span>
+</code></pre></div>
 
 
 <div class="admonition note">
@@ -903,25 +897,25 @@ version of <code class="codehilite"><span class="n">contigs</span><span class="p
 </div>
 <div class="admonition success">
 <details><summary>Answer</summary><p>My own measurements are:   <br />
-<code class="codehilite"><span class="nb">real</span> <span class="mi">0</span><span class="n">m29</span><span class="p">.</span><span class="mi">792</span><span class="n">s</span><span class="p">;</span> <span class="k">user</span> <span class="mi">1</span><span class="n">m4</span><span class="p">.</span><span class="mi">372</span><span class="n">s</span><span class="p">;</span> <span class="n">sys</span> <span class="mi">0</span><span class="n">m3</span><span class="p">.</span><span class="mi">880</span><span class="n">s</span></code></p>
+<code>real 0m29.792s; user 1m4.372s; sys 0m3.880s</code></p>
 </details>
 </div>
 <p>Take a look into the Log file.</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>What is the N50 value for the <code class="codehilite"><span class="n">velvetg</span></code> runs using the switches</p>
+<p>What is the N50 value for the <code>velvetg</code> runs using the switches</p>
 </div>
 <div class="admonition success">
 <details><summary>Answer</summary><p>Base run: 19,510 bp  <br />
-<code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span></code>: 24,739 bp   <br />
-<code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">26</span></code>: 61,793 bp   <br />
-<code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">26</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">350</span></code>: n50 of 62,740 bp; max 194,649 bp; total 2,871,093 bp     </p>
+<code>-cov_cutoff 16</code>: 24,739 bp   <br />
+<code>-cov_cutoff 16 -exp_cov 26</code>: 61,793 bp   <br />
+<code>-cov_cutoff 16 -exp_cov 26 -ins_length 350</code>: n50 of 62,740 bp; max 194,649 bp; total 2,871,093 bp     </p>
 </details>
 </div>
-<p>Try giving the <code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span></code> and/or <code class="codehilite"><span class="o">-</span><span class="n">exp_cov</span></code> parameters the value
-<code class="codehilite"><span class="n">auto</span></code>. See the <code class="codehilite"><span class="n">velvetg</span></code> help to show you how. The information Velvet
+<p>Try giving the <code>-cov_cutoff</code> and/or <code>-exp_cov</code> parameters the value
+<code>auto</code>. See the <code>velvetg</code> help to show you how. The information Velvet
 prints during running includes information about the values used
-(coverage cut-off or insert length) when using the <code class="codehilite"><span class="n">auto</span></code> option.</p>
+(coverage cut-off or insert length) when using the <code>auto</code> option.</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <p>What coverage values does Velvet choose (hint: look at the output that Velvet produces while running)?</p>
@@ -939,15 +933,15 @@ Removing contigs with coverage &lt; 13.010918 …</p>
 <details><summary>Answer</summary><p>n50 of 68,843 bp; max 194,645 bp; total 2,872,678 bp</p>
 </details>
 </div>
-<p>Run <code class="codehilite"><span class="n">gnx</span></code> on all the <code class="codehilite"><span class="n">contig</span><span class="p">.</span><span class="n">fa</span></code> files you have generated in the course
+<p>Run <code>gnx</code> on all the <code>contig.fa</code> files you have generated in the course
 of this exercise. The command will be:</p>
-<div class="codehilite"><pre><span></span><span class="n">gnx</span> <span class="o">-</span><span class="k">min</span> <span class="mi">100</span> <span class="o">-</span><span class="n">nx</span> <span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span> <span class="n">run_25</span><span class="o">/</span><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span><span class="o">*</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">gnx -min 100 -nx 25,50,75 run_25/contigs.fa*</span>
+</code></pre></div>
 
 
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>For which runs are there Ns in the <code class="codehilite"><span class="n">contigs</span><span class="p">.</span><span class="n">fa</span></code> file and why?</p>
+<p>For which runs are there Ns in the <code>contigs.fa</code> file and why?</p>
 </div>
 <div class="admonition success">
 <details><summary>Answer</summary><p>contigs.fa.2, contigs.fa.3, contigs.fa</p>
@@ -1002,12 +996,12 @@ run.</p>
 <h2 id="amos-hawkeye">AMOS Hawkeye</h2>
 <p>We will now output the assembly in the AMOS massage format and visualise
 the assembly using AMOS Hawkeye.</p>
-<p>Run <code class="codehilite"><span class="n">velvetg</span></code> with appropriate arguments and output the AMOS message
+<p>Run <code>velvetg</code> with appropriate arguments and output the AMOS message
 file, then convert it to an AMOS bank and open it in Hawkeye:</p>
-<div class="codehilite"><pre><span></span><span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_25</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">16</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">26</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">350</span> <span class="o">-</span><span class="n">amos_file</span> <span class="n">yes</span> <span class="o">-</span><span class="n">read_trkg</span> <span class="n">yes</span> 
-<span class="n">time</span> <span class="n">bank</span><span class="o">-</span><span class="n">transact</span> <span class="o">-</span><span class="k">c</span> <span class="o">-</span><span class="n">b</span> <span class="n">run_25</span><span class="o">/</span><span class="n">velvet_asm</span><span class="p">.</span><span class="n">bnk</span> <span class="o">-</span><span class="n">m</span> <span class="n">run_25</span><span class="o">/</span><span class="n">velvet_asm</span><span class="p">.</span><span class="n">afg</span>         
-<span class="n">hawkeye</span> <span class="n">run_25</span><span class="o">/</span><span class="n">velvet_asm</span><span class="p">.</span><span class="n">bnk</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">time velvetg run_25 -cov_cutoff 16 -exp_cov 26 -ins_length 350 -amos_file yes -read_trkg yes </span>
+<span class="err">time bank-transact -c -b run_25/velvet_asm.bnk -m run_25/velvet_asm.afg         </span>
+<span class="err">hawkeye run_25/velvet_asm.bnk</span>
+</code></pre></div>
 
 
 <p>Looking at the scaffold view of a contig, comment on the proportion of
@@ -1027,15 +1021,15 @@ happy mates.</p>
 <p>Look at the actual distribution of insert sizes for this library. Can you explain where there is a difference between the mean and SD reported in those two places?</p>
 </div>
 <div class="admonition success">
-<details><summary>Answer</summary><p>We specified <code class="codehilite"><span class="o">-</span><span class="n">ins_length</span> <span class="mi">350</span></code> to the <code class="codehilite"><span class="n">velvetg</span></code> command. Velvet uses this value, in the AMOS message file that it outputs, rather than its own estimate.</p>
+<details><summary>Answer</summary><p>We specified <code>-ins_length 350</code> to the <code>velvetg</code> command. Velvet uses this value, in the AMOS message file that it outputs, rather than its own estimate.</p>
 </details>
 </div>
 <p>You can get AMOS to re-estimate the mean and SD of insert sizes using
 intra-contig pairs. First, close Hawkeye and then run the following
 commands before reopening the AMOS bank to see what has changed.</p>
-<div class="codehilite"><pre><span></span><span class="n">asmQC</span> <span class="o">-</span><span class="n">b</span> <span class="n">run_25</span><span class="o">/</span><span class="n">velvet_asm</span><span class="p">.</span><span class="n">bnk</span> <span class="o">-</span><span class="n">scaff</span> <span class="o">-</span><span class="n">recompute</span> <span class="o">-</span><span class="k">update</span> <span class="o">-</span><span class="n">numsd</span> <span class="mi">2</span>
-<span class="n">hawkeye</span> <span class="n">run_25</span><span class="o">/</span><span class="n">velvet_asm</span><span class="p">.</span><span class="n">bnk</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">asmQC -b run_25/velvet_asm.bnk -scaff -recompute -update -numsd 2</span>
+<span class="err">hawkeye run_25/velvet_asm.bnk</span>
+</code></pre></div>
 
 
 <p>Looking at the scaffold view of a contig, comment on the proportion of
@@ -1080,26 +1074,26 @@ a better assembly. Assuming we haven’t compromised too much on coverage.</p>
 paired end with an insert size of 92 bp.</p>
 <p>Go back to the main directory for this exercise and create and enter a
 new directory dedicated to this phase of the exercise. The commands are:</p>
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span><span class="o">/</span><span class="n">NGS</span><span class="o">/</span><span class="n">velvet</span><span class="o">/</span><span class="n">part2</span> 
-<span class="n">mkdir</span> <span class="n">SRX008042</span> 
-<span class="n">cd</span> <span class="n">SRX008042</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">cd /home/trainee/denovo/NGS/velvet/part2 </span>
+<span class="err">mkdir SRX008042 </span>
+<span class="err">cd SRX008042</span>
+</code></pre></div>
 
 
 <p>Create symlinks to the read data files that we downloaded for you from
 the SRA:</p>
-<div class="codehilite"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">trainee</span><span class="o">/</span><span class="n">denovo</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">SRR023408_</span><span class="o">?</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span> <span class="p">.</span><span class="o">/</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">ln -s /home/trainee/denovo/data/SRR023408_?.fastq.gz ./</span>
+</code></pre></div>
 
 
 <p>We will use FastQC, a tool you should be familiar with, to visualise the
 quality of our data. We will use FastQC in the Graphical User Interface
 (GUI) mode.</p>
 <p>Start FastQC and set the process running in the background, by using a
-trailing <code class="codehilite"><span class="o">&amp;</span></code>, so we get control of our terminal back for entering more
+trailing <code>&amp;</code>, so we get control of our terminal back for entering more
 commands:</p>
-<div class="codehilite"><pre><span></span><span class="n">fastqc</span> <span class="o">&amp;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">fastqc &amp;</span>
+</code></pre></div>
 
 
 <p>Open the two compressed FASTQ files (File -&gt; Open) by selecting them
@@ -1164,21 +1158,21 @@ both and clicking OK). Look at tabs for both files:</p>
 </div>
 <p><img alt="image" src="../images/paired_fastqc_quality_plots.png" /></p>
 <p>Once you have decided what your trim points will be, close FastQC. We
-will use <code class="codehilite"><span class="n">fastx_trimmer</span></code> from the FASTX-Toolkit to perform fixed-length
+will use <code>fastx_trimmer</code> from the FASTX-Toolkit to perform fixed-length
 trimming. For usage information see the help:</p>
-<div class="codehilite"><pre><span></span><span class="n">fastx_trimmer</span> <span class="o">-</span><span class="n">h</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">fastx_trimmer -h</span>
+</code></pre></div>
 
 
-<p><code class="codehilite"><span class="n">fastx_trimmer</span></code> is not able to read compressed FASTQ files, so we first
+<p><code>fastx_trimmer</code> is not able to read compressed FASTQ files, so we first
 need to decompress the files ready for input.</p>
 <p>The suggestion (hopefully not far from your own thoughts?) is that you
 trim your reads as follows:</p>
-<div class="codehilite"><pre><span></span><span class="n">gunzip</span> <span class="o">&lt;</span> <span class="n">SRR023408_1</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span> <span class="o">&gt;</span> <span class="n">SRR023408_1</span><span class="p">.</span><span class="n">fastq</span>
-<span class="n">gunzip</span> <span class="o">&lt;</span> <span class="n">SRR023408_2</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span> <span class="o">&gt;</span> <span class="n">SRR023408_2</span><span class="p">.</span><span class="n">fastq</span>
-<span class="n">fastx_trimmer</span> <span class="o">-</span><span class="n">Q</span> <span class="mi">33</span> <span class="o">-</span><span class="n">f</span> <span class="mi">1</span> <span class="o">-</span><span class="n">l</span> <span class="mi">32</span> <span class="o">-</span><span class="n">i</span> <span class="n">SRR023408_1</span><span class="p">.</span><span class="n">fastq</span> <span class="o">-</span><span class="n">o</span> <span class="n">SRR023408_trim1</span><span class="p">.</span><span class="n">fastq</span> 
-<span class="n">fastx_trimmer</span> <span class="o">-</span><span class="n">Q</span> <span class="mi">33</span> <span class="o">-</span><span class="n">f</span> <span class="mi">1</span> <span class="o">-</span><span class="n">l</span> <span class="mi">27</span> <span class="o">-</span><span class="n">i</span> <span class="n">SRR023408_2</span><span class="p">.</span><span class="n">fastq</span> <span class="o">-</span><span class="n">o</span> <span class="n">SRR023408_trim2</span><span class="p">.</span><span class="n">fastq</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">gunzip &lt; SRR023408_1.fastq.gz &gt; SRR023408_1.fastq</span>
+<span class="err">gunzip &lt; SRR023408_2.fastq.gz &gt; SRR023408_2.fastq</span>
+<span class="err">fastx_trimmer -Q 33 -f 1 -l 32 -i SRR023408_1.fastq -o SRR023408_trim1.fastq </span>
+<span class="err">fastx_trimmer -Q 33 -f 1 -l 27 -i SRR023408_2.fastq -o SRR023408_trim2.fastq</span>
+</code></pre></div>
 
 
 <p>Many NGS read files are large. This means that simply reading and
@@ -1187,31 +1181,31 @@ Therefore, it is often good practice to avoid unnecessary disk
 read/write.</p>
 <div class="admonition hint">
 <p class="admonition-title">Tips</p>
-<p>We could do what is called pipelining to send a stream of data from one command to another, using the pipe (<code class="codehilite"><span class="o">|</span></code>) character, without the need for intermediary files. The following command would achieve this:       </p>
+<p>We could do what is called pipelining to send a stream of data from one command to another, using the pipe (<code>|</code>) character, without the need for intermediary files. The following command would achieve this:       </p>
 <p>gunzip &ndash;to-stdout &lt; SRR023408_1.fastq.gz | fastx_trimmer -Q 33 -f 4 -l 32 -o SRR023408_trim1.fastq   <br />
 gunzip &ndash;to-stdout &lt; SRR023408_2.fastq.gz | fastx_trimmer -Q 33 -f 3 -l 29 -o SRR023408_trim2.fastq    </p>
 </div>
-<p>Now run <code class="codehilite"><span class="n">velveth</span></code> with a k-mer value of 21 for both the untrimmed and
-trimmed read files in <code class="codehilite"><span class="o">-</span><span class="n">shortPaired</span></code> mode. Separate the output of the
-two executions of <code class="codehilite"><span class="n">velveth</span></code> into suitably named directories, followed by
-<code class="codehilite"><span class="n">velvetg</span></code>:</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">untrimmed</span> <span class="k">reads</span>
+<p>Now run <code>velveth</code> with a k-mer value of 21 for both the untrimmed and
+trimmed read files in <code>-shortPaired</code> mode. Separate the output of the
+two executions of <code>velveth</code> into suitably named directories, followed by
+<code>velvetg</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">untrimmed</span> <span class="k">reads</span>
 <span class="n">velveth</span> <span class="n">run_21</span> <span class="mi">21</span> <span class="o">-</span><span class="n">fmtAuto</span> <span class="o">-</span><span class="n">create_binary</span> <span class="o">-</span><span class="n">shortPaired</span> <span class="o">-</span><span class="n">separate</span> <span class="n">SRR023408_1</span><span class="p">.</span><span class="n">fastq</span> <span class="n">SRR023408_2</span><span class="p">.</span><span class="n">fastq</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_21</span>
+<span class="k">time</span> <span class="n">velvetg</span> <span class="n">run_21</span>
 
 <span class="o">#</span> <span class="n">trimmed</span> <span class="k">reads</span>
 <span class="n">velveth</span> <span class="n">run_21trim</span> <span class="mi">21</span> <span class="o">-</span><span class="n">fmtAuto</span> <span class="o">-</span><span class="n">create_binary</span> <span class="o">-</span><span class="n">shortPaired</span> <span class="o">-</span><span class="n">separate</span> <span class="n">SRR023408_trim1</span><span class="p">.</span><span class="n">fastq</span> <span class="n">SRR023408_trim2</span><span class="p">.</span><span class="n">fastq</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_21trim</span>
-</pre></div>
+<span class="k">time</span> <span class="n">velvetg</span> <span class="n">run_21trim</span>
+</code></pre></div>
 
 
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>How long did the two <code class="codehilite"><span class="n">velvetg</span></code> runs take?</p>
+<p>How long did the two <code>velvetg</code> runs take?</p>
 </div>
 <div class="admonition success">
-<details><summary>Answer</summary><p>run_25: <code class="codehilite"><span class="nb">real</span> <span class="mi">3</span><span class="n">m16</span><span class="p">.</span><span class="mi">132</span><span class="n">s</span><span class="p">;</span> <span class="k">user</span> <span class="mi">8</span><span class="n">m18</span><span class="p">.</span><span class="mi">261</span><span class="n">s</span><span class="p">;</span> <span class="n">sys</span> <span class="mi">0</span><span class="n">m7</span><span class="p">.</span><span class="mi">317</span><span class="n">s</span></code>   <br />
-run_25trim: <code class="codehilite"><span class="nb">real</span> <span class="mi">1</span><span class="n">m18</span><span class="p">.</span><span class="mi">611</span><span class="n">s</span><span class="p">;</span> <span class="k">user</span> <span class="mi">3</span><span class="n">m53</span><span class="p">.</span><span class="mi">140</span><span class="n">s</span><span class="p">;</span> <span class="n">sys</span> <span class="mi">0</span><span class="n">m4</span><span class="p">.</span><span class="mi">962</span><span class="n">s</span></code></p>
+<details><summary>Answer</summary><p>run_25: <code>real 3m16.132s; user 8m18.261s; sys 0m7.317s</code>   <br />
+run_25trim: <code>real 1m18.611s; user 3m53.140s; sys 0m4.962s</code></p>
 </details>
 </div>
 <div class="admonition note">
@@ -1232,18 +1226,18 @@ Trimmed: 15</p>
 </details>
 </div>
 <p>The evidence is that trimming improved the assembly. The thing to do
-surely, is to run <code class="codehilite"><span class="n">velvetg</span></code> with the <code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span></code> and <code class="codehilite"><span class="o">-</span><span class="n">exp_cov</span></code>. In
-order to use <code class="codehilite"><span class="o">-</span><span class="n">cov_cutoff</span></code> and <code class="codehilite"><span class="o">-</span><span class="n">exp_cov</span></code> sensibly, you need to
+surely, is to run <code>velvetg</code> with the <code>-cov_cutoff</code> and <code>-exp_cov</code>. In
+order to use <code>-cov_cutoff</code> and <code>-exp_cov</code> sensibly, you need to
 investigate with R, as you did in the previous exercise, what parameter
 values to use. Start up R and produce the weighted histograms:</p>
-<div class="codehilite"><pre><span></span>    <span class="n">R</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">save</span>
-    <span class="nf">library</span><span class="p">(</span><span class="n">plotrix</span><span class="p">)</span> 
-    <span class="n">data</span> <span class="o">&lt;-</span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;run_21/stats.txt&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
-    <span class="n">data2</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;run_21trim/stats.txt&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
-    <span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
-    <span class="nf">weighted.hist</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">short1_cov</span><span class="p">,</span> <span class="n">data</span><span class="o">$</span><span class="n">lgth</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="m">0</span><span class="o">:</span><span class="m">50</span><span class="p">)</span>
-    <span class="nf">weighted.hist</span><span class="p">(</span><span class="n">data2</span><span class="o">$</span><span class="n">short1_cov</span><span class="p">,</span> <span class="n">data2</span><span class="o">$</span><span class="n">lgth</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="m">0</span><span class="o">:</span><span class="m">50</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>    R --no-save
+    library(plotrix) 
+    data &lt;-read.table(&quot;run_21/stats.txt&quot;, header=TRUE) 
+    data2 &lt;- read.table(&quot;run_21trim/stats.txt&quot;, header=TRUE) 
+    par(mfrow=c(1,2))
+    weighted.hist(data$short1_cov, data$lgth, breaks=0:50)
+    weighted.hist(data2$short1_cov, data2$lgth, breaks=0:50)
+</code></pre></div>
 
 <p>Weighted k-mer coverage histograms of the paired-end reads pre-trimmed (left) and post-trimmed
 (right).</p>
@@ -1253,12 +1247,12 @@ around 13 with a coverage cut-off of around 7. For the trimmed read
 histogram (right) there is an expected coverage of around 9 with a
 coverage cut-off of around 5.</p>
 <p>If you disagree, feel free to try different settings, but first quit R
-before running <code class="codehilite"><span class="n">velvetg</span></code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">q</span><span class="p">()</span>
+before running <code>velvetg</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">q</span><span class="p">()</span>
 
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_21</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">7</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">13</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">92</span>
-<span class="n">time</span> <span class="n">velvetg</span> <span class="n">run_21trim</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">5</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">9</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">92</span>
-</pre></div>
+<span class="k">time</span> <span class="n">velvetg</span> <span class="n">run_21</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">7</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">13</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">92</span>
+<span class="k">time</span> <span class="n">velvetg</span> <span class="n">run_21trim</span> <span class="o">-</span><span class="n">cov_cutoff</span> <span class="mi">5</span> <span class="o">-</span><span class="n">exp_cov</span> <span class="mi">9</span> <span class="o">-</span><span class="n">ins_length</span> <span class="mi">92</span>
+</code></pre></div>
 
 
 <div class="admonition note">
@@ -1348,8 +1342,6 @@ Memory: Lower memory usage</p>
 </details>
 </div>
                 
-                  
-                
               
               
                 
@@ -1365,34 +1357,34 @@ Memory: Lower memory usage</p>
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../../rna_seq/handout/handout/" title="RNA-Seq" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../../rna_seq/handout/handout/" title="RNA-Seq" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 RNA-Seq
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../../denovo-canu/handout/handout/" title="De Novo Canu" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../../../denovo-canu/handout/handout/" title="De Novo Canu" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 De Novo Canu
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -1407,11 +1399,10 @@ Memory: Lower memory usage</p>
             &copy; The authors; 2019-
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1420,9 +1411,18 @@ Memory: Lower memory usage</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

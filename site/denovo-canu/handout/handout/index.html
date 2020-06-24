@@ -1,14 +1,12 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
       
@@ -16,27 +14,8 @@
       
         <meta name="author" content="Sonika Tyagi">
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
     
     
       
@@ -44,21 +23,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
       
       
     
-    
-      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../../css/details.css">
@@ -69,69 +45,72 @@
     
   </head>
   
+  
     <body dir="ltr">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#pacbio-reads-assembly-with-command-line-tools" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pacbio-reads-assembly-with-command-line-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Introduction to NGS Workshop
-            </span>
-            <span class="md-header-nav__topic">
-              
-                De Novo Canu
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo" aria-label="Introduction to NGS Workshop">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Introduction to NGS Workshop
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              De Novo Canu
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -139,31 +118,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo" aria-label="Introduction to NGS Workshop">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Introduction to NGS Workshop
   </label>
@@ -215,13 +195,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Hands-on Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Hands-on Modules" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Hands-on Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -320,13 +306,16 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         De Novo Canu
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="De Novo Canu" class="md-nav__link md-nav__link--active">
@@ -334,13 +323,18 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -376,7 +370,7 @@
     Get data
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Get data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -403,7 +397,7 @@
     Assemble
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Assemble">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -437,7 +431,7 @@
     Trim and circularise
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Trim and circularise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -478,7 +472,7 @@
     Find smaller plasmids
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Find smaller plasmids">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -540,7 +534,7 @@
     Correct
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Correct">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -581,7 +575,7 @@
     Short-read assembly: a comparison
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Short-read assembly: a comparison">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -622,7 +616,7 @@
     Next
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Next">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -643,10 +637,6 @@
     </nav>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -683,13 +673,18 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -725,7 +720,7 @@
     Get data
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Get data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -752,7 +747,7 @@
     Assemble
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Assemble">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -786,7 +781,7 @@
     Trim and circularise
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Trim and circularise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -827,7 +822,7 @@
     Find smaller plasmids
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Find smaller plasmids">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -889,7 +884,7 @@
     Correct
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Correct">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -930,7 +925,7 @@
     Short-read assembly: a comparison
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Short-read assembly: a comparison">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -971,7 +966,7 @@
     Next
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Next">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -993,10 +988,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -1008,6 +999,9 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
+                
+                
+                  
                 
                 
                 <h1 id="pacbio-reads-assembly-with-command-line-tools">Pacbio reads: assembly with command line tools</h1>
@@ -1050,22 +1044,22 @@ Anna Syme Melbourne Bioinformatics</p>
 <p>In a new tab, go to <a href="https://doi.org/10.5281/zenodo.1009308">https://doi.org/10.5281/zenodo.1009308</a>.</p>
 <p>Next to the first file, right-click (or control-click) the &ldquo;Download&rdquo; button, and select &ldquo;Copy link address&rdquo;.
 Back in your terminal, enter</p>
-<p><div class="codehilite"><pre><span></span>wget  [paste link URL for file]
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>wget  [paste link URL for file]
+</code></pre></div>
 The file should download.
 Note: paste the link to the file, not to the webpage.
 Repeat this for the other two files.
 Shorten each of these files names with the mv command:</p>
-<div class="codehilite"><pre><span></span>mv R1.fq\?download\=1 R1.fq
+<div class="highlight"><pre><span></span><code>mv R1.fq\?download\=1 R1.fq
 mv R2.fq\?download\=1 R2.fq
 mv pacbio.fq\?download\=1 pacbio.fq
-</pre></div>
+</code></pre></div>
 
-<p>Type in <code class="codehilite"><span class="n">ls</span></code> to check the files are present and correctly-named.</p>
-<p>We should have <code class="codehilite"><span class="n">R1</span><span class="p">.</span><span class="n">fq</span></code>, <code class="codehilite"><span class="n">R2</span><span class="p">.</span><span class="n">fq</span></code> and <code class="codehilite"><span class="n">pacbio</span><span class="p">.</span><span class="n">fq</span></code>.</p>
-<div class="codehilite"><pre><span></span>cd denovo-canu
+<p>Type in <code>ls</code> to check the files are present and correctly-named.</p>
+<p>We should have <code>R1.fq</code>, <code>R2.fq</code> and <code>pacbio.fq</code>.</p>
+<div class="highlight"><pre><span></span><code>cd denovo-canu
 ls
-</pre></div>
+</code></pre></div>
 
 <h3 id="sample-information">Sample information</h3>
 <p>The sample used in this tutorial is a gram-positive bacteria called <em>Staphylococcus aureus</em> (sample number 25747). This particular sample is from a strain that is resistant to the antibiotic methicillin (a type of penicillin). It is also called MRSA: methicillin-resistant <em>Staphylococcus aureus</em>. It was isolated from (human) blood and caused bacteraemia, an infection of the bloodstream.</p>
@@ -1074,15 +1068,15 @@ ls
 <li>We will use the assembly software called <a href="http://canu.readthedocs.io/en/stable/">Canu</a>.</li>
 <li>Run Canu with these commands:</li>
 </ul>
-<div class="codehilite"><pre><span></span>canu -p canu -d canu_outdir genomeSize=0.03m -pacbio-raw pacbio.fq
-</pre></div>
+<div class="highlight"><pre><span></span><code>canu -p canu -d canu_outdir genomeSize=0.03m -pacbio-raw pacbio.fq
+</code></pre></div>
 
 <ul>
-<li>the first <code class="codehilite"><span class="n">canu</span></code> tells the program to run</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">p</span> <span class="n">canu</span></code> names prefix for output files (&ldquo;canu&rdquo;)</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">d</span> <span class="n">canu_outdir</span></code> names output directory (&ldquo;canu_outdir&rdquo;)</li>
+<li>the first <code>canu</code> tells the program to run</li>
+<li><code>-p canu</code> names prefix for output files (&ldquo;canu&rdquo;)</li>
+<li><code>-d canu_outdir</code> names output directory (&ldquo;canu_outdir&rdquo;)</li>
 <li>
-<p><code class="codehilite"><span class="n">genomeSize</span></code> only has to be approximate.</p>
+<p><code>genomeSize</code> only has to be approximate.</p>
 <ul>
 <li>e.g. <em>Staphylococcus aureus</em>, 2.8m</li>
 <li>e.g. <em>Streptococcus pyogenes</em>, 1.8m</li>
@@ -1095,22 +1089,22 @@ ls
 <li>Various output will be displayed on the screen.</li>
 </ul>
 <h3 id="check-the-output">Check the output</h3>
-<p>Move into <fn>canu_outdir</fn> and <code class="codehilite"><span class="n">ls</span></code> to see the output files.</p>
+<p>Move into <fn>canu_outdir</fn> and <code>ls</code> to see the output files.</p>
 <ul>
 <li>The <fn>canu.contigs.fasta</fn> are the assembled sequences.</li>
 <li>The <fn>canu.unassembled.fasta</fn> are the reads that could not be assembled.</li>
 <li>The <fn>canu.correctedReads.fasta.gz</fn> are the corrected Pacbio reads that were used in the assembly.</li>
 <li>The <fn>canu.file.gfa</fn> is the graph of the assembly.</li>
-<li>Display summary information about the contigs: (<code class="codehilite"><span class="n">infoseq</span></code> is a tool from <a href="http://emboss.sourceforge.net/index.html">EMBOSS</a>)</li>
+<li>Display summary information about the contigs: (<code>infoseq</code> is a tool from <a href="http://emboss.sourceforge.net/index.html">EMBOSS</a>)</li>
 </ul>
-<div class="codehilite"><pre><span></span>infoseq canu.contigs.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>infoseq canu.contigs.fasta
+</code></pre></div>
 
 <ul>
 <li>This will show the contigs found by Canu. e.g.,</li>
 </ul>
-<div class="codehilite"><pre><span></span>    - tig00000001   47997
-</pre></div>
+<div class="highlight"><pre><span></span><code>    - tig00000001   47997
+</code></pre></div>
 
 <ul>
 <li>This will show the contigs found by Canu. e.g., tig00000001 47997
@@ -1119,17 +1113,17 @@ ls
 </ul>
 <p>This matches what we were expecting for this sample (approximately 30,000 base pairs). For other data, Canu may not be able to join all the reads into one contig, so there may be several contigs in the output.</p>
 <p>We should also look at the canu.report. To do this:</p>
-<p><div class="codehilite"><pre><span></span>less canu.report
-</pre></div>
-- <code class="codehilite"><span class="k">less</span></code> is a command to display the file on the screen.
+<p><div class="highlight"><pre><span></span><code>less canu.report
+</code></pre></div>
+- <code>less</code> is a command to display the file on the screen.
 - Use the up and down arrows to scroll up and down.
 - You will see lots of histograms of read lengths before and after processing, final contig construction, etc.
 - For a description of the outputs that Canu produces, see: <a href="http://canu.readthedocs.io/en/latest/tutorial.html#outputs">http://canu.readthedocs.io/en/latest/tutorial.html#outputs</a>
-- Type <code class="codehilite"><span class="n">q</span></code> to exit viewing the report</p>
+- Type <code>q</code> to exit viewing the report</p>
 <h3 id="change-canu-parameters-if-required">Change Canu parameters if required</h3>
 <p>If the assembly is poor with many contigs, re-run Canu with extra sensitivity parameters; e.g.
-<div class="codehilite"><pre><span></span>canu -p prefix -d outdir corMhapSensitivity=high corMinCoverage=0 genomeSize=.03m -pacbio-raw pacbio.fq
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>canu -p prefix -d outdir corMhapSensitivity=high corMinCoverage=0 genomeSize=.03m -pacbio-raw pacbio.fq
+</code></pre></div></p>
 <h3 id="questions">Questions</h3>
 <p>Q: How do long- and short-read assembly methods differ? A: short reads: De Bruijn graphs; long reads: a move back towards simpler overlap-layout-consensus methods.</p>
 <p>Q: Where can we find out the what the approximate genome size should be for the species being assembled? A: NCBI Genomes - enter species name - click on Genome Assembly and Annotation report - sort table by clicking on the column header Size (Mb) - look at range of sizes in this column.</p>
@@ -1144,35 +1138,35 @@ ls
 <em>Adapted from Figure 1. Hunt et al. Genome Biology 2015</em></p>
 <p>Move back into your main analysis folder.</p>
 <p>Run Circlator:</p>
-<div class="codehilite"><pre><span></span>circlator all --threads 8 --verbose canu_outdir/canu.contigs.fasta canu_outdir/canu.correctedReads.fasta.gz circlator_outdir
-</pre></div>
+<div class="highlight"><pre><span></span><code>circlator all --threads 8 --verbose canu_outdir/canu.contigs.fasta canu_outdir/canu.correctedReads.fasta.gz circlator_outdir
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="c1">--threads</span></code> is the number of cores: change this to an appropriate number</li>
-<li><code class="codehilite"><span class="c1">--verbose</span></code> prints progress information to the screen</li>
-<li><code class="codehilite"><span class="n">canu_outdir</span><span class="o">/</span><span class="n">canu</span><span class="p">.</span><span class="n">contigs</span><span class="p">.</span><span class="n">fasta</span></code> is the file path to the input Canu assembly</li>
-<li><code class="codehilite"><span class="n">canu_outdir</span><span class="o">/</span><span class="n">canu</span><span class="p">.</span><span class="n">correctedReads</span><span class="p">.</span><span class="n">fasta</span><span class="p">.</span><span class="n">gz</span></code> is the file path to the corrected Pacbio reads - note, fastA not fastQ</li>
-<li><code class="codehilite"><span class="n">circlator_outdir</span></code> is the name of the output directory.</li>
+<li><code>--threads</code> is the number of cores: change this to an appropriate number</li>
+<li><code>--verbose</code> prints progress information to the screen</li>
+<li><code>canu_outdir/canu.contigs.fasta</code> is the file path to the input Canu assembly</li>
+<li><code>canu_outdir/canu.correctedReads.fasta.gz</code> is the file path to the corrected Pacbio reads - note, fastA not fastQ</li>
+<li><code>circlator_outdir</code> is the name of the output directory.</li>
 </ul>
 <p>Some output will print to screen. When finished, it should say &ldquo;Circularized x of x contig(s)&rdquo;.</p>
 <h3 id="check-the-output_1">Check the output</h3>
-<p>Move into the <fn>circlator_outdir</fn> directory and <code class="codehilite"><span class="n">ls</span></code> to list files.</p>
+<p>Move into the <fn>circlator_outdir</fn> directory and <code>ls</code> to list files.</p>
 <p><em>Were the contigs circularised?</em> :</p>
-<div class="codehilite"><pre><span></span>less 04.merge.circularise.log
-</pre></div>
+<div class="highlight"><pre><span></span><code>less 04.merge.circularise.log
+</code></pre></div>
 
 <ul>
 <li>Yes, the contig was circularised (last column).</li>
 <li>Type &ldquo;q&rdquo; to exit.</li>
 </ul>
 <p><em>Where were the contigs oriented (which gene)?</em> :</p>
-<p><div class="codehilite"><pre><span></span>less 06.fixstart.log
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>less 06.fixstart.log
+</code></pre></div>
 - Look in the &ldquo;gene_name&rdquo; column.
 - The contig has been oriented at tr|A0A090N2A8|A0A090N2A8_STAAU, which is another name for dnaA. <!-- (search swissprot - uniprot.org) --> This is typically used as the start of bacterial chromosome sequences.</p>
 <p><em>What are the trimmed contig sizes?</em> :</p>
-<div class="codehilite"><pre><span></span>infoseq 06.fixstart.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>infoseq 06.fixstart.fasta
+</code></pre></div>
 
 <ul>
 <li>tig00000001 30019 (bases trimmed)</li>
@@ -1183,13 +1177,13 @@ ls
 <li>The trimmed contigs are in the file called <fn>06.fixstart.fasta</fn>.</li>
 <li>Re-name it <fn>contig1.fasta</fn>:</li>
 </ul>
-<div class="codehilite"><pre><span></span>mv 06.fixstart.fasta contig1.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>mv 06.fixstart.fasta contig1.fasta
+</code></pre></div>
 
-<p>Open this file in a text editor (e.g. nano: <code class="codehilite"><span class="n">nano</span> <span class="n">contig1</span><span class="p">.</span><span class="n">fasta</span></code>) and change the header to &ldquo;&gt;chromosome&rdquo;.</p>
-<p>Move the file back into the main folder (<code class="codehilite"><span class="n">mv</span> <span class="n">contig1</span><span class="p">.</span><span class="n">fasta</span> <span class="p">..</span><span class="o">/</span></code>).</p>
+<p>Open this file in a text editor (e.g. nano: <code>nano contig1.fasta</code>) and change the header to &ldquo;&gt;chromosome&rdquo;.</p>
+<p>Move the file back into the main folder (<code>mv contig1.fasta ../</code>).</p>
 <h3 id="options">Options</h3>
-<p>If all the contigs have not circularised with Circlator, an option is to change the <code class="codehilite"><span class="c1">--b2r_length_cutoff</span></code> setting to approximately 2X the average read depth.</p>
+<p>If all the contigs have not circularised with Circlator, an option is to change the <code>--b2r_length_cutoff</code> setting to approximately 2X the average read depth.</p>
 <h3 id="questions_1">Questions</h3>
 <p>Q: Were all the contigs circularised? Why/why not?</p>
 <p>Q: Circlator can set the start of the sequence at a particular gene. Which gene does it use? Is this appropriate for all contigs? A: Uses dnaA for the chromosomal contig. For other contigs, uses a centrally-located gene. However, ideally, plasmids would be oriented on a gene such as repA. It is possible to provide a file to Circlator to do this.</p>
@@ -1206,109 +1200,109 @@ ls
 <ul>
 <li>Index the contigs file:</li>
 </ul>
-<div class="codehilite"><pre><span></span>bwa index contig1.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>bwa index contig1.fasta
+</code></pre></div>
 
 <ul>
 <li>Align Illumina reads using using bwa mem:</li>
 </ul>
-<div class="codehilite"><pre><span></span>bwa mem -t 8 contig1.fasta R1.fq R2.fq | samtools sort &gt; aln.bam
-</pre></div>
+<div class="highlight"><pre><span></span><code>bwa mem -t 8 contig1.fasta R1.fq R2.fq | samtools sort &gt; aln.bam
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="n">bwa</span> <span class="n">mem</span></code> is the alignment tool</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">t</span> <span class="mi">8</span></code> is the number of cores: choose an appropriate number</li>
-<li><code class="codehilite"><span class="n">contig1</span><span class="p">.</span><span class="n">fasta</span></code> is the input assembly file</li>
-<li><code class="codehilite"><span class="n">R1</span><span class="p">.</span><span class="n">fq</span> <span class="n">R2</span><span class="p">.</span><span class="n">fq</span></code> are the Illumina reads</li>
-<li><code class="codehilite"><span class="o">|</span> <span class="n">samtools</span> <span class="n">sort</span></code> pipes the output to samtools to sort</li>
-<li><code class="codehilite"><span class="o">&gt;</span> <span class="n">aln</span><span class="p">.</span><span class="n">bam</span></code> sends the alignment to the file <fn>aln.bam</fn></li>
+<li><code>bwa mem</code> is the alignment tool</li>
+<li><code>-t 8</code> is the number of cores: choose an appropriate number</li>
+<li><code>contig1.fasta</code> is the input assembly file</li>
+<li><code>R1.fq R2.fq</code> are the Illumina reads</li>
+<li><code>| samtools sort</code> pipes the output to samtools to sort</li>
+<li><code>&gt; aln.bam</code> sends the alignment to the file <fn>aln.bam</fn></li>
 </ul>
 <h3 id="extract-unmapped-illumina-reads">Extract unmapped Illumina reads</h3>
 <ul>
 <li>Index the alignment file:</li>
 </ul>
-<div class="codehilite"><pre><span></span>samtools index aln.bam
-</pre></div>
+<div class="highlight"><pre><span></span><code>samtools index aln.bam
+</code></pre></div>
 
 <ul>
 <li>Extract the fastq files from the bam alignment - those reads that were unmapped to the Pacbio alignment - and save them in various &ldquo;unmapped&rdquo; files:</li>
 </ul>
-<div class="codehilite"><pre><span></span>samtools fastq -f 4 -1 unmapped.R1.fastq -2 unmapped.R2.fastq -s unmapped.RS.fastq aln.bam
-</pre></div>
+<div class="highlight"><pre><span></span><code>samtools fastq -f 4 -1 unmapped.R1.fastq -2 unmapped.R2.fastq -s unmapped.RS.fastq aln.bam
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="n">fastq</span></code> is a command that coverts a <fn>.bam</fn> file into fastq format</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">f</span> <span class="mi">4</span></code> : only output unmapped reads</li>
-<li><code class="codehilite"><span class="o">-</span><span class="mi">1</span></code> : put R1 reads into a file called <fn>unmapped.R1.fastq</fn></li>
-<li><code class="codehilite"><span class="o">-</span><span class="mi">2</span></code> : put R2 reads into a file called <fn>unmapped.R2.fastq</fn></li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">s</span></code> : put singleton reads into a file called <fn>unmapped.RS.fastq</fn></li>
-<li><code class="codehilite"><span class="n">aln</span><span class="p">.</span><span class="n">bam</span></code> : input alignment file</li>
+<li><code>fastq</code> is a command that coverts a <fn>.bam</fn> file into fastq format</li>
+<li><code>-f 4</code> : only output unmapped reads</li>
+<li><code>-1</code> : put R1 reads into a file called <fn>unmapped.R1.fastq</fn></li>
+<li><code>-2</code> : put R2 reads into a file called <fn>unmapped.R2.fastq</fn></li>
+<li><code>-s</code> : put singleton reads into a file called <fn>unmapped.RS.fastq</fn></li>
+<li><code>aln.bam</code> : input alignment file</li>
 </ul>
 <p>We now have three files of the unampped reads: <fn> unmapped.R1.fastq</fn>, <fn> unmapped.R2.fastq</fn>, <fn> unmapped.RS.fastq</fn>.</p>
 <h3 id="assemble-the-unmapped-reads">Assemble the unmapped reads</h3>
 <ul>
 <li>Assemble with Spades:</li>
 </ul>
-<div class="codehilite"><pre><span></span>spades.py -1 unmapped.R1.fastq -2 unmapped.R2.fastq -s unmapped.RS.fastq --careful --cov-cutoff auto -o spades_assembly
-</pre></div>
+<div class="highlight"><pre><span></span><code>spades.py -1 unmapped.R1.fastq -2 unmapped.R2.fastq -s unmapped.RS.fastq --careful --cov-cutoff auto -o spades_assembly
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="o">-</span><span class="mi">1</span></code> is input file forward</li>
-<li><code class="codehilite"><span class="o">-</span><span class="mi">2</span></code> is input file reverse</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">s</span></code> is unpaired</li>
-<li><code class="codehilite"><span class="c1">--careful</span></code> minimizes mismatches and short indels</li>
-<li><code class="codehilite"><span class="c1">--cov-cutoff auto</span></code> computes the coverage threshold (rather than the default setting, &ldquo;off&rdquo;)</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> is the output directory</li>
+<li><code>-1</code> is input file forward</li>
+<li><code>-2</code> is input file reverse</li>
+<li><code>-s</code> is unpaired</li>
+<li><code>--careful</code> minimizes mismatches and short indels</li>
+<li><code>--cov-cutoff auto</code> computes the coverage threshold (rather than the default setting, &ldquo;off&rdquo;)</li>
+<li><code>-o</code> is the output directory</li>
 </ul>
 <p>Move into the output directory (<fn>spades_assembly</fn>) and look at the contigs:</p>
-<p><div class="codehilite"><pre><span></span>cd spades_assembly
+<p><div class="highlight"><pre><span></span><code>cd spades_assembly
 infoseq contigs.fasta
-</pre></div>
+</code></pre></div>
 - 1 contig has been assembled with a length of 2359 bases.
 - Type &ldquo;q&rdquo; to exit.</p>
 <p>Copy it to a new file:</p>
-<div class="codehilite"><pre><span></span>cp contigs.fasta contig2.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>cp contigs.fasta contig2.fasta
+</code></pre></div>
 
 <h3 id="trim-the-plasmid">Trim the plasmid</h3>
 <p>To trim any overhang on this plasmid, we will blast the start of contig2 against itself.</p>
 <ul>
 <li>Take the start of the contig:</li>
 </ul>
-<div class="codehilite"><pre><span></span>head -n 10 contig2.fasta &gt; contig2.fa.head
-</pre></div>
+<div class="highlight"><pre><span></span><code>head -n 10 contig2.fasta &gt; contig2.fa.head
+</code></pre></div>
 
 <ul>
 <li>head -n 10 takes the first ten lines of <fn>contig2.fasta</fn></li>
-<li><code class="codehilite"><span class="o">&gt;</span></code> sends that output to a new file called <fn>contig2.fa.head</fn></li>
+<li><code>&gt;</code> sends that output to a new file called <fn>contig2.fa.head</fn></li>
 <li>We want to see if it matches the end (overhang).</li>
 <li>Format the assembly file for blast:</li>
 </ul>
-<div class="codehilite"><pre><span></span>makeblastdb -in contig2.fasta -dbtype nucl
-</pre></div>
+<div class="highlight"><pre><span></span><code>makeblastdb -in contig2.fasta -dbtype nucl
+</code></pre></div>
 
 <ul>
 <li>
 <p>Blast the start of the assembly (.head file) against all of the assembly:
-<div class="codehilite"><pre><span></span>blastn -query contig2.fa.head -db contig2.fasta -evalue 1e-3 -dust no -out contig2.bls
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>blastn -query contig2.fa.head -db contig2.fasta -evalue 1e-3 -dust no -out contig2.bls
+</code></pre></div></p>
 </li>
 <li>
-<p><code class="codehilite"><span class="n">blastn</span></code> is the tool Blast, set as blastn to compare sequences of nucleotides to each other</p>
+<p><code>blastn</code> is the tool Blast, set as blastn to compare sequences of nucleotides to each other</p>
 </li>
-<li><code class="codehilite"><span class="n">query</span></code> sets the input sequence as <fn>contig2.fa.head</fn></li>
-<li><code class="codehilite"><span class="n">db</span></code> sets the database as that of the original sequence <fn>contig2.fasta</fn>. We don&rsquo;t have to specify the other files that were created when we formatted this file, but they need to present in our current directory.</li>
-<li><code class="codehilite"><span class="n">evalue</span></code> is the number of hits expected by chance, here set as 1e-3</li>
-<li><code class="codehilite"><span class="n">dust</span> <span class="k">no</span></code> turns off the masking of low-complexity regions</li>
+<li><code>query</code> sets the input sequence as <fn>contig2.fa.head</fn></li>
+<li><code>db</code> sets the database as that of the original sequence <fn>contig2.fasta</fn>. We don&rsquo;t have to specify the other files that were created when we formatted this file, but they need to present in our current directory.</li>
+<li><code>evalue</code> is the number of hits expected by chance, here set as 1e-3</li>
+<li><code>dust no</code> turns off the masking of low-complexity regions</li>
 <li>
-<p><code class="codehilite"><span class="k">out</span></code> sets the output file as <fn>contig2.bls</fn></p>
+<p><code>out</code> sets the output file as <fn>contig2.bls</fn></p>
 </li>
 <li>
 <p>Look at <fn>contig2.bls</fn> to see hits:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span>less contig2.bls
-</pre></div>
+<div class="highlight"><pre><span></span><code>less contig2.bls
+</code></pre></div>
 
 <ul>
 <li>The first hit is at start, as expected. We can see that &ldquo;Query 1&rdquo; (the start of the contig) is aligned to &ldquo;Sbject 1&rdquo; (the whole contig), for the first 540 bases.</li>
@@ -1319,70 +1313,70 @@ infoseq contigs.fasta
 <li>Index the plasmid.fa file:</li>
 </ul>
 <p>First, change the name of the contig within the file:</p>
-<p><div class="codehilite"><pre><span></span>nano contig2.fasta
-</pre></div>
-- <code class="codehilite"><span class="n">nano</span></code> opens up a text editor.
+<p><div class="highlight"><pre><span></span><code>nano contig2.fasta
+</code></pre></div>
+- <code>nano</code> opens up a text editor.
 - Use the arrow keys to navigate. (The mouse won&rsquo;t work.)
-- At the first line, delete the text, which will be something like <code class="codehilite"><span class="o">&gt;</span><span class="n">NODE_1_length_2359_cov_3</span><span class="p">.</span><span class="mi">320333</span></code>
-- Type in <code class="codehilite"><span class="o">&gt;</span><span class="n">contig2</span></code>
-- Don&rsquo;t forget the <code class="codehilite"><span class="o">&gt;</span></code> symbol
-- Press <code class="codehilite"><span class="n">Control</span><span class="o">-</span><span class="n">X</span></code>
-- <code class="codehilite"><span class="n">Save</span> <span class="n">modified</span> <span class="n">buffer</span> <span class="o">?</span></code> - type Y
-- Press the <code class="codehilite"><span class="n">Enter</span></code> key</p>
+- At the first line, delete the text, which will be something like <code>&gt;NODE_1_length_2359_cov_3.320333</code>
+- Type in <code>&gt;contig2</code>
+- Don&rsquo;t forget the <code>&gt;</code> symbol
+- Press <code>Control-X</code>
+- <code>Save modified buffer ?</code> - type Y
+- Press the <code>Enter</code> key</p>
 <p>Index the file (this will allow samtools to edit the file as it will have an index):
-<div class="codehilite"><pre><span></span>samtools faidx contig2.fasta
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>samtools faidx contig2.fasta
+</code></pre></div></p>
 <ul>
 <li>Trim the contig:
-<div class="codehilite"><pre><span></span>samtools faidx contig2.fasta plasmid:1-2252 &gt; plasmid.fa.trimmed
-</pre></div></li>
+<div class="highlight"><pre><span></span><code>samtools faidx contig2.fasta plasmid:1-2252 &gt; plasmid.fa.trimmed
+</code></pre></div></li>
 <li>
-<p><code class="codehilite"><span class="n">plasmid</span></code> is the name of the contig, and we want the sequence from 1-2252.</p>
+<p><code>plasmid</code> is the name of the contig, and we want the sequence from 1-2252.</p>
 </li>
 <li>
-<p>Open this file in nano (<code class="codehilite"><span class="n">nano</span> <span class="n">plasmid</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="n">trimmed</span></code>) and change the header to &ldquo;&gt;plasmid&rdquo;, save.</p>
+<p>Open this file in nano (<code>nano plasmid.fa.trimmed</code>) and change the header to &ldquo;&gt;plasmid&rdquo;, save.</p>
 </li>
 <li>We now have a trimmed plasmid.</li>
 <li>Move file back into main folder:</li>
 </ul>
-<div class="codehilite"><pre><span></span>cp plasmid.fa.trimmed ../
-</pre></div>
+<div class="highlight"><pre><span></span><code>cp plasmid.fa.trimmed ../
+</code></pre></div>
 
 <ul>
 <li>Move into the main folder.</li>
 </ul>
 <h3 id="plasmid-contig-orientation">Plasmid contig orientation</h3>
 <p>The bacterial chromosome was oriented at the gene dnaA. Plasmids are often oriented at the replication gene, but this is highly variable and there is no established convention. Here we will orient the plasmid at a gene found by Prodigal, in Circlator:</p>
-<div class="codehilite"><pre><span></span>circlator fixstart plasmid.fa.trimmed plasmid_fixstart
-</pre></div>
+<div class="highlight"><pre><span></span><code>circlator fixstart plasmid.fa.trimmed plasmid_fixstart
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="n">fixstart</span></code> is an option in Circlator just to orient a sequence.</li>
-<li><code class="codehilite"><span class="n">plasmid</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="n">trimmed</span></code> is our small plasmid.</li>
-<li><code class="codehilite"><span class="n">plasmid_fixstart</span></code> is the prefix for the output files.</li>
+<li><code>fixstart</code> is an option in Circlator just to orient a sequence.</li>
+<li><code>plasmid.fa.trimmed</code> is our small plasmid.</li>
+<li><code>plasmid_fixstart</code> is the prefix for the output files.</li>
 </ul>
 <p>View the output:</p>
-<div class="codehilite"><pre><span></span>less plasmid_fixstart.log
-</pre></div>
+<div class="highlight"><pre><span></span><code>less plasmid_fixstart.log
+</code></pre></div>
 
 <ul>
 <li>The plasmid has been oriented at a gene predicted by Prodigal, and the break-point is at position 1200.</li>
 <li>Change the file name:</li>
 </ul>
-<div class="codehilite"><pre><span></span>cp plasmid_fixstart.fasta contig2.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>cp plasmid_fixstart.fasta contig2.fasta
+</code></pre></div>
 
 <!-- note: annotated with prokka. plasmid only has two proteins. ermC, and a hypothetical protein. protein blast genbank: matches a staph replication and maintenance protein. -->
 
 <h3 id="collect-contigs">Collect contigs</h3>
-<div class="codehilite"><pre><span></span>cat contig1.fasta contig2.fasta &gt; genome.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>cat contig1.fasta contig2.fasta &gt; genome.fasta
+</code></pre></div>
 
 <ul>
 <li>
 <p>See the contigs and sizes:
-<div class="codehilite"><pre><span></span>infoseq genome.fasta
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>infoseq genome.fasta
+</code></pre></div></p>
 </li>
 <li>
 <p>chromosome: 2823331</p>
@@ -1401,21 +1395,21 @@ infoseq contigs.fasta
 <ul>
 <li>Align the Illumina reads (R1 and R2) to the draft PacBio assembly, e.g. <fn>genome.fasta</fn>:</li>
 </ul>
-<div class="codehilite"><pre><span></span>bwa index genome.fasta
+<div class="highlight"><pre><span></span><code>bwa index genome.fasta
 bwa mem -t 32 genome.fasta illumina_R1.fastq.gz illumina_R2.fastq.gz | samtools sort &gt; aln.bam
-</pre></div>
+</code></pre></div>
 
 <ul>
 <li>
-<p><code class="codehilite"><span class="o">-</span><span class="n">t</span></code> is the number of cores: set this to an appropriate number. (To find out how many you have, <code class="codehilite"><span class="n">grep</span> <span class="o">-</span><span class="k">c</span> <span class="n">processor</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">cpuinfo</span></code>).</p>
+<p><code>-t</code> is the number of cores: set this to an appropriate number. (To find out how many you have, <code>grep -c processor /proc/cpuinfo</code>).</p>
 </li>
 <li>
 <p>Index the files:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span>samtools index aln.bam
+<div class="highlight"><pre><span></span><code>samtools index aln.bam
 samtools faidx genome.fasta
-</pre></div>
+</code></pre></div>
 
 <ul>
 <li>Now we have an alignment file to use in Pilon: <fn>aln.bam</fn></li>
@@ -1424,28 +1418,28 @@ samtools faidx genome.fasta
 <ul>
 <li>Run:</li>
 </ul>
-<div class="codehilite"><pre><span></span>pilon --genome genome.fasta --frags aln.bam --output pilon1 --fix all --mindepth 0.5 --changes --verbose --threads 32
-</pre></div>
+<div class="highlight"><pre><span></span><code>pilon --genome genome.fasta --frags aln.bam --output pilon1 --fix all --mindepth 0.5 --changes --verbose --threads 32
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="c1">--genome</span></code> is the name of the input assembly to be corrected</li>
-<li><code class="codehilite"><span class="c1">--frags</span></code> is the alignment of the reads against the assembly</li>
-<li><code class="codehilite"><span class="c1">--output</span></code> is the name of the output prefix</li>
-<li><code class="codehilite"><span class="c1">--fix</span></code> is an option for types of corrections</li>
-<li><code class="codehilite"><span class="c1">--mindepth</span></code> gives a minimum read depth to use</li>
-<li><code class="codehilite"><span class="c1">--changes</span></code> produces an output file of the changes made</li>
-<li><code class="codehilite"><span class="c1">--verbose</span></code> prints information to the screen during the run</li>
-<li><code class="codehilite"><span class="c1">--threads</span></code> : set this to an appropriate number</li>
+<li><code>--genome</code> is the name of the input assembly to be corrected</li>
+<li><code>--frags</code> is the alignment of the reads against the assembly</li>
+<li><code>--output</code> is the name of the output prefix</li>
+<li><code>--fix</code> is an option for types of corrections</li>
+<li><code>--mindepth</code> gives a minimum read depth to use</li>
+<li><code>--changes</code> produces an output file of the changes made</li>
+<li><code>--verbose</code> prints information to the screen during the run</li>
+<li><code>--threads</code> : set this to an appropriate number</li>
 </ul>
 <p>Look at the changes file:</p>
-<div class="codehilite"><pre><span></span>less pilon1.changes
-</pre></div>
+<div class="highlight"><pre><span></span><code>less pilon1.changes
+</code></pre></div>
 
 <p><em>Example:</em></p>
 <p><img alt="pilon" src="../images/pilon.png" /></p>
 <p>Look at the details of the fasta file:</p>
-<div class="codehilite"><pre><span></span>infoseq pilon1.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>infoseq pilon1.fasta
+</code></pre></div>
 
 <ul>
 <li>chromosome - 2823340 (net +9 bases)</li>
@@ -1457,8 +1451,8 @@ samtools faidx genome.fasta
 <ul>
 <li>Change the file name:</li>
 </ul>
-<div class="codehilite"><pre><span></span>cp pilon1.fasta assembly.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>cp pilon1.fasta assembly.fasta
+</code></pre></div>
 
 <ul>
 <li>We now have the corrected genome assembly of <em>Staphylococcus aureus</em> in .fasta format, containing a chromosome and a small plasmid.  </li>
@@ -1479,20 +1473,20 @@ samtools faidx genome.fasta
 </ul>
 <h3 id="assemble_1">Assemble</h3>
 <p>Run Spades:</p>
-<div class="codehilite"><pre><span></span>spades.py -1 illumina_R1.fastq.gz -2 illumina_R2.fastq.gz --careful --cov-cutoff auto -o spades_assembly_all_illumina
-</pre></div>
+<div class="highlight"><pre><span></span><code>spades.py -1 illumina_R1.fastq.gz -2 illumina_R2.fastq.gz --careful --cov-cutoff auto -o spades_assembly_all_illumina
+</code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="o">-</span><span class="mi">1</span></code> is input file of forward reads</li>
-<li><code class="codehilite"><span class="o">-</span><span class="mi">2</span></code> is input file of reverse reads</li>
-<li><code class="codehilite"><span class="c1">--careful</span></code> minimizes mismatches and short indels</li>
-<li><code class="codehilite"><span class="c1">--cov-cutoff auto</span></code> computes the coverage threshold (rather than the default setting, &ldquo;off&rdquo;)</li>
-<li><code class="codehilite"><span class="o">-</span><span class="n">o</span></code> is the output directory</li>
+<li><code>-1</code> is input file of forward reads</li>
+<li><code>-2</code> is input file of reverse reads</li>
+<li><code>--careful</code> minimizes mismatches and short indels</li>
+<li><code>--cov-cutoff auto</code> computes the coverage threshold (rather than the default setting, &ldquo;off&rdquo;)</li>
+<li><code>-o</code> is the output directory</li>
 </ul>
 <h3 id="results">Results</h3>
 <p>Move into the output directory and look at the contigs:</p>
-<div class="codehilite"><pre><span></span>infoseq contigs.fasta
-</pre></div>
+<div class="highlight"><pre><span></span><code>infoseq contigs.fasta
+</code></pre></div>
 
 <h3 id="questions_4">Questions</h3>
 <p>How many contigs were found by Spades?</p>
@@ -1541,8 +1535,6 @@ samtools faidx genome.fasta
 <li>Notes on <a href="https://github.com/PacificBiosciences/Bioinformatics-Training/wiki/Finishing-Bacterial-Genomes">finishing</a> and <a href="https://github.com/PacificBiosciences/Bioinformatics-Training/wiki/Evaluating-Assemblies">evaluating</a> assemblies.</li>
 </ul>
                 
-                  
-                
               
               
                 
@@ -1558,34 +1550,34 @@ samtools faidx genome.fasta
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../../denovo/handout/handout/" title="De Novo Genome Assembly" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../../denovo/handout/handout/" title="De Novo Genome Assembly" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 De Novo Genome Assembly
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../../../license/" title="License" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 License
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -1600,11 +1592,10 @@ samtools faidx genome.fasta
             &copy; The authors; 2019-
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1613,9 +1604,18 @@ samtools faidx genome.fasta
       
     </div>
     
-      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

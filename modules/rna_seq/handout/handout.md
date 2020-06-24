@@ -305,7 +305,7 @@ Once tophat finishes aligning the 6h data you will need to sort the
 alignments found in the BAM file and then index the sorted BAM file.
 
 ```bash
-samtools sort tophat/ZV9_6h/accepted_hits.bam tophat/ZV9_6h/accepted_hits.sorted
+samtools sort tophat/ZV9_6h/accepted_hits.bam -o tophat/ZV9_6h/accepted_hits.sorted.bam
 samtools index tophat/ZV9_6h/accepted_hits.sorted.bam
 ```
 
@@ -368,7 +368,7 @@ annotations, for the `2cells` and `6h` data using cufflinks:
 
 For instance, to run StringTie on 2cells BAM file:
 ```
-    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_2cells.gft tophat/ZV9_2cells/accepted_hits.sorted.bam
+    stringtie -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/ZV9_2cells.gtf tophat/ZV9_2cells/accepted_hits.sorted.bam
 ```
  
 
