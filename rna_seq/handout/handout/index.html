@@ -1242,6 +1242,9 @@ Check the dimensions of the object:
 <div class="highlight"><pre><span></span><code>    dim(y)
 </code></pre></div>
 We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
+<p>Now we will filter out genes with low counts by only keeping those rows
+where the count per million (cpm) is at least 1 in at least three
+samples:</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <div class="admonition hint">
